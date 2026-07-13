@@ -1,43 +1,44 @@
 # HVR
 ## HANTZVIPRIDES
 
-**$martest, $afe, $ecured, $imple, $HAReTER $ervices for Nigerian VIP Commuters**  
-*Corporate Logistics + Private VIP Movement | South-South, Nigeria*
+**$martest, $afe, $ecured, $imple, $HAReTER, $ervices for Nigerian VIP Commuters**  
+*Corporate Logistics + Private VIP Movement | Nigeria*
 
 ---
 
-### OUR CLIENTS & PROPOSED PARTNERS
-**FIRST BANK** | **LEADWAY ASSURANCE** | **VIP HOTELS** | **NIGERIAN POLICE FORCE** | **FRSC** | **YOU**  
-*For Partnership Review & Public Preview*
+## THE 6 '$' OF HANTZVIPRIDES
+1.  **$martest** - $HAReTER routing that $aves company + $taff money
+2.  **$afe** - Vetted driver$, AC vehicle$, GP$ tracked trip$
+3.  **$ecured** - Corporate contract$, in$urance, FR$C compliant
+4.  **$imple** - Book in 30 $econd$ on What$App
+5.  **$HAReTER** - $hare VIP ride$, nobody walk$ alone
+6.  **$ervices** - Premium VIP logi$tic$ for corporate + private client$
 
 ---
 
-## SHAReTER - Shared VIP Charter
-### From ₦10,000 per seat vs ₦40,000 solo
-**Save up to 80%** | **AC Vehicles** | **GPS Tracked** | **Door-to-Door** | **Payroll Deduction**
+### OUR CLIENT$ & PROPO$ED PARTNER$
+**FIR$T BANK** | **LEADWAY A$$URANCE** | **VIP HOTEL$** | **NIGERIAN POLICE FORCE** | **FR$C** | **YOU**  
+*For Partner$hip Review & Public Preview*
 
-*Imagine sharing a 7 passenger vehicle SHAReTER with 4 or 5 persons. Picked from your house and dropped at your house. Pure VIP logistics.*
+---
 
-[**BOOK ON WHATSAPP: 08085526104**](https://wa.me/2348085526104)
+## $HAReTER - $hared VIP Charter
+### From ₦10,000 per $eat vs ₦40,000 $olo
+✅ **$ave up to 80%** | ✅ **AC Vehicle$** | ✅ **GP$ Tracked** | ✅ **Door-to-Door** | ✅ **Payroll Deduction**
+
+*$hare a 7-$eater with 4 or 5 per$on$. Picked from your hou$e and dropped at your hou$e. Pure VIP logi$tic$.*
+
+[**BOOK ON WHAT$APP: 08085526104**](https://wa.me/2348085526104)
 
 ---
 
 ## EXECUTIVE CHARTER
-### From ₦40,000 Solo
-**Corporate Teams** | **VIP Groups** | **Hotels** | **Government** | **Private Individuals**
+### From ₦40,000 $olo
+✅ **Corporate Team$** | ✅ **VIP Group$** | ✅ **Hotel$** | ✅ **Government** | ✅ **Private Individual$**
 
-Private Vehicle | Dedicated Driver | 24/7 Support | Luggage Service
+Private Vehicle | Dedicated Driver | 24/7 $upport | Luggage $ervice
 
-[**REQUEST QUOTE: 08085526104**](https://wa.me/2348085526104)
-
----
-
-## WHY HVR?
-1.  **$martest** - SHAReTER routing saves company + staff money
-2.  **$afe** - Vetted drivers, AC vehicles, tracked trips
-3.  **$ecured** - Corporate contracts, insurance, FRSC compliant
-4.  **$imple** - Book in 30 seconds on WhatsApp
-5.  **$HAReTER** - Share VIP rides, nobody walks alone
+[**REQUE$T QUOTE: 08085526104**](https://wa.me/2348085526104)
 
 ---
 
