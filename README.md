@@ -1,7 +1,7 @@
 # HVR
 ## HANTZVIPRIDES
 
-**$martest, $afe, $ecured, $imple, $HAReTER, $ervices for Nigerian VIP Commuters**  
+**$martest, $afe, $ecured, $imple, $HAReTER $ervices for Nigerian VIP Commuters**  
 *Corporate Logistics + Private VIP Movement | Nigeria*
 
 ---
@@ -24,7 +24,7 @@
 
 ## $HAReTER - $hared VIP Charter
 ### From ₦10,000 per $eat vs ₦40,000 $olo
-✅ **$ave up to 80%** | ✅ **AC Vehicle$** | ✅ **GP$ Tracked** | ✅ **Door-to-Door** | ✅ **Payroll Deduction**
+✅ **$ave up to 80%** | ✅ **AC Vehicle$** | ✅ **GP$ Tracked** | ✅ **Door-to-Door**
 
 *$hare a 7-$eater with 4 or 5 per$on$. Picked from your hou$e and dropped at your hou$e. Pure VIP logi$tic$.*
 
