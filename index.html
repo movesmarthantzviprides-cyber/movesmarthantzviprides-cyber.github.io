@@ -1,247 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HANTZVIPRIDES - Port Harcourt Intercity</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body { font-family: system-ui, sans-serif; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://picsum.photos/id/1015/2000/1200') center/cover; }
-        .gold { color: #fbbf24; }
-        .watermark {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20rem;
-            color: #fbbf24;
-            opacity: 0.04;
-            z-index: -1;
-            pointer-events: none;
-        }
-    </style>
+<title>HANTZVIPRIDES - Partner Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{font-family:Arial;margin:0;background:#f8f9fa;color:#222}
+.banner{background:#FFD700;color:#000;text-align:center;padding:10px;font-weight:bold;font-size:14px}
+.hero{background:#001f3f;color:white;text-align:center;padding:50px 20px}
+.partners{display:flex;justify-content:center;gap:15px;margin:20px 0;flex-wrap:wrap}
+.partner-badge{background:white;color:#001f3f;padding:10px 18px;border-radius:8px;font-weight:bold;font-size:13px}
+.section{padding:40px 20px;max-width:900px;margin:20px auto;background:white;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.price{color:#28a745;font-size:26px;font-weight:bold}
+.btn{background:#001f3f;color:white;padding:14px 28px;border:none;border-radius:8px;cursor:pointer;font-weight:bold}
+.footer{background:#001f3f;color:white;text-align:center;padding:25px;margin-top:40px;font-size:13px}
+</style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-black/95 border-b border-zinc-800 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="logo.jpg" alt="Hantz VIP Logo" class="w-10 h-10 rounded">
-                <div class="text-xl font-bold">HANTZ <span class="gold">VIP</span></div>
-            </div>
-            <div class="flex gap-6 text-sm">
-                <a onclick="navigate('home')" class="cursor-pointer hover:text-amber-400">Home</a>
-                <a onclick="navigate('book')" class="cursor-pointer hover:text-amber-400">PH Routes</a>
-                <a onclick="navigate('bonny')" class="cursor-pointer hover:text-amber-400">Bonny</a>
-                <a onclick="navigate('drivers')" class="cursor-pointer hover:text-amber-400">Drivers</a>
-                <a onclick="navigate('agents')" class="cursor-pointer hover:text-amber-400">Agents</a>
-                <a onclick="navigate('tracking')" class="cursor-pointer hover:text-amber-400">Track</a>
-            </div>
-        </div>
-    </nav>
+<div class="banner">DRAFT - For Partner Review Only</div>
 
-    <i id="watermark" class="fa-solid fa-car-side watermark hidden"></i>
-    <div id="content" class="pt-20"></div>
+<div class="hero">
+  <h1>HANTZVIPRIDES</h1>
+  <p>The Safest Way To Move in South</p>
+  <div class="partners">
+    <div class="partner-badge">FIRSTBANK 🎗️</div>
+    <div class="partner-badge">LEADWAY ASSURANCE 🎗️</div>
+    <div class="partner-badge">HOTELS 🎗️</div>
+    <div class="partner-badge">GOVERNMENT 🎗️</div>
+  </div>
+  <p>Trusted Partners for VIP Transport & Logistics</p>
+</div>
 
-    <script>
-        const routes = [
-            {id: 1, title: "PORT HARCOURT TOWNSHIP ROUTE", stops: [
-                {point: "Aggrey Rd - Port Harcourt Township Axis (No 82 Aggrey Rd Blessed Sunny)", price: "N7,500"},
-                {point: "UPE - Borokiri Sand field axis (UPE Jnc)", price: "N7,500"},
-                {point: "Ibeto - Industry Road axis (Stella Marris Jnc)", price: "N7,000"},
-                {point: "Old GRA axis (civic center)", price: "N7,000"},
-                {point: "Trans Amadi axis (Amadi Rnd Abt)", price: "N7,000"},
-                {point: "Odili Rd Axis (Sasung Rnd Abt)", price: "N7,000"},
-                {point: "Elelenwo Akpajo Axis (Elelenwo - Odili Rd Cut off Jnc)", price: "N7,000"}
-            ]},
-            {id: 2, title: "ABA ROAD ROUTE", stops: [
-                {point: "Abali Park Aba road Axis (Abali Park)", price: "N7,000"},
-                {point: "Diobu Mile1 - Mile 3 axis (Mile 2 flyover)", price: "N7,000"},
-                {point: "D/Line Axis (Garrison Flyover)", price: "N7,000"},
-                {point: "New GRA Axis (New GRA Flyover)", price: "N7,000"}
-            ]},
-            {id: 3, title: "MILE 4-6 / EAGLE ISLAND ROUTE", stops: [
-                {point: "Mile 4 - Mile 6 axis (Wimpey Jnc)", price: "N8,500"},
-                {point: "Eagle Island Axis (Ilabuchi, Eagle Rd Jnc)", price: "N9,000"},
-                {point: "Ada George Axis (Agip Jnc)", price: "N9,000"},
-                {point: "Iwofe axis (Pepperoni Jnc Flyover)", price: "N9,000"}
-            ]},
-            {id: 4, title: "AIRPORT / CHOBA ROUTE", stops: [
-                {point: "Mgbuoba - Ozuoba Axis (Ozuoba Jnc)", price: "N10,000"},
-                {point: "Choba axis (Uniport Jnc)", price: "N10,000"},
-                {point: "Omagwa, Airport, Igwirita (Airport Jnc)", price: "N12,000"},
-                {point: "Rukpokwu axis (Rukpokwu Jnc)", price: "N12,000"}
-            ]},
-            {id: 5, title: "ELEME / ENEKA ROUTE", stops: [
-                {point: "Eleme junction, Artillery Axis (Eleme Jnc)", price: "N6,000"},
-                {point: "Rumukwurishe, Tank axis (Tank Jnc)", price: "N7,000"},
-                {point: "Eleozu, Rumudara axis (Eleozu Jnc Flyover)", price: "N8,000"},
-                {point: "Eneka Axis (Eneka Jnc)", price: "N8,500"}
-            ]}
-        ];
+<div class="section">
+  <h2>SHAReTER - Shared Charter Service</h2>
+  <p><b>Shared Charter for Corporate Staff + Semi-VIP Middle Class</b></p>
+  <p><span class="price">From ₦15,000 per seat</span> vs ₦40,000 solo charter</p>
+  <p>Save up to 62% | AC | Comfort | Safety | GPS Tracked | Payroll Deduction</p>
+  <button class="btn">BOOK SHAReTER SEAT</button>
+</div>
 
-        const bonnyRoutes = [
-            {id: "01", price: "₦25,000", title: "COAL BEACH ROUTE", points: ["Coal Beach Axis (Coal Beach Park)", "Cable Rd Axis (Women's Hall)", "Ikuba Square Axis (Allison Playground)", "Amaomu Axis (Amaomu Jnc)", "Old Main Market Axis (Old Main Market Jnc)", "Sandfield Rd Axis (Behind fmr All State Bank)"]},
-            {id: "02", price: "₦25,000", title: "BERGER RD ROUTE", points: ["Berger Rd Axis (Main Market Gate)", "Iwoama Axis (Bonny Round Abt)", "New Road Axis 1 (Telavee Hotel front)", "New Road Axis 2 (Bonny Intercity Park by GTB)", "Hospital Rd 1 Axis (by BNGS Gate)", "Hospital Rd 2 Axis (By Bonny Police Station)"]},
-            {id: "03", price: "₦30,000", title: "GHANA WOMAN ROUTE", points: ["Ghana Woman Axis (SDP Jnc)", "Akiama Axis (Akiama Jnc)", "Abalamabie Axis (Simidia Jnc)", "Wilbros Rd Axis (Apostolic Church Jnc)", "New Road Axis 3 (Wilbros Jnc)"]},
-            {id: "04", price: "₦30,000", title: "FINIMA ROUTE", points: ["Finima Townhall Axis (Finima Stadium)", "Finima Market Axis (Finima Market Jnc)", "Lighthouse Axis (Lighthouse Jnc)", "Tank Rd Axis (by Tank bus stop)", "NLNG Axis (NLNG Rnd Abt)", "Agaja Axis (Agaja Jnc)", "Agaja Market Axis (Agaja Market Bus Stop)", "Workers Camp Axis 1 ( Workers Camp Jnc)", "Workers Camp Axis 2 (Workers Camp Gate)"]}
-        ];
+<div class="section">
+  <h2>EXECUTIVE CHARTER</h2>
+  <p><span class="price">From ₦40,000 Solo</span></p>
+  <p>Corporate Teams | VIP Groups | Door-to-Door | Hotels + Government</p>
+  <button class="btn">REQUEST QUOTE</button>
+</div>
 
-        function navigate(page) {
-            const content = document.getElementById('content');
-            const watermark = document.getElementById('watermark');
-            
-            if(page === 'home') {
-                watermark.classList.add('hidden');
-            } else {
-                watermark.classList.remove('hidden');
-            }
-            
-            if (page === 'home') {
-                content.innerHTML = `
-                    <section class="hero min-h-screen flex items-center text-center">
-                        <div class="max-w-5xl mx-auto px-6">
-                            <img src="logo.jpg" alt="Hantz VIP Logo" class="w-64 mx-auto mb-8 rounded-2xl shadow-2xl">
-                            <h1 class="text-5xl font-bold mb-4">HANTZVIPRIDES</h1>
-                            <h2 class="text-2xl gold mb-6">PORT HARCOURT INTERCITY</h2>
-                            <p class="text-lg mb-4">Premium Car Rental + Corporate Shuttle + Intercity Transport</p>
-                            <p class="text-2xl gold font-bold mb-2">📞 +234 8085526104</p>
-                            <p class="gold mb-10">BONNY ROUTE LAUNCH: 18TH JULY, 2027</p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href="tel:+2348085526104" class="bg-amber-400 text-black px-10 py-5 rounded-3xl text-xl font-bold hover:bg-amber-500"><i class="fa-solid fa-phone"></i> CALL TO BOOK</a>
-                                <a href="https://wa.me/2348085526104" target="_blank" class="bg-green-600 text-white px-10 py-5 rounded-3xl text-xl font-bold hover:bg-green-700"><i class="fa-brands fa-whatsapp"></i> WHATSAPP US</a>
-                                <button onclick="navigate('book')" class="bg-zinc-800 px-10 py-5 rounded-3xl text-xl font-bold border border-amber-400">VIEW ROUTES</button>
-                            </div>
-                        </div>
-                    </section>
-                `;
-            } 
-            else if (page === 'book') {
-                let routesHTML = routes.map(r => `
-                    <div class="bg-zinc-900 p-8 rounded-3xl border-zinc-800">
-                        <h2 class="text-2xl font-bold">ROUTE ${r.id} - ${r.title}</h2>
-                        <p class="mt-4 mb-4 text-zinc-400 font-semibold">DESIGNATED PH PICKUP/DROP OFF POINTS:</p>
-                        <div class="space-y-3">
-                            ${r.stops.map(s => `
-                                <div class="flex justify-between items-start bg-zinc-800 p-3 rounded-xl">
-                                    <p class="text-sm text-zinc-300 flex-1">• ${s.point}</p>
-                                    <p class="gold font-bold ml-4">${s.price}</p>
-                                </div>
-                            `).join('')}
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-4 mt-8">
-                            <a href="tel:+2348085526104" class="flex-1 bg-amber-400 text-black py-5 rounded-2xl font-bold hover:bg-amber-500 text-center"><i class="fa-solid fa-phone"></i> Call</a>
-                            <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides,%20I%20want%20to%20book%20Route%20${r.id}" target="_blank" class="flex-1 bg-green-600 text-white py-5 rounded-2xl font-bold hover:bg-green-700 text-center"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                `).join('');
+<div class="section">
+  <h2>Our Corporate Partners</h2>
+  <p><b>FIRSTBANK:</b> Payroll Transport + Staff Mobility. Seamless salary deduction.</p>
+  <p><b>LEADWAY ASSURANCE:</b> Insurance + Claims Partner. Every ride insured. NFC verified.</p>
+  <p><b>HOTELS:</b> Guest Transfer + Executive Charter. Airport pickup for VIP guests.</p>
+  <p><b>GOVERNMENT:</b> Secure Mobility. Verified drivers + Audit reports + NFC tracking.</p>
+</div>
 
-                content.innerHTML = `
-                    <div class="max-w-7xl mx-auto px-6 py-12">
-                        <h1 class="text-4xl font-bold mb-10 text-center">Port Harcourt Semi VIP Routes</h1>
-                        <div class="grid lg:grid-cols-2 gap-8">
-                            ${routesHTML}
-                        </div>
-                    </div>
-                `;
-            } 
-            else if (page === 'bonny') {
-                let bonnyHTML = bonnyRoutes.map(b => `
-                    <div class="bg-zinc-900 p-8 rounded-3xl border-zinc-800">
-                        <h2 class="text-2xl font-bold">ROUTE ${b.id} - ${b.title}</h2>
-                        <p class="gold text-2xl mt-3 font-bold">${b.price}</p>
-                        <p class="mt-4 mb-4 text-zinc-400 font-semibold">DESIGNATED PICKUP/DROP OFF POINTS:</p>
-                        <ul class="space-y-2 text-sm text-zinc-300">
-                            ${b.points.map(p => `<li>• ${p}</li>`).join('')}
-                        </ul>
-                        <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                            <a href="tel:+2348085526104" class="flex-1 bg-amber-400 text-black py-4 rounded-2xl font-bold hover:bg-amber-500 text-center"><i class="fa-solid fa-phone"></i> Call</a>
-                            <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides,%20I%20want%20to%20book%20Bonny%20Route%20${b.id}" target="_blank" class="flex-1 bg-green-600 text-white py-4 rounded-2xl font-bold hover:bg-green-700 text-center"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                `).join('');
+<div class="footer">
+  HANTZVIPRIDES | Command Center: 08085526104<br>
+  Powered by FirstBank + Leadway + Hotels + Government | NFC VERIFIED 24/7
+</div>
 
-                content.innerHTML = `
-                    <div class="max-w-6xl mx-auto px-6 py-12">
-                        <h1 class="text-4xl font-bold mb-4 text-center">SEMI VIP BONNY - PH ROUTES</h1>
-                        <p class="text-center text-zinc-400 mb-2">Current Operational Routes</p>
-                        <p class="text-center text-zinc-400 mb-10">PH to all Bonny axis • Bonny to several PH Axis and Environs</p>
-                        <div class="bg-zinc-900 p-6 rounded-2xl mb-10 border-amber-400">
-                            <p class="text-center"><span class="gold font-bold">PAYMENT:</span> HANTZ INTERNATIONAL NIGERIA</p>
-                            <p class="text-center"><span class="gold font-bold">ACCT:</span> 2007689316 FIRST BANK</p>
-                            <p class="text-center text-sm mt-2">Paystack link sent after booking. Arrive 10mins before departure.</p>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-8">
-                            ${bonnyHTML}
-                        </div>
-                    </div>
-                `;
-            }
-            else if (page === 'drivers') {
-                content.innerHTML = `
-                    <div class="max-w-5xl mx-auto px-6 py-12">
-                        <h1 class="text-4xl font-bold mb-10 text-center gold">BECOME A VIP DRIVER</h1>
-                        <div class="bg-zinc-900 p-10 rounded-3xl border-zinc-800">
-                            <h2 class="text-2xl font-bold mb-6">With HantzVIPRides Drivers Enjoy:</h2>
-                            <ul class="space-y-4 text-lg">
-                                <li>✅ Monitor passenger bookings from comfort of your home</li>
-                                <li>✅ No more endless waiting at motor park</li>
-                                <li>✅ No more dealing with motor park touts</li>
-                                <li>✅ No money to security checkpoints on the way</li>
-                                <li>✅ No over speeding on highway</li>
-                                <li>✅ Be friendly, courteous and respectful to passengers</li>
-                                <li>✅ Zero cash payment - Safe electronic transfers</li>
-                                <li>✅ Very prompt driver payments</li>
-                                <li>✅ Become a <span class="gold font-bold">VIP DRIVER</span></li>
-                            </ul>
-                            <div class="flex flex-col sm:flex-row gap-4 mt-10">
-                                <a href="tel:+2348085526104" class="flex-1 bg-amber-400 text-black py-5 rounded-2xl font-bold hover:bg-amber-500 text-center text-xl"><i class="fa-solid fa-phone"></i> Call</a>
-                                <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides,%20I%20want%20to%20apply%20as%20a%20VIP%20Driver" target="_blank" class="flex-1 bg-green-600 text-white py-5 rounded-2xl font-bold hover:bg-green-700 text-center text-xl"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-            else if (page === 'agents') {
-                content.innerHTML = `
-                    <div class="max-w-5xl mx-auto px-6 py-12">
-                        <h1 class="text-4xl font-bold mb-10 text-center gold">AGENTS WANTED</h1>
-                        <div class="bg-zinc-900 p-10 rounded-3xl border border-amber-400">
-                            <h2 class="text-3xl font-bold text-center mb-6">EARN WITH HANTZ</h2>
-                            <div class="text-center mb-8">
-                                <p class="text-2xl">₦300 <span class="text-sm">per passenger</span></p>
-                                <p class="text-2xl">+ ₦2,000 <span class="text-sm">per vehicle per trip</span></p>
-                                <p class="gold mt-4">Paid WEEKLY by Hantz</p>
-                                <p class="text-sm mt-2">2 slots available per axis</p>
-                            </div>
-                            <p class="text-center text-lg mb-8">See "AGENT COMMISSION" product for details</p>
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="tel:+2348085526104" class="flex-1 bg-amber-400 text-black py-5 rounded-2xl font-bold hover:bg-amber-500 text-center text-xl"><i class="fa-solid fa-phone"></i> Call</a>
-                                <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides,%20I%20want%20to%20register%20as%20an%20Agent" target="_blank" class="flex-1 bg-green-600 text-white py-5 rounded-2xl font-bold hover:bg-green-700 text-center text-xl"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-            else if (page === 'tracking') {
-                content.innerHTML = `
-                    <div class="max-w-4xl mx-auto px-6 py-12 text-center">
-                        <h1 class="text-4xl font-bold mb-10">Live Driver Tracking</h1>
-                        <div class="bg-zinc-900 p-12 rounded-3xl border-zinc-800">
-                            <p class="text-6xl mb-6">📍</p>
-                            <p class="text-2xl gold">Driver arriving in 7 minutes</p>
-                            <p class="mt-4 text-lg">Chinedu • Mercedes E-Class</p>
-                            <button onclick="alert('Driver has arrived! Safe journey.')" class="mt-12 bg-green-600 px-12 py-5 rounded-2xl font-bold hover:bg-green-700">Simulate Arrival</button>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-        navigate('home');
-    </script>
 </body>
 </html>
