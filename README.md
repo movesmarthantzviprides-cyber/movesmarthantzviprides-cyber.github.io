@@ -1,7 +1,7 @@
 # HVR
 ## HANTZVIPRIDES
 
-**$martest, $afe, $ecured, $imple, $HAReTER $ervices for Nigerian VIP Commuters**  
+**$martest, $afe, $ecured, $imple, $HAReTER Services for Nigerian VIP Commuters**  
 *Corporate Logistics + Private VIP Movement | South-South, Nigeria*
 
 ---
