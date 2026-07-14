@@ -3,141 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HVR - HANTZVIPRIDES | Bonny Route Launch 18th July</title>
+  <meta name="description" content="HANTZVIPRIDES - Premium Car Rental, Corporate Shuttle & Intercity Transport. Bonny Route Launch 18th July 2027">
+  <title>HVR - HANTZVIPRIDES | Bonny Route Launch 18th July 2027</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background: #0A0A0A; color: #fff; }
-    .container { max-width: 1200px; margin: auto; padding: 20px; }
-    section { padding: 40px 20px; }
-    h1 { font-size: 48px; color:#D4AF37; margin:0; text-align:center; }
-    h2 { color:#D4AF37; font-size:28px; text-align:center; margin-bottom:20px; }
-    .btn { background:#D4AF37; color:#000; padding:15px 30px; border-radius:8px; text-decoration:none; display:inline-block; font-weight:900; margin:10px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; }
-    .card { background:#1A1A1A; padding:20px; border-radius:10px; border:1px solid #333; }
-    .route-title { color:#D4AF37; font-size:18px; margin-top:0; }
-    .price { color:#00FF00; font-weight:bold; float:right; }
+    :root {
+      --gold: #D4AF37;
+      --dark: #050505;
+      --card: #111111;
+    }
+    * { box-sizing: border-box; }
+    body { 
+      font-family: Arial, Helvetica, sans-serif; 
+      margin:0; padding:0; 
+      background: var(--dark); 
+      color: #eee; 
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(rgba(5,5,5,0.85), rgba(5,5,5,0.9)), url('hero-bg.jpg') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    h1 { font-size: clamp(42px, 8vw, 62px); color: var(--gold); font-weight: 900; letter-spacing: 3px; margin: 10px 0; }
+    h2 { color: var(--gold); font-size: 32px; text-align: center; margin-bottom: 30px; }
+    .btn { 
+      background: var(--gold); color: #000; padding: 16px 34px; 
+      border-radius: 50px; text-decoration: none; font-weight: 900; 
+      display: inline-block; margin: 12px; transition: all 0.4s;
+    }
+    .btn:hover { background: #ffeb3b; transform: scale(1.05); }
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 25px; 
+    }
+    .card { 
+      background: var(--card); 
+      padding: 28px; 
+      border-radius: 16px; 
+      border: 1px solid #222; 
+    }
+    .route-title { color: var(--gold); font-size: 19px; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    .price { color: #00FF88; font-weight: bold; float: right; }
+    .form-container { 
+      max-width: 620px; 
+      margin: 40px auto; 
+      background: #0a0a0a; 
+      padding: 40px; 
+      border-radius: 16px; 
+      border: 2px solid var(--gold); 
+    }
+    input, select, textarea { 
+      width: 100%; padding: 14px; margin: 10px 0; 
+      background: #1a1a1a; border: 1px solid #444; 
+      color: white; border-radius: 8px; font-size: 16px;
+    }
+    footer { 
+      background: #000; 
+      padding: 50px 20px; 
+      text-align: center; 
+      border-top: 4px solid var(--gold); 
+    }
   </style>
 </head>
 <body>
 
-<div class="container">
-
-<!-- HEADER -->
-<section style="text-align:center; background:#000; border-radius:12px;">
-  <h1>HANTZVIPRIDES</h1>
-  <p>Premium Car Rental + Corporate Shuttle + Intercity Transport</p>
-  <p><b style="color:#D4AF37;">BONNY ROUTE LAUNCH: 18TH JULY 2027</b></p>
-  <a href="https://wa.me/2348085526104" class="btn">📞 BOOK NOW: +234 808 552 6104</a>
-</section>
-
-<!-- ROUTES + PRICES -->
-<section>
-  <h2>📍 PORT HARCOURT PICKUP/DROP OFF + PRICES</h2>
-  <div class="grid">
-    <div class="card"><h3 class="route-title">ROUTE 1</h3>
-      Aggrey Rd - Port Harcourt Township <span class="price">N7,500</span><br>
-      UPE - Borokiri Sand field <span class="price">N7,500</span><br>
-      Ibeto - Industry Road <span class="price">N7,000</span><br>
-      Old GRA <span class="price">N7,000</span><br>
-      Trans Amadi <span class="price">N7,000</span><br>
-      Odili Rd <span class="price">N7,000</span><br>
-      Elelenwo Akpajo <span class="price">N7,000</span>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div style="max-width:1200px; margin:auto; padding:20px; width:100%;">
+      <img src="image-88.jpg" 
+           alt="HANTZVIPRIDES Logo" 
+           style="width:220px; height:auto; margin-bottom:25px; border-radius:12px; box-shadow: 0 0 35px #D4AF37;">
+      <h1>HANTZVIPRIDES</h1>
+      <p style="font-size:22px; max-width:700px; margin:20px auto;">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
+      <p style="font-size:28px; color:var(--gold); font-weight:bold;">BONNY ROUTE LAUNCH — 18TH JULY 2027</p>
+      <a href="#booking" class="btn">BOOK YOUR RIDE NOW</a>
+      <a href="https://wa.me/2348085526104" class="btn">💬 WhatsApp Us</a>
     </div>
-    <div class="card"><h3 class="route-title">ROUTE 2</h3>
-      Abali Park Aba road <span class="price">N7,000</span><br>
-      Diobu Mile1 - Mile 3 <span class="price">N7,000</span><br>
-      D/Line <span class="price">N7,000</span><br>
-      New GRA <span class="price">N7,000</span>
-    </div>
-    <div class="card"><h3 class="route-title">ROUTE 3</h3>
-      Mile 4 - Mile 6 <span class="price">N8,500</span><br>
-      Eagle Island <span class="price">N9,000</span><br>
-      Ada George <span class="price">N9,000</span><br>
-      Iwofe <span class="price">N9,000</span>
-    </div>
-    <div class="card"><h3 class="route-title">ROUTE 4</h3>
-      Mgbuoba - Ozuoba <span class="price">N10,000</span><br>
-      Choba <span class="price">N10,000</span><br>
-      Omagwa, Airport, Igwirita <span class="price">N12,000</span><br>
-      Rukpokwu <span class="price">N12,000</span>
-    </div>
-    <div class="card"><h3 class="route-title">ROUTE 5</h3>
-      Eleme junction, Artillery <span class="price">N6,000</span><br>
-      Rumukwurishe, Tank <span class="price">N7,000</span><br>
-      Eleozu, Rumudara <span class="price">N8,000</span><br>
-      Eneka <span class="price">N8,500</span>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- BONNY ROUTES -->
-<section style="background:#111;">
-  <h2>⛴️ SEMI VIP BONNY - PH ROUTES</h2>
-  <p style="text-align:center; color:#ccc;">*Price for Bonny depends on where you drop in PH*</p>
-  <div class="grid">
-    <div class="card"><h3 class="route-title">BONNY ROUTE 01</h3>Coal Beach, Cable Rd, Ikuba Square, Amaomu, Old Main Market, Sandfield Rd</div>
-    <div class="card"><h3 class="route-title">BONNY ROUTE 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd 1&2</div>
-    <div class="card"><h3 class="route-title">BONNY ROUTE 03</h3>Ghana Woman, Akiama, Abalamabie, Wilbros Rd, New Road 3</div>
-    <div class="card"><h3 class="route-title">BONNY ROUTE 04</h3>Finima Townhall, Finima Market, Lighthouse, Tank Rd, NLNG, Agaja, Workers Camp</div>
-  </div>
-</section>
-
-<!-- CONCESSIONS + VIP -->
-<section>
-  <h2>🎁 CONCESSIONS & VIP SERVICES</h2>
-  <div class="grid">
-    <div class="card"><b>EARLY BOOKING DISCOUNT</b><br>21 days - 5%<br>14 days - 3%<br>7 days - 2.5%</div>
-    <div class="card"><b>VIP XX - 100% CHARTER</b><br>Price based on Pickup/Drop Off<br>Very NEGOTIABLE</div>
-    <div class="card"><b>EXECUTIVE AGENTS - HOTELS</b><br>10% Commission for VIP Charters</div>
-    <div class="card"><b>AGENTS WANTED</b><br>Earn ₦300/passenger + ₦2,000/vehicle per trip<br>Paid weekly</div>
-  </div>
-</section>
-
-<!-- VEHICLE TYPES -->
-<section style="background:#111;">
-  <h2>🚙 VEHICLE TYPES</h2>
-  <div class="grid">
-    <div class="card"><b>XX CLASS - AC</b><br>EX SUV, EX SIENNA, EX COASTER, EX CAMRY, EX COROLLA, EX HIACE</div>
-    <div class="card"><b>SEMI VIP</b><br>18 Seater Hiace, 14 Seater Bus, Mini Bus, Camry, Sienna</div>
-  </div>
-</section>
-
-<!-- MEMBERSHIP CARDS -->
-<section style="background:#000; padding:50px 20px; border-top:3px solid #D4AF37;">
-  <h2 style="color:#D4AF37; font-size:28px; text-align:center; margin-bottom:10px;">HVR MEMBERSHIP CARDS</h2>
-  <p style="color:#ccc; text-align:center; margin-bottom:40px;">Exclusive Benefits for Our VIP Stakeholders</p>
-  <div class="grid">
-    <div style="background:linear-gradient(135deg, #B9F2FF, #00BFFF); color:#000; padding:30px; border-radius:15px; text-align:center; border:3px solid #fff;">
-      <h3 style="font-size:24px; margin:0;">💎 HVR DIAMOND CARD</h3>
-      <p style="font-weight:900;">FOR VIPXXX CORPORATE PATRONS</p>
-      <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20DIAMOND%20CARD" 
-         style="background:#000; color:#00BFFF; padding:12px 25px; border-radius:8px; text-decoration:none; display:inline-block; margin-top:15px; font-weight:900;">
-         Apply for Diamond
-      </a>
+  <!-- PORT HARCOURT ROUTES -->
+  <section style="padding:60px 20px;">
+    <h2>📍 PORT HARCOURT PICKUP/DROP-OFF + PRICES</h2>
+    <div class="grid">
+      <div class="card">
+        <h3 class="route-title">ROUTE 1</h3>
+        Aggrey Rd - Port Harcourt Township <span class="price">₦7,500</span><br>
+        UPE - Borokiri Sand field <span class="price">₦7,500</span><br>
+        Ibeto - Industry Road <span class="price">₦7,000</span><br>
+        Old GRA <span class="price">₦7,000</span><br>
+        Trans Amadi <span class="price">₦7,000</span><br>
+        Odili Rd <span class="price">₦7,000</span><br>
+        Elelenwo Akpajo <span class="price">₦7,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 2</h3>
+        Abali Park Aba road <span class="price">₦7,000</span><br>
+        Diobu Mile1 - Mile 3 <span class="price">₦7,000</span><br>
+        D/Line <span class="price">₦7,000</span><br>
+        New GRA <span class="price">₦7,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 3</h3>
+        Mile 4 - Mile 6 <span class="price">₦8,500</span><br>
+        Eagle Island <span class="price">₦9,000</span><br>
+        Ada George <span class="price">₦9,000</span><br>
+        Iwofe <span class="price">₦9,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 4</h3>
+        Mgbuoba - Ozuoba <span class="price">₦10,000</span><br>
+        Choba <span class="price">₦10,000</span><br>
+        Omagwa, Airport, Igwirita <span class="price">₦12,000</span><br>
+        Rukpokwu <span class="price">₦12,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 5</h3>
+        Eleme junction, Artillery <span class="price">₦6,000</span><br>
+        Rumukwurishe, Tank <span class="price">₦7,000</span><br>
+        Eleozu, Rumudara <span class="price">₦8,000</span><br>
+        Eneka <span class="price">₦8,500</span>
+      </div>
     </div>
-    <div style="background:linear-gradient(135deg, #E5E4E2, #C0C0C0); color:#000; padding:30px; border-radius:15px; text-align:center; border:3px solid #fff;">
-      <h3 style="font-size:24px; margin:0;">🏆 HVR PLATFORM CARD</h3>
-      <p style="font-weight:900;">FOR PLATINUM VIPX PASSENGERS</p>
-      <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20PLATINUM%20CARD" 
-         style="background:#000; color:#C0C0C0; padding:12px 25px; border-radius:8px; text-decoration:none; display:inline-block; margin-top:15px; font-weight:900;">
-         Apply for Platinum
-      </a>
-    </div>
-    <div style="background:linear-gradient(135deg, #FFD700, #FFA500); color:#000; padding:30px; border-radius:15px; text-align:center; border:3px solid #fff;">
-      <h3 style="font-size:24px; margin:0;">🥇 HVR GOLD CARD</h3>
-      <p style="font-weight:900;">FOR GOLDEN VIP PASSENGERS</p>
-      <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20GOLD%20CARD" 
-         style="background:#000; color:#FFD700; padding:12px 25px; border-radius:8px; text-decoration:none; display:inline-block; margin-top:15px; font-weight:900;">
-         Apply for Gold
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer style="text-align:center; padding:20px; border-top:2px solid #D4AF37;">
-  <p><b>Bank:</b> HANTZ INTERNATIONAL NIGERIA | 2007689316 FIRST BANK</p>
-  <p>Operations: Port Harcourt, Rivers State</p>
-</footer>
+  <!-- BONNY ROUTES -->
+  <section style="background:#111; padding:60px 20px;">
+    <h2>⛴️ SEMI VIP BONNY - PH ROUTES</h2>
+    <p style="text-align:center; color:#ccc; margin-bottom:30px;">*Price depends on your exact pickup/drop-off point in PH*</p>
+    <div class="grid">
+      <div class="card"><h3 class="route-title">BONNY ROUTE 01</h3>Coal Beach, Cable Rd, Ikuba Square, Amaomu, Old Main Market, Sandfield Rd</div>
+      <div class="card"><h3 class="route-title">BONNY ROUTE 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd 1&2</div>
+      <div class="card"><h3 class="route-title">BONNY ROUTE 03</h3>Ghana Woman, Akiama, Abalamabie, Wilbros Rd, New Road 3</div>
+      <div class="card"><h3 class="route-title">BONNY ROUTE 04</h3>Finima Townhall, Finima Market, Lighthouse, Tank Rd, NLNG, Agaja, Workers Camp</div>
+    </div>
+  </section>
 
-</div>
+  <!-- CONCESSIONS -->
+  <section style="padding:60px 20px;">
+    <h2>🎁 CONCESSIONS & VIP SERVICES</h2>
+    <div class="grid">
+      <div class="card"><b>EARLY BOOKING DISCOUNT</b><br>21 days → 5%<br>14 days → 3%<br>7 days → 2.5%</div>
+      <div class="card"><b>VIP XX - FULL CHARTER</b><br>Price based on route • Highly negotiable</div>
+      <div class="card"><b>EXECUTIVE AGENTS - HOTELS</b><br>10% Commission on VIP Charters</div>
+      <div class="card"><b>AGENTS WANTED</b><br>Earn ₦300/passenger + ₦2,000/vehicle<br>Paid weekly</div>
+    </div>
+  </section>
+
+  <!-- VEHICLES -->
+  <section style="background:#111; padding:60px 20px;">
+    <h2>🚙 VEHICLE TYPES</h2>
+    <div class="grid">
+      <div class="card"><b>XX CLASS (Fully AC)</b><br>Executive SUV, Sienna, Coaster, Camry, Corolla, Hiace</div>
+      <div class="card"><b>SEMI VIP</b><br>18-Seater Hiace, 14-Seater Bus, Mini Bus, Camry, Sienna</div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section style="padding:60px 20px; background:#0a0a0a;">
+    <h2 style="color:var(--gold);">HVR MEMBERSHIP CARDS</h2>
+    <p style="text-align:center; color:#ccc; margin-bottom:40px;">Exclusive benefits for our VIP stakeholders</p>
+    <div class="grid">
+      <div class="card" style="background:linear-gradient(135deg, #B9F2FF, #00BFFF); color:#000; text-align:center;">
+        <h3>💎 HVR DIAMOND CARD</h3>
+        <p style="font-weight:900;">For VIPXXX Corporate Patrons</p>
+        <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20DIAMOND%20CARD" class="btn" style="background:#000;color:#00BFFF;">Apply Now</a>
+      </div>
+      <div class="card" style="background:linear-gradient(135deg, #E5E4E2, #C0C0C0); color:#000; text-align:center;">
+        <h3>🏆 HVR PLATINUM CARD</h3>
+        <p style="font-weight:900;">For Platinum VIPX Passengers</p>
+        <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20PLATINUM%20CARD" class="btn" style="background:#000;color:#333;">Apply Now</a>
+      </div>
+      <div class="card" style="background:linear-gradient(135deg, #FFD700, #FFA500); color:#000; text-align:center;">
+        <h3>🥇 HVR GOLD CARD</h3>
+        <p style="font-weight:900;">For Golden VIP Passengers</p>
+        <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20GOLD%20CARD" class="btn" style="background:#000;color:#FFD700;">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="booking" style="padding:80px 20px; background:#111;">
+    <div class="form-container">
+      <h2 style="text-align:center; color:var(--gold);">Quick Booking Form</h2>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="pickup" placeholder="Pickup Location" required>
+        <input type="text" id="dropoff" placeholder="Drop-off Location" required>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option value="Semi VIP Bonny">Semi VIP Bonny Route</option>
+          <option value="XX Class Charter">XX Class Full Charter</option>
+          <option value="Corporate">Corporate Shuttle</option>
+        </select>
+        <input type="date" id="date" required>
+        <textarea id="message" rows="3" placeholder="Additional notes (number of passengers, etc.)"></textarea>
+        <button type="submit" class="btn" style="width:100%; font-size:18px;">SEND TO WHATSAPP</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Bank:</strong> HANTZ INTERNATIONAL NIGERIA | 2007689316 | FIRST BANK</p>
+    <p>Operations: Port Harcourt, Rivers State</p>
+    <p style="margin-top:15px;">🌐 hantzviprides.net</p>
+    <a href="https://wa.me/2348085526104" class="btn" style="margin-top:20px;">💬 WhatsApp Us</a>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Booking Form WhatsApp
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const pickup = document.getElementById('pickup').value;
+      const dropoff = document.getElementById('dropoff').value;
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+      const message = document.getElementById('message').value;
+
+      const text = `Hello HVR!%0A%0AName: ${name}%0APhone: ${phone}%0APickup: ${pickup}%0ADrop-off: ${dropoff}%0AService: ${service}%0ADate: ${date}%0AMessage: ${message}`;
+      window.open(`https://wa.me/2348085526104?text=${text}`, '_blank');
+    });
+  </script>
 </body>
 </html>
