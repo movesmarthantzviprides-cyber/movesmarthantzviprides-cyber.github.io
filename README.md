@@ -6,7 +6,7 @@
 
 ---
 
-## THE 6 '$' OF HANTZVIPRIDES
+## THE 6 '$' OF HANTZVIPRIDE$
 1.  **$martest** - $HAReTER routing that $aves company + $taff money
 2.  **$afe** - Vetted driver$, AC vehicle$, GP$ tracked trip$
 3.  **$ecured** - Corporate contract$, in$urance, FR$C compliant
@@ -36,7 +36,7 @@
 ### From ₦40,000 $olo
 ✅ **Corporate Team$** | ✅ **VIP Group$** | ✅ **Hotel$** | ✅ **Government** | ✅ **Private Individual$**
 
-Private Vehicle | Dedicated Driver | 24/7 $upport | Luggage $ervice
+Private Vehicle | Dedicated Driver | 24/7 $upport | Luggage $ervices
 
 [**REQUE$T QUOTE: 08085526104**](https://wa.me/2348085526104)
 
