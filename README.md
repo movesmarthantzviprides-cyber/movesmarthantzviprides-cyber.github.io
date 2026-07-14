@@ -1,68 +1,80 @@
-# HANTZVIPRIDE&#36;
+# HANTZVIPRIDES
 ## Nigeria's #1 Corporate VIP Mobility Partner
 
 **Live Portal Preview:** https://movesmarthantzviprides-cyber.github.io
+**WhatsApp:** 08085526104 | **Email:** hantzviprides@gmail.com
 
 ---
 
 ### HVR
-### HANTZVIPRIDE&#36;
+### HANTZVIPRIDES
 
-**Smartest, Safe, Secured, Simple, SHAReTER Services for Nigerian VIP Commuters Corporate Logistics | Private VIP Movement | Nigeria**
-
----
-
-### THE 6 '&#36;' OF HANTZVIPRIDE&#36;
-
-1.  **&#36;martest** - SHAReTER routing that &#36;aves company + &#36;taff money
-2.  **&#36;afe** - Vetted driver&#36;, AC vehicle&#36;, GPS tracked trip&#36;
-3.  **&#36;ecured** - Corporate contract&#36;, in&#36;urance, FRSC compliant
-4.  **&#36;imple** - Book in 30 &#36;econd on WhatsApp
-5.  **&#36;HAReTER** - han&#36;VIPride, nobody walk&#36; alone
-6.  **&#36;ervice&#36;** - Premium VIP logiStic&#36; for corporate + private client&#36;
+**Smartest, Safe, Secured, Simple, SHAReTER Services for Nigerian VIP Commuters | Corporate Logistics | Private VIP Movement | Nigeria**
 
 ---
 
-### OUR CLIENT&#36; & PROPOSED PARTNER&#36;
+### THE 6 '$' OF HANTZVIPRIDES
 
-**FIR&#36;T BANK | LEADWAY A&#36;&#36;URANCE | VIP HOTEL&#36; | NIGERIAN POLICE FORCE | FR&#36;C | YOU**
-
-*For Partner&#36;hip Review & Public Preview*
-
----
-
-### &#36;HAReTER - Shared VIP Charter
-
-**From ₦10,000 per &#36;eat vs ₦40,000 &#36;olo**
-
-✅ Save up to 80% | ✅ AC Vehicle&#36; | ✅ GPS Tracked | ✅ Door-to-Door
-
-Share a 7-Seater with 4 or 5 per&#36;on. Picked from your hou&#36;e and dropped at your hou&#36;e.
-Pure VIP logiStic&#36;.
-
-**BOOK ON WHATSAPP: 08085526104**
+1.  *$martest* - SHAReTER routing that saves company + staff money
+2.  *$afe* - Vetted drivers, AC vehicles, GPS tracked trips  
+3.  *$ecured* - Corporate contracts, insurance, FRSC compliant
+4.  *$imple* - Book in 30 second on WhatsApp
+5.  *$HAReTER* - @ HantzVIPRides, nobody walks alone
+6.  *$ervices* - Premium VIP logistics for corporate + private clients
 
 ---
 
-### EXECUTIVE CHARTER
+### OUR SERVICES
 
-**From ₦40,000 &#36;olo**
+#### 1. SHAReTER - Shared VIP Charter
+**From ₦10,000 per Seat vs ₦40,000 Solo**
+Share a 7-Seater with 4-5 VIPs. Door-to-door pickup.
+- Save up to 80% on staff transport
+- AC Vehicles | GPS Tracked | Professional Drivers
+- Perfect for Banks, Hotels, Corporates
 
-✅ Corporate Team&#36; | ✅ VIP Group&#36; | ✅ Hotel&#36; | ✅ Government | ✅ Private Individual&#36;
+#### 2. EXECUTIVE CHARTER
+**From ₦40,000 Solo**
+Private vehicle for VIPs, Executives, and Government.
+- Dedicated Driver | 24/7 Support 
+- Airport Pickup | Luggage Services | Confidential & private
 
-Private Vehicle | Dedicated Driver | 24/7 Support | Luggage &#36;ervice&#36;
-
-**REQUEST QUOTE: 08085526104**
+#### 3. CORPORATE LOGISTICS
+Monthly contracts for staff movement, hotel guests, and bank runs.
+- Custom Routes | Invoice Billing | Dedicated Account Manager
+- FRSC Compliant | Full Insurance Coverage
 
 ---
 
-### WHY CORPORATE&#36; CHOOSE HVR
+### OUR CLIENTS & PROPOSED PARTNERS
 
-- **Co&#36;t &#36;aving**: Cut staff transport budget by up to 60% with SHAReTER
-- **&#36;ecurity**: Every driver background checked + trip monitored live
-- **Compliance**: Full documentation for audit, in&#36;urance + HR
-- **Reliability**: 24/7 Di&#36;patch and &#36;upport team
+**FIRST BANK | LEADWAY ASSURANCE | VIP HOTELS | NIGERIAN POLICE FORCE | FRSC | YOU**
+
+*We are open for partnership and corporate contracts*
 
 ---
 
-*© 2026 HANTZVIPRIDE&#36;. All Right&#36; Re&#36;erved. Smart Movement. Smart Business.*
+### WHY CORPORATES CHOOSE HVR
+
+- **Cost Saving**: Cut staff transport budget by up to 60% with SHAReTER
+- **Security**: Every driver background checked + trip monitored live
+- **Compliance**: Full documentation for audit, insurance + HR
+- **Reliability**: 24/7 Dispatch and support team
+- **Technology**: Real-time tracking, digital receipts, WhatsApp booking
+
+---
+
+### HOW TO BOOK
+
+**WhatsApp:** 08085526104  
+Send: "Name, Pickup, Destination, Date, Time, Service Type"
+
+Response in under 2 minutes. 24/7.
+
+---
+
+### OUR VISION
+To make VIP movement smart, safe, and affordable for every Nigerian corporate and private client through SHAReTER technology.
+
+### OUR MISSION  
+Deliver secured, tracked, and reliable VIP logistics that saves
