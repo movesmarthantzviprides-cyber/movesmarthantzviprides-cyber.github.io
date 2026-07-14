@@ -1,7 +1,7 @@
 # HANTZVIPRIDES
 ## Nigeria's #1 Corporate VIP Mobility Partner
 
-**Live Portal Preview:** https://movesmarthantzviprides-cyber.github.io
+**Live Portal Preview:** https://movesmarthantzviprides-cyber.github.io  
 **WhatsApp:** 08085526104 | **Email:** hantzviprides@gmail.com
 
 ---
@@ -27,17 +27,17 @@
 ### OUR SERVICES
 
 #### 1. SHAReTER - Shared VIP Charter
-**From ₦10,000 per Seat vs ₦40,000 Solo**
+**From ₦10,000 per Seat vs ₦40,000 Solo**  
 Share a 7-Seater with 4-5 VIPs. Door-to-door pickup.
 - Save up to 80% on staff transport
 - AC Vehicles | GPS Tracked | Professional Drivers
 - Perfect for Banks, Hotels, Corporates
 
 #### 2. EXECUTIVE CHARTER
-**From ₦40,000 Solo**
+**From ₦40,000 Solo**  
 Private vehicle for VIPs, Executives, and Government.
 - Dedicated Driver | 24/7 Support 
-- Airport Pickup | Luggage Services | Confidential & private
+- Airport Pickup | Luggage Services | Confidential & Private
 
 #### 3. CORPORATE LOGISTICS
 Monthly contracts for staff movement, hotel guests, and bank runs.
@@ -77,4 +77,9 @@ Response in under 2 minutes. 24/7.
 To make VIP movement smart, safe, and affordable for every Nigerian corporate and private client through SHAReTER technology.
 
 ### OUR MISSION  
-Deliver secured, tracked, and reliable VIP logistics that saves
+Deliver secured, tracked, and reliable VIP logistics that saves money and time for companies and individuals.
+
+---
+
+*© 2026 HANTZVIPRIDES. All Rights Reserved.*  
+*Smart Movement. Smart Business.*
