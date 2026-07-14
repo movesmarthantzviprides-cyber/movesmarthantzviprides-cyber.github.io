@@ -1,45 +1,70 @@
-# HVR
-## HANTZVIPRIDES
+# HANTZVIPRIDE$
+## Nigeria's #1 Corporate VIP Mobility Partner
 
-**$martest, $afe, $ecured, $imple, $HAReTER $ervices for Nigerian VIP Commuters**  
-*Corporate Logistics + Private VIP Movement | Nigeria*
-
----
-
-## THE 6 '$' OF HANTZVIPRIDE$
-1.  **$martest** - $HAReTER routing that $aves company + $taff money
-2.  **$afe** - Vetted driver$, AC vehicle$, GP$ tracked trip$
-3.  **$ecured** - Corporate contract$, in$urance, FR$C compliant
-4.  **$imple** - Book in 30 $econd$ on What$App
-5.  **$HAReTER** - $hare VIP ride$, nobody walk$ alone
-6.  **$ervices** - Premium VIP logi$tic$ for corporate + private client$
+**Live Portal Preview:** https://movesmarthantzviprides-cyber.github.io
 
 ---
 
-### OUR CLIENT$ & PROPO$ED PARTNER$
-**FIR$T BANK** | **LEADWAY A$$URANCE** | **VIP HOTEL$** | **NIGERIAN POLICE FORCE** | **FR$C** | **YOU**  
+### HVR
+### HANTZVIPRIDE$
+
+**Smartest, Safe, Secured, Simple, SHAReTER Services for Nigerian VIP Commuters**
+*Corporate Logistics | Private VIP Movement | Nigeria*
+
+---
+
+### THE 6 '$' OF HANTZVIPRIDE$
+
+1.  **$martest** - SHAReTER routing that $aves company + $taff money
+2.  **$afe** - Vetted driver$, AC vehicle$, GPS tracked trip$
+3.  **$ecured** - Corporate contract$, in$urance, FRSC compliant
+4.  **$imple** - Book in 30 $econd on WhatsApp
+5.  **$HAReTER** - han$VIPride, nobody walk$ alone
+6.  **$ervice$** - Premium VIP logiStic$ for corporate + private client$
+
+---
+
+### OUR CLIENT$ & PROPOSED PARTNER$
+
+**FIR$T BANK | LEADWAY A$$URANCE | VIP HOTEL$ | NIGERIAN POLICE FORCE | FR$C | YOU**
+
 *For Partner$hip Review & Public Preview*
 
 ---
 
-## $HAReTER - $hared VIP Charter
-### From ₦10,000 per $eat vs ₦40,000 $olo
-✅ **$ave up to 80%** | ✅ **AC Vehicle$** | ✅ **GP$ Tracked** | ✅ **Door-to-Door**
+### $HAReTER - Shared VIP Charter
 
-*$hare a 7-$eater with 4 or 5 per$on$. Picked from your hou$e and dropped at your hou$e. Pure VIP logi$tic$.*
+**From ₦10,000 per Seat vs ₦40,000 $olo**
 
-[**BOOK ON WHAT$APP: 08085526104**](https://wa.me/2348085526104)
+✅ Save up to 80% | ✅ AC Vehicle$ | ✅ GPS Tracked | ✅ Door-to-Door
 
----
+Share a 7-Seater with 4 or 5 per$on$. Picked from your hou$e and dropped at your hou$e.
+Pure VIP logiStic$.
 
-## EXECUTIVE CHARTER
-### From ₦40,000 $olo
-✅ **Corporate Team$** | ✅ **VIP Group$** | ✅ **Hotel$** | ✅ **Government** | ✅ **Private Individual$**
-
-Private Vehicle | Dedicated Driver | 24/7 $upport | Luggage $ervices
-
-[**REQUE$T QUOTE: 08085526104**](https://wa.me/2348085526104)
+**BOOK ON WHATSAPP: 08085526104**
 
 ---
 
-*DRAFT - For Partner Review Only | Hantz International Nigeria*
+### EXECUTIVE CHARTER
+
+**From ₦40,000 $olo**
+
+✅ Corporate Team$ | ✅ VIP Group$ | ✅ Hotel$ | ✅ Government | ✅ Private Individual$
+
+Private Vehicle | Dedicated Driver | 24/7 Support | Luggage $ervice$
+
+**REQUEST QUOTE: 08085526104**
+
+---
+
+### WHY CORPORATE$ CHOOSE HVR
+
+- **Co$t $aving**: Cut staff transport budget by up to 60% with SHAReTER
+- **$ecurity**: Every driver background checked + trip monitored live
+- **Compliance**: Full documentation for audit, in$urance + HR
+- **Reliability**: 24/7 Di$patch and $upport team
+
+---
+
+*© 2026 HANTZVIPRIDE$. All Right$ Re$erved.*
+*Smart Movement. $mart Business.*
