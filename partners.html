@@ -9,14 +9,48 @@
     .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
     h1 { color: #E8B923; font-size: 42px; text-align: center; }
     h2 { color: #E8B923; text-align: center; margin: 40px 0 20px; }
-    .partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 40px 0; }
-    .partner-card { background: #121212; padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #333; }
     .btn { background: #E8B923; color: #000; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 20px 10px; }
     .insurance { background: #111; padding: 40px; border-radius: 16px; margin: 60px 0; }
-    .logo-grid { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 40px 0; }
-    .logo-box { background: #fff; padding: 15px 25px; border-radius: 12px; box-shadow: 0 0 20px rgba(232,185,35,0.3); text-align: center; }
-    .logo-box img { height: 80px; display: block; margin: 0 auto 8px; }
-    .logo-box small { color: #666; font-size: 12px; }
+
+    /* LOGO BOXES */
+    .logo-grid { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 50px; 
+      flex-wrap: wrap; 
+      margin: 50px 0; 
+    }
+    .logo-box { 
+      background: #fff; 
+      padding: 20px 30px; 
+      border-radius: 16px; 
+      box-shadow: 0 0 20px rgba(232,185,35,0.3); 
+      text-align: center; 
+      width: 180px; 
+      height: 140px; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      transition: all 0.3s; 
+    }
+    .logo-box:hover { 
+      transform: scale(1.08); 
+      box-shadow: 0 0 30px rgba(232,185,35,0.5); 
+    }
+    .logo-box img { 
+      height: 80px; 
+      width: auto; 
+      max-width: 140px; 
+      object-fit: contain; 
+      margin-bottom: 10px; 
+    }
+    .logo-box small { 
+      color: #666; 
+      font-size: 12px; 
+      font-weight: bold; 
+    }
   </style>
 </head>
 <body>
@@ -38,13 +72,15 @@
   <!-- DEDICATED LOGO SPACES -->
   <div class="logo-grid">
     <div class="logo-box">
-      <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo">
-      <small>HVR</small>
-    </div>
-    <div class="logo-box">
       <img src="logos/firstbank.jpg" alt="First Bank Nigeria">
       <small>Official Bank</small>
     </div>
+    
+    <div class="logo-box" style="transform:scale(1.1); box-shadow:0 0 35px rgba(232,185,35,0.5);">
+      <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo">
+      <small>HVR</small>
+    </div>
+    
     <div class="logo-box">
       <img src="logos/leadway.jpg" alt="Leadway Assurance">
       <small>Official Insurer</small>
