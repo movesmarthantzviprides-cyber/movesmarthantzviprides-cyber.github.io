@@ -1,367 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HANTZVIPRIDES - Premium Car Rental, Corporate Shuttle & $HAR€t€R Services. Bonny Route Launch">
-  <meta name="keywords" content="HANTZVIPRIDES, car rental Port Harcourt, Bonny shuttle, $HAR€t€R, VIP charter PH, Bonny car hire, PH taxi">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://hantzviprides.net/">
-  <title>HVR - HANTZVIPRIDES | $HAR€t€R Services</title>
-  <link rel="icon" type="image/jpeg" href="IMG-20260712-WA0060(1).jpg">
- <link rel="apple-touch-icon"
-href="IMG-20260712-WA0060(1).jpg">
-  <style>
-    :root { --gold: #E8B923; --dark: #0A0A0A; --card: #121212; --green: #00FF88; }
-    * { box-sizing: border-box; scroll-behavior: smooth; margin: 0; padding: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; background: var(--dark); color: #eee; line-height: 1.6; }
-    .hero { 
-  background: radial-gradient(circle at center, rgba(232,185,35,0.15) 0%, rgba(10,10,10,1) 70%);
-  min-height: 100svh; 
-  display: flex; 
-  align-items: center; 
-  text-align: center; 
-}
-    h1 { font-size: clamp(42px, 8vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 4px; text-shadow: 0 0 25px rgba(232,185,35,0.4); margin: 10px 0; }
-    h2 { color: var(--gold); font-size: 34px; text-align: center; margin: 0 0 30px; }
-    h3 { color: var(--gold); font-size: 19px; margin-bottom: 12px; }
-    p { margin: 10px 0; }
-    .btn { background: var(--gold); color: #000; padding: 16px 34px; border-radius: 50px; text-decoration: none; font-weight: 900; display: inline-block; margin: 10px; transition: all 0.4s; border: none; cursor: pointer; font-size: 17px; }
-    .btn:hover { background: #ffeb3b; transform: translateY(-5px) scale(1.05); }
-    .btn-dark { background: #000; color: var(--gold); border: 2px solid var(--gold); }
-    .btn-green { background: var(--green); color: #000; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
-    .card { background: var(--card); padding: 28px; border-radius: 16px; border: 1px solid #222; transition: all 0.4s; }
-    .card:hover { transform: translateY(-10px); border-color: var(--gold); }
-    .section { padding: 80px 20px; }
-    .center-text { text-align: center; }
-    .launch-badge { background: var(--gold); color: #000; padding: 12px 30px; border-radius: 50px; font-weight: 900; font-size: 20px; display: inline-block; margin: 15px 0; }
-    .service-icon { font-size: 40px; margin-bottom: 15px; display: block; }
-    .har€ter-highlight { background: linear-gradient(135deg, #1a1a1a, #000); border: 2px solid var(--gold); }
-    .price { color: var(--green); font-weight: bold; font-size: 18px; }
-    .form-container { max-width: 620px; margin: 40px auto; background: #0a0a0a; padding: 40px; border-radius: 16px; border: 2px solid var(--gold); }
-    input, select, textarea { width: 100%; padding: 14px; margin: 10px 0; background: #1a1a1a; border: 1px solid #444; color: white; border-radius: 8px; font-size: 16px; }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); }
-    input[type="file"] { background: #222; padding: 10px; }
-    .membership-card { padding: 35px 20px; border-radius: 16px; text-align: center; border: 3px solid #fff; transition: all 0.4s; }
-    .membership-card:hover { transform: scale(1.03); }
-    footer { background: #000; padding: 50px 20px; text-align: center; border-top: 4px solid var(--gold); }
-    .route-group { margin-bottom: 50px; }
-    .situation-room { background: #0a0a0a; border: 2px dashed var(--gold); padding: 30px; border-radius: 16px; margin: 20px 0; }
-    .verify-profile { max-width: 500px; margin: 30px auto; background: #111; padding: 30px; border-radius: 16px; border: 2px solid var(--green); display: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HANTZ VIP RIDES - Premium Rides, Maximum Comfort</title>
+<style>
+  :root {
+    --gold: #E8B923;
+    --black: #0A0A0A;
+    --deep: #121212;
+    --white: #FFFFFF;
+  }
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif;}
+  body {background:var(--black); color:var(--white); line-height:1.6;}
+  .container {max-width:1200px; margin:0 auto; padding:20px;}
+  
+  /* HERO */
+  .hero {
+    background:linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070') center/cover;
+    text-align:center; padding:80px 20px; border-bottom:3px solid var(--gold);
+  }
+  .hero h1 {font-size:3rem; color:var(--gold); margin-bottom:15px; letter-spacing:2px;}
+  .hero p {font-size:1.2rem; color:#ccc; margin-bottom:25px;}
+  .btn {
+    display:inline-block; background:var(--gold); color:var(--black); 
+    padding:15px 35px; border-radius:50px; text-decoration:none; 
+    font-weight:900; margin:10px; transition:0.3s;
+  }
+  .btn:hover {transform:scale(1.05); box-shadow:0 0 20px var(--gold);}
+  
+  /* SECTIONS */
+  .section {padding:60px 20px;}
+  .section h2 {text-align:center; font-size:2.2rem; color:var(--gold); margin-bottom:30px;}
+  .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; max-width:1000px; margin:0 auto;}
+  .card {background:var(--deep); padding:25px; border-radius:16px; border:1px solid #222; text-align:center;}
+  
+  /* PARTNERS */
+  .partner-box {background:#fff; padding:10px 18px; border-radius:12px; box-shadow:0 0 20px rgba(232,185,35,0.3);}
+  .partner-box img {height:65px; display:block;}
+</style>
 </head>
 <body>
 
-  <section class="hero" id="home">
-    <div style="max-width:1280px; margin:auto; padding:20px; width:100%;">
-      <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo" style="width:240px; height:auto; margin-bottom:25px; border-radius:12px; box-shadow: 0 0 40px var(--gold);">
-      <h1>HANTZVIPRIDES</h1>
-      <p style="font-size:22px; max-width:700px; margin:20px auto;">$martest. $afe. $ecured. $imple.</p>
-      <div class="launch-badge">$HAR€t€R SERVICES - BONNY PH LAUNCH COMING VERY SOON</div>
-      <p style="font-size:18px; color:#bbb;"><strong>Proposed Partners & Clients:</strong> FIRST BANK • LEADWAY ASSURANCE • VIP HOTELS • NPF • FRSC</p>
-      <div style="margin-top:30px;">
-        <a href="#har€ter" class="btn" aria-label="View $HAR€t€R Services">$HAR€t€R SERVICES</a>
-        <a href="#services" class="btn" aria-label="View Our Services">OUR SERVICES</a>
-        <a href="#routes" class="btn" aria-label="View Routes">📍 VIEW ROUTES</a>
-        <a href="#booking" class="btn" aria-label="Book Now">📞 BOOK NOW</a>
-        <a href="#owner-driver" class="btn btn-dark" aria-label="Join HVR Fleet">JOIN OUR FLEET</a>
-        <a href="#passenger-reg" class="btn btn-dark" aria-label="Get Passenger ID">GET PASSENGER ID</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>HANTZ VIP RIDES</h1>
+    <p>Premium Rides. Maximum Comfort. Zero Stress.</p>
+    
+    <!-- CORPORATE PARTNERS LOGOS -->
+    <div style="margin:35px 0;">
+      <p style="color:#aaa; font-size:14px; letter-spacing:2px; margin-bottom:20px;">PROPOSED OFFICIAL PARTNERS</p>
+      <div style="display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div class="partner-box">
+            <img src="logos/firstbank.jpg" alt="First Bank">
+          </div>
+          <p style="font-size:11px; color:#aaa; margin-top:8px;">Official Bank</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="partner-box">
+            <img src="logos/leadway.jpg" alt="Leadway Assurance">
+          </div>
+          <p style="font-size:11px; color:#aaa; margin-top:8px;">Official Insurer</p>
+        </div>
       </div>
+      <p style="font-size:12px; color:#777; margin-top:15px;">*Additional strategic partners to be announced*</p>
     </div>
-  </section>
 
-  <section id="har€ter" class="section har€ter-highlight">
-    <h2>💎 $HAR€t€R - SHARED VIP CHARTER</h2>
-    <p class="center-text" style="font-size:20px; margin-bottom:20px;">Travel VIP. Pay Less.</p>
-    <div class="center-text" style="margin-bottom:30px;">
-      <p style="font-size:24px; color:var(--green); font-weight:900;">From ₦10,000 per seat vs ₦40,000 solo</p>
-      <p style="color:#ccc; margin-top:10px;">✅ Save up to 80% | ✅ AC Vehicles | ✅ GPS Tracked | ✅ Door-to-Door</p>
-    </div>
-    <p class="center-text" style="font-style:italic; margin-bottom:30px;">Share a 7-seater with 4-5 persons. Picked from your house, dropped at your house. Pure VIP logistics.</p>
-    <h3 class="center-text" style="margin-bottom:25px;">OUR 6 $HAR€t€R SERVICE CATEGORIES</h3>
+    <a href="https://wa.me/2348085526104?text=I%20want%20to%20book%20a%20HANTZ%20VIP%20RIDE" class="btn">BOOK NOW ON WHATSAPP</a>
+    <a href="#agent" class="btn" style="background:transparent; border:2px solid var(--gold); color:var(--gold);">BECOME AN AGENT</a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="container">
+    <h2>WHY CHOOSE HANTZ VIP?</h2>
     <div class="grid">
-      <div class="card"><span class="service-icon">🚐</span><h3>1. $HAR€t€R SHARED</h3><p>7-Seater shared rides. 4-5 passengers max. From ₦10,000 per seat. Comfort + Savings.</p></div>
-      <div class="card"><span class="service-icon">👑</span><h3>2. $HAR€t€R EXECUTIVE CHARTER</h3><p>100% Private vehicle. From ₦40,000 solo. Dedicated driver. For VIPs, Executives, Govt.</p></div>
-      <div class="card"><span class="service-icon">🏢</span><h3>3. $HAR€t€R CORPORATE</h3><p>Staff buses & shuttles for companies. Daily/Monthly contracts. Punctual and branded.</p></div>
-      <div class="card"><span class="service-icon">⛴️</span><h3>4. $HAR€t€R INTERCITY</h3><p>Bonny-PH-Warri-Akwa Ibom-Abuja. Semi VIP & VIP XX. Your route, your comfort.</p></div>
-      <div class="card"><span class="service-icon">✈️</span><h3>5. $HAR€t€R AIRPORT</h3><p>PH Airport pickup & drop-off. Flight monitoring. Meet & Greet. Zero delays.</p></div>
-      <div class="card"><span class="service-icon">💍</span><h3>6. $HAR€t€R EVENT</h3><p>Weddings, parties, VIP events. Luxury cars + chauffeur. Decor available on request.</p></div>
+      <div class="card">
+        <h3 style="color:var(--gold);">🛡️ Safety First</h3>
+        <p>All drivers vetted. All vehicles insured. Real-time tracking for every ride.</p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--gold);">💎 Premium Comfort</h3>
+        <p>Clean AC vehicles. Professional drivers. On-time pickup, every time.</p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--gold);">⚡ Instant Booking</h3>
+        <p>Book in 30 seconds on WhatsApp. No app download needed.</p>
+      </div>
     </div>
-    <div class="center-text" style="margin-top:30px;">
-      <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20$HAR€t€R" class="btn" aria-label="Book $HAR€t€R on WhatsApp">BOOK $HAR€t€R ON WHATSAPP</a>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section id="services" class="section">
-    <h2>🚘 FULL HVR SERVICES</h2>
+<!-- INSURANCE & PARTNERSHIP -->
+<section class="section" style="background:var(--deep); text-align:center;">
+  <div class="container">
+    <h2>🤝 STRATEGIC PARTNERSHIPS</h2>
+    <p style="color:#ccc; max-width:700px; margin:0 auto 30px;">
+      We’ve partnered with Leadway Assurance to ensure every vehicle, driver, and passenger is fully protected. 
+      Fast claims. Comprehensive coverage. Peace of mind.
+    </p>
+    <div style="max-width:900px; margin:0 auto;">
+      <img src="images/leadway-partnership.jpg" alt="HantzVIPRides Partners with Leadway" style="width:100%; border-radius:16px; box-shadow:0 0 30px rgba(232,185,35,0.3);">
+    </div>
+  </div>
+</section>
+
+<!-- AGENT PROGRAM -->
+<section class="section" id="agent">
+  <div class="container" style="text-align:center;">
+    <h2>💼 BECOME A HANTZ AGENT</h2>
+    <p style="color:#ccc; margin-bottom:30px;">Earn Double Commissions - Passenger Bookings + Driver Recruitment</p>
     <div class="grid">
-      <div class="card"><span class="service-icon">🚙</span><h3>PREMIUM CAR RENTAL</h3><p>Executive, SUV, Luxury cars. With/Without Driver. Daily, Weekly, Monthly. Corporate rates available.</p></div>
-      <div class="card"><span class="service-icon">📦</span><h3>EXECUTIVE LOGISTICS</h3><p>Same day delivery. Documents, packages, parcels. GPS Tracked. Insured.</p></div>
-      <div class="card"><span class="service-icon">🏢</span><h3>CORPORATE SHUTTLE</h3><p>Staff movement for companies. Branded buses. Punctual. Monthly contracts.</p></div>
-      <div class="card"><span class="service-icon">🎁</span><h3>EARLY BOOKING DISCOUNT</h3><p>21 days 5% | 14 days 3% | 7 days 2.5%. Save more when you book early.</p></div>
-      <div class="card"><span class="service-icon">🔒</span><h3>VIP SECURITY RIDES</h3><p>Armed escort available. For VIPs, Govt officials, Executives. NPF partnership.</p></div>
-      <div class="card"><span class="service-icon">🎓</span><h3>DRIVER TRAINING</h3><p>Professional defensive driving. Biometric certified drivers only.</p></div>
+      <img src="images/agent-flyer1.jpg" alt="Agent Program" style="width:100%; border-radius:16px;">
+      <img src="images/agent-flyer2.jpg" alt="Agent Commission" style="width:100%; border-radius:16px;">
     </div>
-  </section>
+    <a href="https://wa.me/2348085526104?text=I%20want%20to%20become%20a%20HANTZ%20AGENT" class="btn" style="margin-top:30px;">JOIN AS AGENT ON WHATSAPP</a>
+  </div>
+</section>
 
-  <section id="routes" class="section" style="background:#000;">
-    <h2>📍 OUR ROUTES & RATES</h2>
-    <div class="route-group">
-      <h3 class="center-text" style="color:var(--green); font-size:24px; margin-bottom:20px;">PORT HARCOURT COMPLETE ROUTES</h3>
-      <div class="grid">
-        <div class="card"><h3>ROUTE 1</h3>Aggrey Rd, Borokiri, Old GRA, PHC Township <span class="price">₦7,000</span></div>
-        <div class="card"><h3>ROUTE 2</h3>Diobu, D/Line, Mile 1-3, New GRA <span class="price">₦7,000</span></div>
-        <div class="card"><h3>ROUTE 3</h3>Mile 4-6, Rumuola, Eagle Island <span class="price">₦8,500 - ₦9,000</span></div>
-        <div class="card"><h3>ROUTE 4</h3>Choba, Aluu, Omagwa, Airport <span class="price">₦10,000 - ₦12,000</span></div>
-        <div class="card"><h3>ROUTE 5</h3>Eleme, Onne, Rumukwurishe, Eneka <span class="price">₦6,000 - ₦8,500</span></div>
-        <div class="card"><h3>ROUTE 6</h3>Rumuokoro, Rumuodara, Eliozu <span class="price">₦6,000 - ₦7,500</span></div>
-        <div class="card"><h3>ROUTE 7</h3>Trans Amadi, Oginiba, Nkpolu <span class="price">₦7,000 - ₦8,000</span></div>
-        <div class="card"><h3>ROUTE 8</h3>Rumuigbo, Rumuomasi, Mgbuoba <span class="price">₦6,500 - ₦7,500</span></div>
-      </div>
-    </div>
-    <div class="route-group">
-      <h3 class="center-text" style="color:var(--green); font-size:24px; margin-bottom:20px;">BONNY ROUTES</h3>
-      <div class="grid">
-        <div class="card"><h3>BONNY 01</h3>Coal Beach, Cable Rd, Ikuba, Amaomu, Old Market</div>
-        <div class="card"><h3>BONNY 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd</div>
-        <div class="card"><h3>BONNY 03</h3>Ghana, Akiama, Abalamabie, Wilbros Rd</div>
-        <div class="card"><h3>BONNY 04</h3>Finima Townhall, Market, Lighthouse, NLNG</div>
-      </div>
-    </div>
-    <div class="route-group">
-      <h3 class="center-text" style="color:var(--green); font-size:24px; margin-bottom:20px;">NATIONAL INTERCITY $HAR€t€R ROUTES</h3>
-      <div class="grid">
-        <div class="card"><h3>BONNY - WARRI</h3>Direct Intercity VIP <span class="price">₦22,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - WARRI</h3>Delta State VIP <span class="price">From ₦18,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - ABA</h3>Abia State Commercial <span class="price">From ₦12,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - OWERRI</h3>Imo State Capital <span class="price">From ₦10,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - AKWA IBOM</h3>Uyo VIP <span class="price">From ₦10,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - BAYELSA</h3>Yenagoa Direct <span class="price">From ₦15,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - ASABA</h3>Delta Capital <span class="price">From ₦17,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - BENIN</h3>Edo State VIP <span class="price">From ₦20,000</span></div>
-        <div class="card"><h3>PORT HARCOURT - LAGOS</h3>National VIP Service <span class="price">Contact for Rate</span></div>
-        <div class="card"><h3>PORT HARCOURT - ABUJA</h3>FCT Executive Trip <span class="price">Contact for Rate</span></div>
-      </div>
-    </div>
-  </section>
-  <section class="section" style="background:#111;">
-    <h2>🎯 SITUATION ROOMS</h2>
-    <div class="situation-room">
-      <h3 class="center-text">🚦 DRIVERS SITUATION ROOM</h3>
-      <p class="center-text">For HVR Certified Drivers Only</p>
-      <div class="center-text" style="margin-top:20px;">
-        <p>✅ Daily Trip Updates | ✅ Vehicle Status | ✅ Biometric Check-in</p>
-        <a href="https://wa.me/2348085526104?text=DRIVER%20LOGIN%20SITUATION%20ROOM" class="btn btn-green" aria-label="Enter Drivers Situation Room">ENTER DRIVERS ROOM</a>
-      </div>
-    </div>
-    <div class="situation-room">
-      <h3 class="center-text">👥 PASSENGERS SITUATION ROOM</h3>
-      <p class="center-text">Track Your Trip & Give Feedback</p>
-      <div class="center-text" style="margin-top:20px;">
-        <p>✅ Live Trip Tracking | ✅ Complaints | ✅ Lost & Found</p>
-        <a href="https://wa.me/2348085526104?text=PASSENGER%20SITUATION%20ROOM" class="btn btn-green" aria-label="Enter Passengers Situation Room">ENTER PASSENGERS ROOM</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>🔍 VERIFY DRIVER & VEHICLE</h2>
-    <div class="form-container">
-      <p class="center-text">Enter Plate Number or Driver ID to verify authenticity</p>
-      <input type="text" id="verifyInput" placeholder="e.g. PHC-123-AB or DRV-001">
-      <button onclick="showProfile()" class="btn" style="width:100%;">VERIFY NOW</button>
-      <div id="driverProfile" class="verify-profile">
-        <h3 class="center-text" style="color:var(--green);">✅ VERIFIED</h3>
-        <p><strong>Driver Name:</strong> <span id="dName">John Doe</span></p>
-        <p><strong>Driver ID:</strong> <span id="dID">DRV-001</span></p>
-        <p><strong>Vehicle:</strong> <span id="dCar">Toyota Hiace 2024</span></p>
-        <p><strong>Plate No:</strong> <span id="dPlate">PHC-123-AB</span></p>
-        <p><strong>Biometric:</strong> <span style="color:var(--green);">ACTIVE</span></p>
-        <p><strong>Status:</strong> <span style="color:var(--green);">CLEAN - No Complaints</span></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="owner-driver" class="section" style="background:#000;">
-    <div class="form-container">
-      <h2 class="center-text">🚛 VEHICLE OWNER REGISTRATION & DRIVER IDENTIFICATION</h2>
-      <p class="center-text" style="color:#ccc; margin-bottom:20px;">Join HVR Fleet. Earn Daily.</p>
-      <form id="ownerDriverForm">
-        <h3 style="color:var(--gold); margin-top:15px;">Vehicle Owner Details</h3>
-        <input type="text" id="owner-name" placeholder="Full Name of Vehicle Owner" required>
-        <input type="tel" id="owner-phone" placeholder="Owner Phone Number" required>
-        <input type="text" id="vehicle-details" placeholder="Vehicle Make, Model, Year e.g Toyota Hiace 2024" required>
-        <input type="text" id="plate-number" placeholder="Plate Number e.g PHC-123-AB" required>
-        <input type="text" id="vehicle-location" placeholder="Vehicle Base Location e.g Bonny, PH" required>
-        <h3 style="color:var(--gold); margin-top:25px;">Driver Details</h3>
-        <input type="text" id="driver-name" placeholder="Driver Full Name" required>
-        <input type="tel" id="driver-phone" placeholder="Driver Phone Number" required>
-        <input type="text" id="driver-license" placeholder="Driver License Number" required>
-        <input type="text" id="driver-id" placeholder="National ID / NIN" required>
-        <textarea id="driver-experience" rows="2" placeholder="Years of Driving Experience"></textarea>
-        <label style="color:var(--gold); font-size:14px; margin-top:15px; display:block;">Upload Driver License Photo</label>
-        <input type="file" id="driver-license-file" accept="image/*,.pdf" required>
-        <label style="color:var(--gold); font-size:14px; margin-top:10px; display:block;">Upload Vehicle Papers / Proof of Ownership</label>
-        <input type="file" id="vehicle-papers-file" accept="image/*,.pdf" required>
-        <button type="submit" class="btn btn-green" style="width:100%; font-size:18px; margin-top:15px;">SUBMIT FLEET REGISTRATION</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="passenger-reg" class="section" style="background:#111;">
-    <div class="form-container">
-      <h2 class="center-text">👤 PASSENGER REGISTRATION & IDENTIFICATION</h2>
-      <p class="center-text" style="color:#ccc; margin-bottom:20px;">Get your HVR Passenger ID. Travel Safer, Faster.</p>
-      <form id="passengerForm">
-        <input type="text" id="passenger-name" placeholder="Full Name" required>
-        <input type="tel" id="passenger-phone" placeholder="Phone Number / WhatsApp" required>
-        <input type="email" id="passenger-email" placeholder="Email Address">
-        <input type="text" id="passenger-address" placeholder="Home Address in PH / Bonny" required>
-        <input type="text" id="passenger-nin" placeholder="NIN or Voter's Card Number" required>
-        <select id="passenger-type" required>
-          <option value="">Select Passenger Type</option>
-          <option value="Regular VIP">$HAR€t€R Regular VIP</option>
-          <option value="Corporate">Corporate Staff</option>
-          <option value="Student">Student</option>
-        </select>
-        <label style="color:var(--gold); font-size:14px; margin-top:15px; display:block;">Upload NIN / Voter's Card / Driver License</label>
-        <input type="file" id="passenger-id-file" accept="image/*,.pdf" required>
-        <button type="submit" class="btn" style="width:100%; font-size:18px; margin-top:15px;">GET HVR PASSENGER ID</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="section" style="background:#000;">
-    <h2>HVR MEMBERSHIP CARDS</h2>
-    <p class="center-text" style="color:#ccc; margin-bottom:40px;">Exclusive benefits for our VIP stakeholders</p>
-    <div class="grid">
-      <div class="membership-card" style="background:linear-gradient(135deg, #B9F2FF, #00BFFF); color:#000;">
-        <h3 style="font-size:26px; color:#000;">💎 HVR DIAMOND CARD</h3>
-        <p style="font-weight:900;">For VIPXXX Corporate Patrons</p>
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20DIAMOND%20CARD" class="btn" style="background:#000; color:#00BFFF;" aria-label="Apply for HVR Diamond Card">Apply for Diamond</a>
-      </div>
-      <div class="membership-card" style="background:linear-gradient(135deg, #E5E4E2, #C0C0C0); color:#000;">
-        <h3 style="font-size:26px; color:#000;">🏆 HVR PLATINUM CARD</h3>
-        <p style="font-weight:900;">For Platinum VIPX Passengers</p>
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20PLATINUM%20CARD" class="btn" style="background:#000; color:#333;" aria-label="Apply for HVR Platinum Card">Apply for Platinum</a>
-      </div>
-      <div class="membership-card" style="background:linear-gradient(135deg, #FFD700, #FFA500); color:#000;">
-        <h3 style="font-size:26px; color:#000;">🥇 HVR GOLD CARD</h3>
-        <p style="font-weight:900;">For Golden VIP Passengers</p>
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20APPLY%20for%20HVR%20GOLD%20CARD" class="btn" style="background:#000; color:#FFD700;" aria-label="Apply for HVR Gold Card">Apply for Gold</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="agents-form" class="section" style="background:#111;">
-    <div class="form-container">
-      <h2 class="center-text">HVR AGENTS APPLICATION FORM</h2>
-      <form id="agentsForm">
-        <input type="text" id="agent-name" placeholder="Full Name" required>
-        <input type="tel" id="agent-phone" placeholder="Phone Number" required>
-        <input type="email" id="agent-email" placeholder="Email Address">
-        <input type="text" id="agent-location" placeholder="Location / Area" required>
-        <textarea id="agent-experience" rows="3" placeholder="Previous Experience (if any)"></textarea>
-        <button type="submit" class="btn" style="width:100%; font-size:18px;">SUBMIT VIA WHATSAPP</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="booking" class="section">
-    <div class="form-container">
-      <h2 class="center-text">Quick Booking Form</h2>
-      <form id="bookingForm">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="tel" id="phone" placeholder="Phone Number" required>
-        <select id="service" required>
-          <option value="">Select $HAR€t€R Service</option>
-          <option value="$HAR€t€R Shared">$HAR€t€R Shared</option>
-          <option value="$HAR€t€R Executive Charter">$HAR€t€R Executive Charter</option>
-          <option value="$HAR€t€R Corporate">$HAR€t€R Corporate</option>
-          <option value="$HAR€t€R Intercity">$HAR€t€R Intercity</option>
-          <option value="$HAR€t€R Airport">$HAR€t€R Airport</option>
-          <option value="$HAR€t€R Event">$HAR€t€R Event</option>
-        </select>
-        <button type="submit" class="btn" style="width:100%; font-size:18px;">SEND TO WHATSAPP</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <p><strong>Bank:</strong> HANTZ INTERNATIONAL NIGERIA | 2007689316 | FIRST BANK</p>
-    <p style="font-size:12px; color:#888;">*Partnership proposals pending. Logos used for intent only.</p>
-    <p>© 2026 HANTZVIPRIDES. $HAR€t€R Services</p>
-  </footer>
-
-  <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const text = `Hello HVR! $HAR€t€R Booking%0AName: ${document.getElementById('name').value}%0APhone: ${document.getElementById('phone').value}%0AService: ${document.getElementById('service').value}`;
-      window.open(`https://wa.me/2348085526104?text=${text}`, '_blank');
-    });
-    document.getElementById('agentsForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const text = `HVR AGENTS APPLICATION%0AName: ${document.getElementById('agent-name').value}%0APhone: ${document.getElementById('agent-phone').value}%0AEmail: ${document.getElementById('agent-email').value}%0ALocation: ${document.getElementById('agent-location').value}%0AExperience: ${document.getElementById('agent-experience').value || 'None'}`;
-      window.open(`https://wa.me/2348085526104?text=${text}`, '_blank');
-    });
-    function showProfile() {
-      const input = document.getElementById('verifyInput').value;
-      if(input && input.trim() !== "") {
-        document.getElementById('driverProfile').style.display = 'block';
-        document.getElementById('dPlate').innerText = input.toUpperCase();
-      } else {
-        document.getElementById('driverProfile').style.display = 'none';
-        alert("Please enter Plate Number or Driver ID");
-      }
-    }
-    document.getElementById('ownerDriverForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const text = `HVR VEHICLE OWNER & DRIVER REGISTRATION%0AOwner: ${document.getElementById('owner-name').value}%0AOwner Phone: ${document.getElementById('owner-phone').value}%0AVehicle: ${document.getElementById('vehicle-details').value}%0APlate: ${document.getElementById('plate-number').value}%0ALocation: ${document.getElementById('vehicle-location').value}%0ADriver: ${document.getElementById('driver-name').value}%0ADriver Phone: ${document.getElementById('driver-phone').value}%0ALicense: ${document.getElementById('driver-license').value}%0ANIN: ${document.getElementById('driver-id').value}%0AExperience: ${document.getElementById('driver-experience').value}%0A%0A⚠️ ATTACH: Driver License + Vehicle Papers to this WhatsApp`;
-      window.open(`https://wa.me/2348085526104?text=${text}`, '_blank');
-    });
-    document.getElementById('passengerForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const text = `HVR PASSENGER REGISTRATION%0AName: ${document.getElementById('passenger-name').value}%0APhone: ${document.getElementById('passenger-phone').value}%0AEmail: ${document.getElementById('passenger-email').value}%0AAddress: ${document.getElementById('passenger-address').value}%0ANIN: ${document.getElementById('passenger-nin').value}%0AType: ${document.getElementById('passenger-type').value}%0A%0A⚠️ ATTACH: NIN/Voter's Card Photo to this WhatsApp`;
-      window.open(`https://wa.me/2348085526104?text=${text}`, '_blank');
-    });
-  </script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a5fa75cfbe1311d44c8c00f/1ju2qbgmr';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a5fc337fbe1311d44c8c08e/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-<!-- FOOTER START -->
-<footer style="background: #000; color: #fff; text-align:center; padding:25px 10px; font-size:13px; margin-top:40px;">
-  <p style="margin:0 0 10px 0; color:#D4AF37; font-weight:bold; font-size:14px;">HANTZVIPRIDES</p>
-  <p style="margin:0 0 15px 0; font-size:12px;">
-    <a href="privacy.html" style="color:#fff; text-decoration:none; margin:0 6px;">Privacy Policy</a> | 
-    <a href="terms.html" style="color:#fff; text-decoration:none; margin:0 6px;">Terms & Conditions</a> |
-    <a href="partners.html" style="color:#fff; text-decoration:none; margin:0 6px;">Partners</a>
-  </p>
-  <p style="margin:0; font-size:11px; color:#aaa;">© 2026 HANTZVIPRIDES. All Rights Reserved. Port Harcourt, Nigeria.</p>
+<!-- FOOTER -->
+<footer style="background:#000; padding:30px 20px; text-align:center; border-top:1px solid #222;">
+  <p style="color:#777;">© 2026 HANTZ VIP RIDES. All Rights Reserved.</p>
+  <p style="color:#555; font-size:12px;">Port Harcourt, Nigeria | +234 808 552 6104</p>
 </footer>
-<!-- FOOTER END -->
+
 </body>
 </html>
