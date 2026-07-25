@@ -8,24 +8,24 @@
     :root { --gold: #E8B923; --deep: #0A0A0A; --card: #121212; --green: #00FF88; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, Helvetica, sans-serif; background: var(--deep); color: #ddd; line-height: 1.6; }
-  .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
+ .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
     h1 { font-size: clamp(36px, 8vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 3px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
     h2 { color: var(--gold); font-size: clamp(24px, 5vw, 34px); text-align: center; margin: 40px 0 25px; }
-  .btn { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
-  .btn:hover { background: #ffeb3b; transform: translateY(-3px); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-  .card { background: var(--card); padding: 24px; border-radius: 14px; border: 1px solid #222; }
-  .route-title { color: var(--gold); font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-  .price { color: var(--green); font-weight: bold; float: right; }
-  .section { padding: 60px 20px; }
-  .form-container { max-width: 600px; margin: 30px auto; background: #0a0a0a; padding: 30px; border-radius: 14px; border: 2px solid var(--gold); }
+ .btn { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
+ .btn:hover { background: #ffeb3b; transform: translateY(-3px); }
+ .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+ .card { background: var(--card); padding: 24px; border-radius: 14px; border: 1px solid #222; }
+ .route-title { color: var(--gold); font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+ .price { color: var(--green); font-weight: bold; float: right; }
+ .section { padding: 60px 20px; }
+ .form-container { max-width: 600px; margin: 30px auto; background: #0a0a0a; padding: 30px; border-radius: 14px; border: 2px solid var(--gold); }
     input, select, textarea, input[type="file"] { width: 100%; padding: 12px; margin: 8px 0; background: #1a1a1a; border: 1px solid #444; color: white; border-radius: 8px; font-size: 15px; }
-  .situation-room { background: #0a0a0a; border: 2px dashed var(--gold); padding: 30px; border-radius: 16px; margin: 20px 0; text-align: center; }
+ .situation-room { background: #0a0a0a; border: 2px dashed var(--gold); padding: 30px; border-radius: 16px; margin: 20px 0; text-align: center; }
 
     @media (max-width: 768px) {
       h1 { font-size: 34px; }
-    .btn { display: block; width: 90%; margin: 10px auto; }
-    .section { padding: 40px 15px; }
+   .btn { display: block; width: 90%; margin: 10px auto; }
+   .section { padding: 40px 15px; }
     }
   </style>
 </head>
@@ -40,13 +40,14 @@
       <p style="font-size:clamp(18px,4vw,26px); color:var(--gold); font-weight:bold; margin:15px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
       <p style="font-size:clamp(16px,3vw,20px); color:var(--green); font-weight:900; margin:10px 0;">Official Bank Bonus 💰</p>
-      <p style="font-size:clamp(15px,3vw,18px); color:#fff; font-weight:800; margin:8px 0;">🫶 BOOK IN ADVANCE: 6TH TRIP FREE</p>
+      <p style="font-size:clamp(15px,3vw,18px); color:#fff; font-weight:800; margin:8px 0;">🫶 BOOK IN ADVANCE</p>
+      <p style="font-size:14px; color:#aaa; margin:5px 0;">Pay to HVR Account from 30days -3hrs before trip</p>
       <p style="font-size:clamp(15px,3vw,18px); color:#fff; font-weight:800; margin:8px 0;">🫶 PAY ON BOARD: 11TH TRIP FREE</p>
       <p style="font-size:14px; color:#aaa; margin-top:8px;">Bonus value = Your route fare. No HVR Bank Account = No Bonus</p>
 
       <a href="#booking" class="btn">BOOK YOUR RIDE NOW</a>
       <a href="partners.html" class="btn">Corporate Partners Preview</a>
-      <a href="safety.html" class="btn">Safety & Dispatch Certificate</a>
+      <a href="safety.html" class="btn">Safety & Dispatch Code</a>
       <a href="applications.html" class="btn">Applications / Profiling</a>
       <a href="applications.html" class="btn" style="background:var(--green); color:#000;">OPEN HVR BANK ACCOUNT</a>
     </div>
@@ -64,8 +65,8 @@
       </div>
       <div class="card">
         <h3 style="color:var(--gold);">🫶 BOOK IN ADVANCE</h3>
-        <p><b>Book & Pay Early to HVR Account</b></p>
-        <p>Pay directly 24-48hrs before trip. Get seat choice.</p>
+        <p><b>Pay to HVR Account from 30days -3hrs before trip</b></p>
+        <p>Get seat choice + priority boarding.</p>
         <p style="color:var(--green); font-weight:bold; margin-top:8px; font-size:18px;">6TH TRIP FREE</p>
       </div>
       <div class="card">
@@ -74,9 +75,9 @@
         <p>Bonus value = Your route fare. Balance rolls over.</p>
       </div>
       <div class="card">
-        <h3 style="color:var(--gold);">4. DISPATCH CERTIFICATE</h3>
+        <h3 style="color:var(--gold);">4. DISPATCH CODE</h3>
         <p>Sent to your WhatsApp after payment confirmation.</p>
-        <p style="color:var(--green); margin-top:8px;">No Certificate = No Insurance + No HVR Official Bank Bonus</p>
+        <p style="color:var(--green); margin-top:8px;">Dispatch Code qualifies you for Insurance + Official Bank Bonus Benefits</p>
       </div>
     </div>
     <p style="text-align:center; margin-top:30px; color:var(--gold); font-weight:bold; font-size:18px;">NO BANK ACCOUNT WITH HVR OFFICIAL BANK = NO BANK BONUS</p>
@@ -210,7 +211,7 @@
     <div style="margin:20px 0; padding:15px; border:1px dashed var(--gold); border-radius:10px; max-width:650px; margin-left:auto; margin-right:auto;">
       <p style="color:var(--gold); font-weight:900; font-size:16px; margin-bottom:10px;">Official Bank Bonus 💰</p>
       <p style="color:var(--green); font-weight:bold;">🫶 BOOK IN ADVANCE</p>
-      <p style="color:#ddd; margin-top:5px;">Pay to HVR Account 24-48hrs before trip</p>
+      <p style="color:#ddd; margin-top:5px;">Pay to HVR Account from 30days -3hrs before trip</p>
       <p style="color:var(--green); font-weight:bold; font-size:15px;">Earn 6TH TRIP FREE</p>
       <p style="color:var(--green); font-weight:bold; margin-top:12px;">🫶 PAY ON BOARD</p>
       <p style="color:#ddd; margin-top:5px;">Pay driver during boarding</p>
@@ -223,7 +224,7 @@
       <a href="applications.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Applications</a>
       <a href="privacy.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Privacy Policy</a>
       <a href="terms.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Terms of Service</a>
-      <a href="safety.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Safety & Dispatch</a>
+      <a href="safety.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Safety & Dispatch Code</a>
     </div>
 
     <!-- COPYRIGHT -->
