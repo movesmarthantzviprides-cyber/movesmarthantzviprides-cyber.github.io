@@ -3,311 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HVR - HANTZVIPRIDES | Bonny Route Launch Coming Very Soon</title>
+  <title>HANTZVIPRIDES | Premium Transport - Bonny Route Launching Soon</title>
   <style>
     :root { --gold: #E8B923; --deep: #0A0A0A; --card: #121212; --green: #00FF88; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; background: var(--deep); color: #ddd; line-height: 1.6; }
-.hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
-    h1 { font-size: clamp(36px, 8vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 3px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
-    h2 { color: var(--gold); font-size: clamp(24px, 5vw, 34px); text-align: center; margin: 40px 0 25px; }
-.btn { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
-.btn:hover { background: #ffeb3b; transform: translateY(-3px); }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.card { background: var(--card); padding: 24px; border-radius: 14px; border: 1px solid #222; }
-.route-title { color: var(--gold); font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-.price { color: var(--green); font-weight: bold; float: right; }
-.section { padding: 60px 20px; }
-.situation-room { background: #0a0a0a; border: 2px dashed var(--gold); padding: 30px; border-radius: 16px; margin: 20px 0; text-align: center; }
-.partners-logos { display: flex; justify-content: center; align-items: center; gap: 25px; margin: 20px 0; flex-wrap: wrap; }
-.partners-logos img { height: 50px; border-radius: 8px; background: white; padding: 5px; object-fit: contain; }
-.promo-screen { background: linear-gradient(135deg, #0a0a0a, #111); padding: 50px 20px; text-align: center; border-top: 3px solid var(--gold); border-bottom: 3px solid var(--gold); }
-.promo-box { max-width: 900px; margin: 0 auto; background: #000; padding: 30px; border-radius: 16px; border: 1px solid #333; }
+    body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; background: var(--deep); color: #ddd; line-height: 1.6; }
+.hero { background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.90)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
+    h1 { font-size: clamp(36px, 8vw, 68px); color: var(--gold); font-weight: 900; letter-spacing: 2px; }
+    h2 { color: var(--gold); font-size: clamp(22px, 4vw, 32px); text-align: center; margin: 40px 0 20px; }
+    p.sub { font-size: clamp(16px, 3vw, 20px); color: #ccc; margin: 10px 0 20px; }
+.btn-primary { background: var(--gold); color: #000; padding: 16px 40px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 10px; transition: all 0.3s; font-size: 16px; box-shadow: 0 0 20px rgba(232,185,35,0.3); }
+.btn-primary:hover { background: #ffeb3b; transform: translateY(-3px); box-shadow: 0 0 30px rgba(232,185,35,0.5); }
+.btn-secondary { background: transparent; color: var(--gold); border: 2px solid var(--gold); padding: 14px 32px; border-radius: 50px; font-weight: 800; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
+.btn-secondary:hover { background: var(--gold); color: #000; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.card { background: var(--card); padding: 24px; border-radius: 14px; border: 1px solid #222; transition: all 0.3s; }
+.card:hover { border-color: var(--gold); }
+.section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+.partners { display: flex; justify-content: center; align-items: center; gap: 30px; margin: 25px 0; flex-wrap: wrap; }
+.partners img { height: 45px; background: white; padding: 8px 12px; border-radius: 8px; object-fit: contain; }
+.promo-screen { background: #0a0a0a; padding: 50px 20px; text-align: center; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); }
+.promo-box { max-width: 900px; margin: 0 auto; }
+.alert { background:#000; border:2px solid var(--gold); padding:12px 20px; border-radius:10px; margin:20px auto; max-width:700px; }
+.alert p { color:var(--gold); font-weight:900; margin:0; font-size:15px; }
 
     @media (max-width: 768px) {
-      h1 { font-size: 34px; }
-.btn { display: block; width: 90%; margin: 10px auto; }
+.btn-primary, .btn-secondary { display: block; width: 90%; margin: 10px auto; }
 .section { padding: 40px 15px; }
-.partners-logos img { height: 40px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO - CLEAN -->
   <section class="hero">
-    <div style="max-width:1200px; margin:auto; width:100%;">
-      <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo" style="width:200px; margin-bottom:20px; border-radius:12px; box-shadow: 0 0 40px #E8B923;">
+    <div style="max-width:1100px; margin:auto; width:100%;">
+      <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo" style="width:180px; margin-bottom:15px; border-radius:12px;">
       <h1>HANTZVIPRIDES</h1>
-      <p style="font-size:clamp(16px,4vw,22px);">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-      <p style="font-size:clamp(18px,4vw,26px); color:var(--gold); font-weight:bold; margin:15px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
+      <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
+      <p style="font-size:20px; color:var(--gold); font-weight:900; margin:10px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
-      <!-- CORPORATE PARTNERS LOGOS -->
-      <p style="color:var(--gold); font-weight:900; font-size:16px; margin:15px 0 8px;">CORPORATE PARTNERS</p>
-      <div class="partners-logos">
+      <!-- TRUST BADGES -->
+      <div class="partners">
         <img src="IMG-20260701-WA0113.jpg" alt="First Bank">
-        <img src="IMG-20260723-WA0135(1).jpg" alt="HVR Flyer" style="height:70px;">
         <img src="IMG-20260701-WA0116.jpg" alt="Leadway Assurance">
       </div>
 
-      <!-- BOLD DISCLAIMER -->
-      <div style="background:#000; border:2px solid var(--gold); padding:12px 15px; border-radius:10px; margin:15px auto; max-width:700px;">
-        <p style="font-size:clamp(14px,3vw,17px); color:var(--gold); font-weight:900; margin:0;">💰ONLY PASSENGERS BOOKINGS WITH OFFICIAL BANK ARE QUALIFIED FOR OFFICIAL BANK BONUSES💰</p>
+      <!-- KEY BONUS ALERT -->
+      <div class="alert">
+        <p>💰 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 💰</p>
       </div>
 
-      <p style="font-size:clamp(16px,3vw,20px); color:var(--green); font-weight:900; margin:10px 0;">Official Bank Bonus 💰</p>
-      <p style="font-size:clamp(15px,3vw,18px); color:#fff; font-weight:800; margin:8px 0;">🫶 BOOK IN ADVANCE</p>
-      <p style="font-size:14px; color:#aaa; margin:5px 0;">Pay to HVR Account from 30days -3hrs before trip</p>
-      <p style="font-size:clamp(15px,3vw,18px); color:#fff; font-weight:800; margin:8px 0;">🫶 PAY ON BOARD: 11TH TRIP FREE</p>
-      <p style="font-size:14px; color:#aaa; margin-top:8px;">Bonus value = Your route fare. No HVR Bank Account = No Bonus</p>
-
-      <!-- UPDATED BUTTONS -->
-      <a href="https://wa.me/2348085526104?text=I%20WANT%20TO%20BOOK%20A%20RIDE" class="btn">BOOK YOUR RIDE</a>
-      <a href="partners.html" class="btn">Corporate Partners Preview</a>
-      <a href="#safety" class="btn">Safety & Security</a>
-      <a href="vehicle-form.html" class="btn">Vehicle Registration and PreMob</a>
-      <a href="https://wa.me/2348085526104?text=I%20WANT%20TO%20OPEN%20HVR%20BANK%20ACCOUNT" class="btn" style="background:var(--green); color:#000;">OPEN HVR BANK ACCOUNT</a>
+      <!-- ONLY 2 CTAs -->
+      <a href="https://wa.me/2348085526104?text=I%20WANT%20TO%20BOOK%20A%20RIDE" class="btn-primary">BOOK YOUR RIDE</a>
+      <a href="#safety" class="btn-secondary">Safety & Security</a>
+      
+      <div style="margin-top:15px;">
+        <a href="vehicle-form.html" class="btn-secondary" style="padding:12px 24px; font-size:14px;">Vehicle Registration</a>
+        <a href="applications.html" class="btn-secondary" style="padding:12px 24px; font-size:14px;">Join As Agent</a>
+        <a href="https://wa.me/2348085526104?text=I%20WANT%20TO%20OPEN%20HVR%20BANK%20ACCOUNT" class="btn-secondary" style="padding:12px 24px; font-size:14px; border-color:var(--green); color:var(--green);">Open Bank Account</a>
+      </div>
     </div>
   </section>
 
-  <!-- INFO/PROMO SCREEN - NOW WITH VIDEO -->
+  <!-- PROMO VIDEO ONLY -->
   <section class="promo-screen">
     <div class="promo-box">
-      <h2 style="color:var(--gold); margin-bottom:20px;">📢 HVR PROMO & UPDATES</h2>
-      <p style="font-size:16px; color:#aaa; margin-bottom:20px;">Watch our latest promo and stay updated on Bonny Route Launch</p>
-
-      <!-- VIDEO PLAYER -->
-      <video controls style="width:100%; border-radius:10px; border:2px solid var(--gold);">
+      <h2>Experience HVR</h2>
+      <video controls style="width:100%; border-radius:12px; border:2px solid var(--gold); margin-top:15px;">
         <source src="promo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
   </section>
 
-  <!-- HOW HVR WORKS -->
-  <section class="section" style="background:#111;">
-    <h2>🛡️ HOW HVR OFFICIAL BANK BONUS 💰 WORKS</h2>
-    <p style="text-align:center; color:var(--green); font-weight:bold; font-size:15px; margin-top:-15px; margin-bottom:25px;">(only for HVR OFFICIAL BANK ACCOUNT HOLDERS)</p>
-
-    <div class="grid">
-      <div class="card">
-        <h3 style="color:var(--gold);">🫶 PAY ON BOARD</h3>
-        <p><b>Pay driver during boarding</b></p>
-        <p style="color:var(--green); font-weight:bold; margin-top:8px; font-size:18px;">11TH TRIP FREE</p>
-      </div>
-      <div class="card">
-        <h3 style="color:var(--gold);">🫶 BOOK IN ADVANCE</h3>
-        <p><b>Pay to HVR Account from 30days -3hrs before trip</b></p>
-        <p>Get seat choice + priority boarding.</p>
-        <p style="color:var(--green); font-weight:bold; margin-top:8px; font-size:18px;">6TH TRIP FREE</p>
-      </div>
-      <div class="card">
-        <h3 style="color:var(--gold);">3. BONUS WALLET</h3>
-        <p>Every trip builds credit in your wallet.</p>
-        <p>Bonus value = Your route fare. Balance rolls over.</p>
-      </div>
-      <div class="card">
-        <h3 style="color:var(--gold);">4. DISPATCH CODE</h3>
-        <p>Sent to your WhatsApp after payment confirmation.</p>
-        <p style="color:var(--green); margin-top:8px;">Dispatch Code qualifies you for Insurance + Official Bank Bonus Benefits</p>
-      </div>
-    </div>
-    <p style="text-align:center; margin-top:30px; color:var(--gold); font-weight:bold; font-size:18px;">NO BANK ACCOUNT WITH HVR OFFICIAL BANK = NO BANK BONUS</p>
-  </section>
-
-  <!-- PORT HARCOURT ROUTES -->
-  <section class="section" style="background:#0f0f0f;">
-    <h2>📍 SEMI VIP PORT HARCOURT ROUTES + PRICES</h2>
-    <div class="grid">
-      <div class="card">
-        <h3 class="route-title">ROUTE 1</h3>
-        Aggrey Rd - Port Harcourt Township <span class="price">₦7,500</span><br>
-        UPE - Borokiri Sand field <span class="price">₦7,500</span><br>
-        Ibeto - Industry Road <span class="price">₦7,000</span><br>
-        Old GRA <span class="price">₦7,000</span><br>
-        Trans Amadi <span class="price">₦7,000</span><br>
-        Odili Rd <span class="price">₦7,000</span><br>
-        Elelenwo Akpajo <span class="price">₦7,000</span>
-      </div>
-      <div class="card">
-        <h3 class="route-title">ROUTE 2</h3>
-        Abali Park Aba Road <span class="price">₦7,000</span><br>
-        Diobu Mile 1 – Mile 3 <span class="price">₦7,000</span><br>
-        D/Line <span class="price">₦7,000</span><br>
-        New GRA <span class="price">₦7,000</span>
-      </div>
-      <div class="card">
-        <h3 class="route-title">ROUTE 3</h3>
-        Mile 4 – Mile 6 <span class="price">₦8,500</span><br>
-        Eagle Island <span class="price">₦9,000</span><br>
-        Ada George <span class="price">₦9,000</span><br>
-        Iwofe <span class="price">₦9,000</span>
-      </div>
-      <div class="card">
-        <h3 class="route-title">ROUTE 4</h3>
-        Mgbuoba – Ozuoba <span class="price">₦10,000</span><br>
-        Choba <span class="price">₦10,000</span><br>
-        Omagwa / Airport / Igwirita <span class="price">₦12,000</span><br>
-        Rukpokwu <span class="price">₦12,000</span>
-      </div>
-      <div class="card">
-        <h3 class="route-title">ROUTE 5</h3>
-        Eleme Junction / Artillery <span class="price">₦6,000</span><br>
-        Rumukwurishe / Tank <span class="price">₦7,000</span><br>
-        Eleozu / Rumudara <span class="price">₦8,000</span><br>
-        Eneka <span class="price">₦8,500</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- BONNY ROUTES -->
-  <section class="section" style="background:#111;">
-    <h2>⛴️ SEMI VIP BONNY – PH ROUTES</h2>
-    <div class="grid">
-      <div class="card"><h3 class="route-title">BONNY ROUTE 01</h3>Coal Beach, Cable Rd, Ikuba Square, Amaomu, Old Main Market, Sandfield Rd</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd 1&2</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 03</h3>Ghana Woman, Akiama, Abalamabie, Wilbros Rd, New Road 3</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 04</h3>Finima Townhall, Finima Market, Lighthouse, Tank Rd, NLNG, Agaja, Workers Camp</div>
-    </div>
-  </section>
-
-  <!-- LUGGAGE POLICY -->
-  <section class="section" style="background:#0f0f0f;">
-    <h2>💼 LUGGAGE POLICY</h2>
-    <div class="card" style="max-width:800px; margin:auto; text-align:center;">
-      <p style="font-size:18px; margin-bottom:15px;"><b>All luggage MUST be shown, captured, and priced during booking.</b></p>
-      <p>HVR assesses and prices all luggage. Driver collects with fare.</p>
-      <p style="color:var(--gold); font-weight:bold; margin:15px 0;">Driver Keeps: 70% | HVR Gets: 30%</p>
-      <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px 0;">
-        <p><span style="color:var(--green); font-weight:bold;">Small:</span> ₦500</p>
-        <p><span style="color:var(--green); font-weight:bold;">Medium:</span> ₦1,500</p>
-        <p><span style="color:var(--green); font-weight:bold;">Big:</span> ₦3,000</p>
-        <p><span style="color:var(--green); font-weight:bold;">Extra:</span> ₦5,000+</p>
-      </div>
-      <p style="text-align:center; margin-top:15px; color:var(--gold); font-weight:bold; font-size:18px;">NO CAPTURE = NO LOAD</p>
-    </div>
-  </section>
-
-  <!-- SITUATION ROOMS -->
-  <section class="section" style="background:#0f0f0f;">
-    <h2>🚦 SITUATION ROOMS</h2>
-    <div class="situation-room">
-      <h3 style="color:var(--gold);">DRIVERS SITUATION ROOM</h3>
-      <p>Live boarding status • Passenger count • Departure times</p>
-      <a href="https://wa.me/2348085526104?text=DRIVER%20SITUATION%20ROOM%20LOGIN" class="btn">ENTER DRIVERS ROOM</a>
-      <a href="driver-dashboard.html" class="btn" style="background:#333; color:var(--gold); border:2px solid var(--gold);">Driver Dashboard</a>
-    </div>
-    <div class="situation-room">
-      <h3 style="color:var(--gold);">PASSENGERS SITUATION ROOM</h3>
-      <p>Track your trip • Give feedback • Lost & Found</p>
-      <a href="https://wa.me/2348085526104?text=PASSENGER%20SITUATION%20ROOM" class="btn">ENTER PASSENGERS ROOM</a>
-    </div>
-  </section>
-
-  <!-- REGISTRATION -->
-  <section id="registration" class="section">
-    <h2>📋 REGISTRATION & PROFILING</h2>
+  <!-- HOW IT WORKS - SIMPLIFIED -->
+  <section class="section">
+    <h2>How HVR Bonus Works</h2>
     <div class="grid">
       <div class="card" style="text-align:center;">
-        <h3 style="color:var(--gold);">Vehicle / Driver / Agent</h3>
-        <a href="applications.html" class="btn">Go to Applications Page</a>
+        <h3 style="color:var(--gold); font-size:22px;">🫶 Book In Advance</h3>
+        <p>Pay to HVR Account 3 days before trip</p>
+        <p style="color:var(--green); font-weight:bold; margin-top:10px; font-size:18px;">6TH TRIP FREE</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <h3 style="color:var(--gold); font-size:22px;">🫶 Pay On Board</h3>
+        <p>Pay driver during boarding</p>
+        <p style="color:var(--green); font-weight:bold; margin-top:10px; font-size:18px;">11TH TRIP FREE</p>
       </div>
     </div>
+    <p style="text-align:center; margin-top:25px; color:#aaa; font-size:14px;">Bonus value equals your route fare. T&Cs Apply.</p>
   </section>
 
-  <!-- SAFETY & SECURITY - WRITE UP MOVED HERE -->
-  <section id="safety" class="section" style="background:#111; text-align:center;">
-    <h2>🛡️ SAFETY & SECURITY</h2>
+  <!-- ROUTES - SIMPLIFIED -->
+  <section class="section" style="background:#0a0a0a;">
+    <h2>Our Routes</h2>
+    <p style="text-align:center; color:#aaa; margin-bottom:20px;">Port Harcourt • Bonny • Airport</p>
+    <div style="text-align:center;">
+      <a href="routes.html" class="btn-primary">View All Routes & Prices</a>
+    </div>
+  </section>
 
-    <div class="card" style="max-width:900px; margin:0 auto 30px;">
+  <!-- SAFETY & SECURITY -->
+  <section id="safety" class="section">
+    <h2>🛡️ Safety & Security</h2>
+    <div class="card" style="max-width:900px; margin:0 auto 30px; text-align:center;">
       <p style="font-size:17px; line-height:1.8; color:#ddd; margin-bottom:15px;">
         At HANTZVIPRIDES, your safety is our first priority. Every trip is covered by our
-        <b style="color:var(--green);">Dispatch Code System</b> sent directly to your WhatsApp after payment.
+        <b style="color:var(--green);">Dispatch Code System</b>.
       </p>
-      <p style="font-size:16px; line-height:1.8; color:#aaa; margin-bottom:15px;">
-        <b>What we guarantee:</b><br>
-        ✅ Verified Drivers + Fleet Vehicles with Comprehensive Insurance<br>
-        ✅ Group Accident Cover up to ₦5 Million for all Passengers<br>
-        ✅ Live Situation Room Monitoring for every trip<br>
-        ✅ 24/7 Emergency Response Team on standby
+      <p style="font-size:16px; line-height:1.8; color:#aaa;">
+        ✅ Verified Drivers + Comprehensive Insurance<br>
+        ✅ Group Accident Cover up to ₦5 Million<br>
+        ✅ 24/7 Emergency Response Team
       </p>
-      <p style="font-size:16px; color:var(--gold); font-weight:bold;">
-        No Dispatch Code = No Insurance + No Official Bank Bonus Benefits
-      </p>
-    </div>
-
-    <div class="grid">
-      <div class="card"><h3>Passengers</h3><p>Group Accident Cover (up to ₦5 million)</p></div>
-      <div class="card"><h3>Drivers</h3><p>Commercial + Personal Accident</p></div>
-      <div class="card"><h3>Fleet Vehicles</h3><p>Comprehensive Insurance</p></div>
     </div>
   </section>
 
-  <!-- BOTTOM IMAGE -->
-  <section style="padding:40px 20px; text-align:center; background:#000;">
-    <img src="IMG-20260624-WA0059.jpg" alt="HVR Bottom Banner" style="max-width:100%; width:100%; max-width:900px; border-radius:12px; border:2px solid var(--gold);">
-  </section>
-
-  <!-- FOOTER -->
-  <footer style="padding:50px 20px; text-align:center; background:#000; border-top:4px solid var(--gold);">
-    <p style="font-size:20px; margin-bottom:10px;"><strong>HVR BOOKING & PAYMENT</strong></p>
-    <p>HANTZ INTERNATIONAL NIGERIA</p>
-
-    <!-- CLICK TO COPY ACCOUNT -->
+  <!-- FOOTER - CLEAN -->
+  <footer style="padding:40px 20px; text-align:center; background:#000; border-top:2px solid var(--gold);">
+    <p style="font-size:18px; margin-bottom:8px;"><strong>HANTZ INTERNATIONAL NIGERIA</strong></p>
+    
     <div style="margin:15px 0;">
-      <p>Account Number: <strong id="hvrAccount">2007689316</strong></p>
-      <button onclick="copyAccount()" style="background:var(--gold); color:#000; border:none; padding:8px 18px; border-radius:8px; font-weight:900; cursor:pointer; margin-top:8px;">CLICK TO COPY ACCOUNT</button>
+      <p>Account: <strong id="hvrAccount">2007689316</strong> | First Bank</p>
+      <button onclick="copyAccount()" style="background:var(--gold); color:#000; border:none; padding:8px 18px; border-radius:8px; font-weight:900; cursor:pointer; margin-top:8px;">COPY ACCOUNT</button>
       <p id="copyMsg" style="color:var(--green); font-size:13px; margin-top:5px; height:18px;"></p>
     </div>
 
-    <p>Bank: First Bank</p>
-
-    <!-- BONUS TIER BOX - NO AMOUNTS -->
-    <div style="margin:20px 0; padding:15px; border:1px dashed var(--gold); border-radius:10px; max-width:650px; margin-left:auto; margin-right:auto;">
-      <p style="color:var(--gold); font-weight:900; font-size:16px; margin-bottom:10px;">Official Bank Bonus 💰</p>
-      <p style="color:var(--green); font-weight:bold;">🫶 BOOK IN ADVANCE</p>
-      <p style="color:#ddd; margin-top:5px;">Pay to HVR Account from 30days -3hrs before trip</p>
-      <p style="color:var(--green); font-weight:bold; font-size:15px;">Earn 6TH TRIP FREE</p>
-      <p style="color:var(--green); font-weight:bold; margin-top:12px;">🫶 PAY ON BOARD</p>
-      <p style="color:#ddd; margin-top:5px;">Pay driver during boarding</p>
-      <p style="color:var(--green); font-weight:bold; font-size:15px;">Earn 11TH TRIP FREE</p>
-      <p style="color:#aaa; font-size:13px; margin-top:10px;">Bonus value = Your route fare. Different routes = Different bonus value.</p>
+    <div style="margin:20px 0;">
+      <a href="privacy.html" style="color:#E8B923; margin:0 10px; text-decoration:none;">Privacy</a>
+      <a href="terms.html" style="color:#E8B923; margin:0 10px; text-decoration:none;">Terms</a>
+      <a href="routes.html" style="color:#E8B923; margin:0 10px; text-decoration:none;">Routes</a>
     </div>
 
-    <!-- QUICK LINKS -->
-    <div style="margin:30px 0;">
-      <a href="applications.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Applications</a>
-      <a href="privacy.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Privacy Policy</a>
-      <a href="terms.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Terms of Service</a>
-      <a href="#safety" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Safety & Security</a>
-    </div>
-
-    <!-- COPYRIGHT -->
-    <p style="color:#888; margin-top:20px; font-size:14px;">© 2026 HANTZVIPRIDES. All Rights Reserved.</p>
+    <p style="color:#666; margin-top:15px; font-size:13px;">© 2026 HANTZVIPRIDES. All Rights Reserved.</p>
   </footer>
 
-  <!-- COPY SCRIPT -->
   <script>
   function copyAccount() {
     navigator.clipboard.writeText("2007689316");
-    document.getElementById("copyMsg").innerText = "Account Number Copied ✓";
+    document.getElementById("copyMsg").innerText = "Copied ✓";
     setTimeout(() => { document.getElementById("copyMsg").innerText = ""; }, 2000);
   }
   </script>
-
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6a5fcba2733b3e1d4a1c0d37/default';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  <!--End of Tawk.to Script-->
 
 </body>
 </html>
