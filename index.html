@@ -11,7 +11,6 @@
     .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
     h1 { font-size: clamp(36px, 8vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 3px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
     h2 { color: var(--gold); font-size: clamp(24px, 5vw, 34px); text-align: center; margin: 40px 0 25px; }
-    .center-text { text-align: center; }
     .btn { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
     .btn:hover { background: #ffeb3b; transform: translateY(-3px); }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -59,7 +58,7 @@
     <p style="text-align:center; margin-top:30px; color:var(--gold); font-weight:bold;">No Dispatch Certificate = No Insurance Cover + No Bank Benefits</p>
   </section>
 
-  <!-- PORT HARCOURT ROUTES (FULL) -->
+  <!-- PORT HARCOURT ROUTES -->
   <section class="section" style="background:#0f0f0f;">
     <h2>📍 SEMI VIP PORT HARCOURT ROUTES + PRICES</h2>
     <div class="grid">
@@ -122,6 +121,7 @@
       <h3 style="color:var(--gold);">DRIVERS SITUATION ROOM</h3>
       <p>Live boarding status • Passenger count • Departure times</p>
       <a href="https://wa.me/2348085526104?text=DRIVER%20SITUATION%20ROOM%20LOGIN" class="btn">ENTER DRIVERS ROOM</a>
+      <a href="driver-dashboard.html" class="btn" style="background:#333; color:var(--gold); border:2px solid var(--gold);">Driver Dashboard</a>
     </div>
     <div class="situation-room">
       <h3 style="color:var(--gold);">PASSENGERS SITUATION ROOM</h3>
@@ -130,21 +130,13 @@
     </div>
   </section>
 
-  <!-- REGISTRATION FORMS -->
+  <!-- REGISTRATION -->
   <section class="section">
     <h2>📋 REGISTRATION & PROFILING</h2>
     <div class="grid">
       <div class="card" style="text-align:center;">
-        <h3 style="color:var(--gold);">Vehicle Profiling, Pre-Mob & Owner’s Registration</h3>
-        <a href="https://wa.me/2349082483452?text=I%20want%20to%20register%20my%20vehicle%20and%20do%20Pre-Mob" class="btn">Register Vehicle</a>
-      </div>
-      <div class="card" style="text-align:center;">
-        <h3 style="color:var(--gold);">Drivers Identification Form</h3>
-        <a href="https://wa.me/2349082483452?text=I%20want%20to%20register%20as%20HVR%20Driver" class="btn">Register as Driver</a>
-      </div>
-      <div class="card" style="text-align:center;">
-        <h3 style="color:var(--gold);">Agents Registration Form</h3>
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20REGISTER%20as%20AGENT" class="btn">Register as Agent</a>
+        <h3 style="color:var(--gold);">Vehicle / Driver / Agent</h3>
+        <a href="applications.html" class="btn">Go to Applications Page</a>
       </div>
     </div>
   </section>
@@ -156,25 +148,6 @@
       <div class="card"><h3>Passengers</h3><p>Group Accident Cover (up to ₦5 million)</p></div>
       <div class="card"><h3>Drivers</h3><p>Commercial + Personal Accident</p></div>
       <div class="card"><h3>Fleet Vehicles</h3><p>Comprehensive Insurance</p></div>
-    </div>
-  </section>
-
-  <!-- PASSENGER FORM -->
-  <section class="section">
-    <div class="form-container">
-      <h2 class="center-text">Passenger Identification Form</h2>
-      <form id="passengerForm">
-        <input type="text" id="p-name" placeholder="Full Name" required>
-        <input type="text" id="p-address" placeholder="Residential Address" required>
-        <select id="p-sex" required>
-          <option value="">Select Sex</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-        <input type="text" id="p-nin" placeholder="NIN Number" required>
-        <input type="file" id="p-id" accept="image/*" capture="environment" required>
-        <button type="submit" class="btn" style="width:100%;">SUBMIT VIA WHATSAPP</button>
-      </form>
     </div>
   </section>
 
@@ -194,14 +167,6 @@
     
     <p style="color:#888; margin-top:20px;">© 2026 HANTZVIPRIDES</p>
   </footer>
-
-  <script>
-    document.getElementById('passengerForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const text = `HVR PASSENGER IDENTIFICATION%0AName: ${document.getElementById('p-name').value}%0AAddress: ${document.getElementById('p-address').value}%0ASex: ${document.getElementById('p-sex').value}%0ANIN: ${document.getElementById('p-nin').value}`;
-      window.open(`https://wa.me/2348085526104?text=${text}`, '_blank');
-    });
-  </script>
 
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
