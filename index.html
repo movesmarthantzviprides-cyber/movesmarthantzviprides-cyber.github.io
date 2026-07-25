@@ -6,127 +6,185 @@
   <title>HVR - HANTZVIPRIDES | Bonny Route Launch Coming Very Soon</title>
   <style>
     :root { --gold: #E8B923; --deep: #0A0A0A; --card: #121212; --green: #00FF88; }
-    * { box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background: var(--deep); color: #ddd; line-height: 1.6; }
-    .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; }
-    h1 { font-size: clamp(48px, 9vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 4px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
-    h2 { color: var(--gold); font-size: 34px; text-align: center; margin: 40px 0 25px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; background: var(--deep); color: #ddd; line-height: 1.6; }
+    .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
+    h1 { font-size: clamp(36px, 8vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 3px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
+    h2 { color: var(--gold); font-size: clamp(24px, 5vw, 34px); text-align: center; margin: 40px 0 25px; }
     .center-text { text-align: center; }
-    .btn { background: var(--gold); color: #000; padding: 16px 36px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 10px; transition: all 0.4s; }
-    .btn:hover { background: #ffeb3b; transform: translateY(-5px) scale(1.05); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
-    .card { background: var(--card); padding: 28px; border-radius: 16px; border: 1px solid #222; transition: all 0.4s; }
-    .card:hover { transform: translateY(-10px); }
-    .route-title { color: var(--gold); font-size: 19px; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
-    .price { color: #00FF88; font-weight: bold; float: right; font-size: 18px; }
-    .section { padding: 80px 20px; }
-    .form-container { max-width: 620px; margin: 40px auto; background: #0a0a0a; padding: 40px; border-radius: 16px; border: 2px solid var(--gold); }
-    input, select, textarea, input[type="file"] { width: 100%; padding: 14px; margin: 10px 0; background: #1a1a1a; border: 1px solid #444; color: white; border-radius: 8px; font-size: 16px; }
-    
-    /* PARTNER LOGOS */
-    .partners {margin:35px 0;}
-    .partners p {color:#aaa; font-size:14px; letter-spacing:2px; margin-bottom:20px;}
-    .partner-logos {display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap;}
-    .partner-box {background:#fff; padding:12px 20px; border-radius:12px; box-shadow:0 0 20px rgba(232,185,35,0.3);}
-    .partner-box img {height:65px; display:block;}
-    .partner-box small {color:#aaa; font-size:11px; display:block; margin-top:8px;}
+    .btn { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
+    .btn:hover { background: #ffeb3b; transform: translateY(-3px); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: var(--card); padding: 24px; border-radius: 14px; border: 1px solid #222; }
+    .route-title { color: var(--gold); font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+    .price { color: var(--green); font-weight: bold; float: right; }
+    .section { padding: 60px 20px; }
+    .form-container { max-width: 600px; margin: 30px auto; background: #0a0a0a; padding: 30px; border-radius: 14px; border: 2px solid var(--gold); }
+    input, select, textarea, input[type="file"] { width: 100%; padding: 12px; margin: 8px 0; background: #1a1a1a; border: 1px solid #444; color: white; border-radius: 8px; font-size: 15px; }
+    .partners { margin: 30px 0; }
+    .partner-logos { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; }
+    .partner-box { background: #fff; padding: 12px 18px; border-radius: 12px; box-shadow: 0 0 20px rgba(232,185,35,0.3); }
+    .partner-box img { height: 55px; display: block; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 34px; letter-spacing: 1px; }
+      .btn { display: block; width: 90%; margin: 10px auto; }
+      .section { padding: 40px 15px; }
+      .card { padding: 18px; }
+    }
   </style>
 </head>
 <body>
 
   <!-- HERO -->
   <section class="hero">
-    <div style="max-width:1280px; margin:auto; padding:20px; width:100%;">
-      <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo" style="width:240px; margin-bottom:25px; border-radius:12px; box-shadow: 0 0 40px #E8B923;">
+    <div style="max-width:1200px; margin:auto; width:100%;">
+      <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo" style="width:200px; margin-bottom:20px; border-radius:12px; box-shadow: 0 0 40px #E8B923;">
       <h1>HANTZVIPRIDES</h1>
-      <p style="font-size:24px;">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-      <p style="font-size:29px; color:var(--gold); font-weight:bold;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
+      <p style="font-size:clamp(16px,4vw,22px);">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
+      <p style="font-size:clamp(18px,4vw,26px); color:var(--gold); font-weight:bold; margin:15px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
       
-      <!-- PARTNER LOGOS -->
       <div class="partners">
-        <p>PROPOSED OFFICIAL PARTNERS</p>
+        <p style="color:#aaa; font-size:13px; letter-spacing:1px;">PROPOSED OFFICIAL PARTNERS</p>
         <div class="partner-logos">
-          <div>
-            <div class="partner-box">
-              <img src="IMG-20260712-WA0060(1).jpg" alt="HANTZVIPRIDES Logo" style="height:65px;">
-            </div>
-            <small>HVR</small>
-          </div>
-          <div>
-            <div class="partner-box">
-              <img src="logos/firstbank.jpg" alt="First Bank Nigeria">
-            </div>
-            <small>Official Bank</small>
-          </div>
-          <div>
-            <div class="partner-box">
-              <img src="logos/leadway.jpg" alt="Leadway Assurance">
-            </div>
-            <small>Official Insurer</small>
-          </div>
+          <div class="partner-box"><img src="logos/firstbank.jpg" alt="First Bank"></div>
+          <div class="partner-box"><img src="logos/leadway.jpg" alt="Leadway"></div>
         </div>
       </div>
 
       <a href="#booking" class="btn">BOOK YOUR RIDE NOW</a>
       <a href="partners.html" class="btn">Corporate Partners Preview</a>
-      <a href="Proposal_HANTZVIPRIDES_v3.pdf" class="btn" download>📄 Download Partnership Proposal</a>
+      <a href="safety.html" class="btn">Safety & Dispatch Certificate</a>
     </div>
   </section>
 
-  <!-- $HAR€t€R SERVICES -->
-  <section id="har€ter" class="section" style="background:#111;">
-    <h2>💎 $HAR€t€R - SHARED VIP CHARTER</h2>
-    <p class="center-text" style="font-size:20px; margin-bottom:20px;">Travel VIP. Pay Less.</p>
-    <div class="center-text" style="margin-bottom:30px;">
-      <p style="font-size:24px; color:var(--green); font-weight:900;">From ₦10,000 per seat vs ₦40,000 solo</p>
-      <p style="color:#ccc; margin-top:10px;">✅ Save up to 80% | ✅ AC Vehicles | ✅ GPS Tracked | ✅ Door-to-Door</p>
+  <!-- HOW HVR WORKS -->
+  <section class="section" style="background:#111;">
+    <h2>🛡️ HOW HVR WORKS – SAFETY & TRUST SYSTEM</h2>
+    <p style="text-align:center; color:#ccc; max-width:800px; margin:0 auto 35px;">
+      Designed for passenger safety, driver fairness and zero revenue leakage
+    </p>
+    <div class="grid">
+      <div class="card"><h3 style="color:var(--gold);">1. Boarding Collection</h3><p>Driver collects full fare from each passenger at boarding.</p></div>
+      <div class="card"><h3 style="color:var(--gold);">2. One-Seat Remittance</h3><p>Driver remits the value of one seat to the official HVR account <strong>before takeoff</strong>.</p></div>
+      <div class="card"><h3 style="color:var(--gold);">3. Manifest + Proof</h3><p>Driver sends signed passengers manifest + proof of remittance via WhatsApp.</p></div>
+      <div class="card"><h3 style="color:var(--gold);">4. Dispatch Certificate</h3><p>HVR issues official Dispatch Certificate + unique codes to all passengers and the driver.</p></div>
     </div>
-    <div class="center-text" style="margin-top:30px;">
+    <p style="text-align:center; margin-top:30px; color:var(--gold); font-weight:bold;">No Dispatch Certificate = No Insurance Cover + No Bank Benefits</p>
+  </section>
+
+  <!-- $HAR€t€R -->
+  <section class="section">
+    <h2>💎 $HAR€t€R - SHARED VIP CHARTER</h2>
+    <p class="center-text">Travel VIP. Pay Less.</p>
+    <p style="text-align:center; font-size:22px; color:var(--green); font-weight:900;">From ₦10,000 per seat vs ₦40,000 solo</p>
+    <div class="center-text" style="margin-top:25px;">
       <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20$HAR€t€R" class="btn">BOOK $HAR€t€R ON WHATSAPP</a>
     </div>
   </section>
 
   <!-- PORT HARCOURT ROUTES -->
   <section class="section" style="background:#0f0f0f;">
-    <h2>📍 PORT HARCOURT PICKUP/DROP-OFF + PRICES</h2>
+    <h2>📍 SEMI VIP PORT HARCOURT ROUTES + PRICES</h2>
     <div class="grid">
       <div class="card">
         <h3 class="route-title">ROUTE 1</h3>
-        Aggrey Rd - Port Harcourt Township <span class="price">₦7,000</span><br>
-        UPE - Borokiri Sand field <span class="price">₦7,000</span><br>
+        Aggrey Rd - Port Harcourt Township <span class="price">₦7,500</span><br>
+        UPE - Borokiri Sand field <span class="price">₦7,500</span><br>
         Ibeto - Industry Road <span class="price">₦7,000</span><br>
         Old GRA <span class="price">₦7,000</span><br>
-        Trans Amadi <span class="price">₦7,000</span>
+        Trans Amadi <span class="price">₦7,000</span><br>
+        Odili Rd <span class="price">₦7,000</span><br>
+        Elelenwo Akpajo <span class="price">₦7,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 2</h3>
+        Abali Park Aba Road <span class="price">₦7,000</span><br>
+        Diobu Mile 1 – Mile 3 <span class="price">₦7,000</span><br>
+        D/Line <span class="price">₦7,000</span><br>
+        New GRA <span class="price">₦7,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 3</h3>
+        Mile 4 – Mile 6 <span class="price">₦8,500</span><br>
+        Eagle Island <span class="price">₦9,000</span><br>
+        Ada George <span class="price">₦9,000</span><br>
+        Iwofe <span class="price">₦9,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 4</h3>
+        Mgbuoba – Ozuoba <span class="price">₦10,000</span><br>
+        Choba <span class="price">₦10,000</span><br>
+        Omagwa / Airport / Igwirita <span class="price">₦12,000</span><br>
+        Rukpokwu <span class="price">₦12,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 5</h3>
+        Eleme Junction / Artillery <span class="price">₦6,000</span><br>
+        Rumukwurishe / Tank <span class="price">₦7,000</span><br>
+        Eleozu / Rumudara <span class="price">₦8,000</span><br>
+        Eneka <span class="price">₦8,500</span>
       </div>
     </div>
   </section>
 
   <!-- BONNY ROUTES -->
   <section class="section" style="background:#111;">
-    <h2>⛴️ SEMI VIP BONNY - PH ROUTES</h2>
-    <p style="text-align:center; color:#ccc; margin-bottom:30px;">*Fares are determined by your exact drop-off destination point in PH*</p>
+    <h2>⛴️ SEMI VIP BONNY – PH ROUTES</h2>
+    <p style="text-align:center; color:#ccc; margin-bottom:30px;">Designated Bonny Pickup / Drop-off Points</p>
     <div class="grid">
-      <div class="card"><h3 class="route-title">BONNY ROUTE 01</h3>Coal Beach, Cable Rd, Ikuba Square, Amaomu, Old Main Market, Sandfield Rd</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd 1&2</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 03</h3>Ghana Woman, Akiama, Abalamabie, Wilbros Rd, New Road 3</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 04</h3>Finima Townhall, Finima Market, Lighthouse, Tank Rd, NLNG, Agaja, Workers Camp</div>
+      <div class="card">
+        <h3 class="route-title">BONNY ROUTE 01</h3>
+        Coal Beach Axis (Coal Beach Park)<br>
+        Cable Rd Axis (Women's Hall)<br>
+        Ikuba Square Axis (Allison Playground)<br>
+        Amaomu Axis (Amaomu Jnc)<br>
+        Old Main Market Axis<br>
+        Sandfield Rd Axis
+      </div>
+      <div class="card">
+        <h3 class="route-title">BONNY ROUTE 02</h3>
+        Berger Rd Axis (Main Market Gate)<br>
+        Iwoama Axis (Bonny Roundabout)<br>
+        New Road Axis 1 (Telavee Hotel)<br>
+        New Road Axis 2 (GTB)<br>
+        Hospital Rd 1 (BNGS Gate)<br>
+        Hospital Rd 2 (Police Station)
+      </div>
+      <div class="card">
+        <h3 class="route-title">BONNY ROUTE 03</h3>
+        Ghana Woman Axis (SDP Jnc)<br>
+        Akiama Axis<br>
+        Abalamabie Axis (Simidia Jnc)<br>
+        Wilbros Rd Axis<br>
+        New Road Axis 3 (Wilbros Jnc)
+      </div>
+      <div class="card">
+        <h3 class="route-title">BONNY ROUTE 04</h3>
+        Finima Townhall / Stadium<br>
+        Finima Market<br>
+        Lighthouse<br>
+        Tank Rd<br>
+        NLNG Roundabout<br>
+        Agaja / Agaja Market<br>
+        Workers Camp 1 & 2
+      </div>
     </div>
   </section>
 
-  <!-- INTERCITY ROUTES -->
-  <section class="section" style="background:#111;">
-    <h2>🌍 OTHER INTERCITY ROUTES FROM BONNY</h2>
-    <p style="text-align:center; color:#ccc; margin-bottom:30px;">Available in <strong>Semi VIP</strong> and <strong>VIP XX</strong> Operations</p>
+  <!-- INTERCITY -->
+  <section class="section" style="background:#0f0f0f;">
+    <h2>🌍 OTHER INTERCITY ROUTES</h2>
     <div class="grid">
-      <div class="card">BONNY - WARRI ROUTE <span class="price">₦22,000</span> <strong>(Semi VIP & VIP XX)</strong></div>
-      <div class="card">PORT HARCOURT - WARRI <span class="price">₦15,000</span></div>
-      <div class="card">BONNY - AKWA IBOM ROUTE <strong>(Semi VIP & VIP XX)</strong></div>
-      <div class="card">BONNY - ABUJA ROUTE <strong>(Semi VIP & VIP XX)</strong></div>
+      <div class="card">BONNY – WARRI <span class="price">₦22,000</span></div>
+      <div class="card">PORT HARCOURT – WARRI <span class="price">₦15,000</span></div>
+      <div class="card">BONNY – AKWA IBOM</div>
+      <div class="card">BONNY – ABUJA</div>
     </div>
   </section>
 
   <!-- FLEET -->
-  <section class="section" style="background:var(--deep);">
+  <section class="section">
     <h2>🚙 OUR PREMIUM FLEET</h2>
     <div class="grid">
       <div class="card"><strong>XX CLASS</strong><br>Executive SUV, Camry, Sienna, Hiace, Coaster</div>
@@ -135,31 +193,19 @@
     </div>
   </section>
 
-  <!-- INSURANCE & SAFETY -->
+  <!-- INSURANCE -->
   <section class="section" style="background:#111; text-align:center;">
     <h2>🛡️ INSURANCE & SAFETY</h2>
-    <p style="color:#ccc; margin-bottom:30px;">All HVR trips are fully insured for maximum protection</p>
     <div class="grid">
-      <div class="card">
-        <h3>Passengers</h3>
-        <p>Group Personal Accident Cover (up to ₦5 million per person)</p>
-        <p style="font-size:14px; color:#aaa;">*Only during active HVR trips*</p>
-      </div>
-      <div class="card">
-        <h3>Drivers</h3>
-        <p>Commercial Driver + Personal Accident Insurance</p>
-        <p style="font-size:14px; color:#aaa;">Off-duty coverage available as optional extension</p>
-      </div>
-      <div class="card">
-        <h3>Fleet Vehicles</h3>
-        <p>Comprehensive Insurance (Accident, Theft, Third-Party, Fire)</p>
-      </div>
+      <div class="card"><h3>Passengers</h3><p>Group Accident Cover (up to ₦5 million)</p><p style="font-size:13px;color:#aaa;">*Only during active HVR trips*</p></div>
+      <div class="card"><h3>Drivers</h3><p>Commercial + Personal Accident Insurance</p></div>
+      <div class="card"><h3>Fleet Vehicles</h3><p>Comprehensive Insurance</p></div>
     </div>
-    <p style="margin-top:30px; color:#aaa;">24/7 Roadside Assistance via Leadway Assist</p>
+    <p style="margin-top:25px;color:#aaa;">24/7 Roadside Assistance via Leadway Assist</p>
   </section>
 
-  <!-- PASSENGER IDENTIFICATION FORM -->
-  <section class="section" style="background:var(--deep);">
+  <!-- PASSENGER FORM -->
+  <section class="section">
     <div class="form-container">
       <h2 class="center-text">Passenger Identification Form</h2>
       <form id="passengerForm">
@@ -172,21 +218,14 @@
         </select>
         <input type="text" id="p-nin" placeholder="NIN Number" required>
         <input type="file" id="p-id" accept="image/*" capture="environment" required>
-        <p style="font-size:14px; color:#aaa; margin:10px 0;">Snap or upload ID Card (National ID / International Passport / Voters Card / Drivers License)</p>
-        <button type="submit" class="btn" style="width:100%; font-size:18px;">SUBMIT VIA WHATSAPP</button>
+        <button type="submit" class="btn" style="width:100%;">SUBMIT VIA WHATSAPP</button>
       </form>
     </div>
   </section>
 
-  <!-- PASSENGER FEEDBACK -->
-  <section class="section" style="background:#111; text-align:center;">
-    <h2>💬 Passenger Feedback</h2>
-    <a href="https://wa.me/2348085526104?text=I%20want%20to%20give%20feedback%20on%20my%20trip" class="btn">Send Feedback via WhatsApp</a>
-  </section>
-
-  <footer style="padding:60px 20px; text-align:center; background:#000; border-top:4px solid var(--gold);">
+  <footer style="padding:50px 20px; text-align:center; background:#000; border-top:4px solid var(--gold);">
     <p><strong>Booking & Payment Account</strong></p>
-    <p><strong>HANTZ INTERNATIONAL NIGERIA</strong></p>
+    <p>HANTZ INTERNATIONAL NIGERIA</p>
     <p>Account Number: <strong>2007689316</strong></p>
     <p>Bank: First Bank</p>
   </footer>
@@ -194,20 +233,9 @@
   <script>
     document.getElementById('passengerForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const name = document.getElementById('p-name').value;
-      const text = `HVR PASSENGER IDENTIFICATION%0AName: ${name}%0AAddress: ${document.getElementById('p-address').value}%0ASex: ${document.getElementById('p-sex').value}%0ANIN: ${document.getElementById('p-nin').value}`;
+      const text = `HVR PASSENGER IDENTIFICATION%0AName: ${document.getElementById('p-name').value}%0AAddress: ${document.getElementById('p-address').value}%0ASex: ${document.getElementById('p-sex').value}%0ANIN: ${document.getElementById('p-nin').value}`;
       window.open(`https://wa.me/2348085526104?text=${text}`, '_blank');
     });
   </script>
-<!-- FLYERS SECTION -->
-<section style="padding:20px; text-align:center;">
-  <h2>Our Latest Flyers</h2>
-  
-  <img src="IMG-20260723-WA0135(1).jpg" width="100%" style="max-width:400px; margin:10px 0; border-radius:10px;">
-  
-  <img src="IMG-20260624-WA0059.jpg" width="100%" style="max-width:400px; margin:10px 0; border-radius:10px;">
-  
-  <img src="IMG-20260624-WA0058.jpg" width="100%" style="max-width:400px; margin:10px 0; border-radius:10px;">
-</section>
 </body>
 </html>
