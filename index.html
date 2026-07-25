@@ -21,6 +21,8 @@
 .situation-room { background: #0a0a0a; border: 2px dashed var(--gold); padding: 30px; border-radius: 16px; margin: 20px 0; text-align: center; }
 .partners-logos { display: flex; justify-content: center; align-items: center; gap: 25px; margin: 20px 0; flex-wrap: wrap; }
 .partners-logos img { height: 50px; border-radius: 8px; background: white; padding: 5px; object-fit: contain; }
+.promo-screen { background: linear-gradient(135deg, #0a0a0a, #111); padding: 50px 20px; text-align: center; border-top: 3px solid var(--gold); border-bottom: 3px solid var(--gold); }
+.promo-box { max-width: 900px; margin: 0 auto; background: #000; padding: 30px; border-radius: 16px; border: 1px solid #333; }
 
     @media (max-width: 768px) {
       h1 { font-size: 34px; }
@@ -40,7 +42,7 @@
       <p style="font-size:clamp(16px,4vw,22px);">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
       <p style="font-size:clamp(18px,4vw,26px); color:var(--gold); font-weight:bold; margin:15px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
-      <!-- CORPORATE PARTNERS LOGOS - FIXED FILENAMES -->
+      <!-- CORPORATE PARTNERS LOGOS -->
       <p style="color:var(--gold); font-weight:900; font-size:16px; margin:15px 0 8px;">CORPORATE PARTNERS</p>
       <div class="partners-logos">
         <img src="IMG-20260701-WA0113.jpg" alt="First Bank">
@@ -59,12 +61,26 @@
       <p style="font-size:clamp(15px,3vw,18px); color:#fff; font-weight:800; margin:8px 0;">🫶 PAY ON BOARD: 11TH TRIP FREE</p>
       <p style="font-size:14px; color:#aaa; margin-top:8px;">Bonus value = Your route fare. No HVR Bank Account = No Bonus</p>
 
-      <!-- FIXED BUTTON LINKS -->
-      <a href="#booking" class="btn">BOOK YOUR RIDE NOW</a>
+      <!-- UPDATED BUTTONS -->
+      <a href="https://wa.me/2348085526104?text=I%20WANT%20TO%20BOOK%20A%20RIDE" class="btn">BOOK YOUR RIDE</a>
       <a href="partners.html" class="btn">Corporate Partners Preview</a>
-      <a href="#insurance" class="btn">Safety & Dispatch Code</a>
-      <a href="#registration" class="btn">Applications / Profiling</a>
+      <a href="#safety" class="btn">Safety & Security</a>
+      <a href="vehicle-form.html" class="btn">Vehicle Registration and PreMob</a>
       <a href="https://wa.me/2348085526104?text=I%20WANT%20TO%20OPEN%20HVR%20BANK%20ACCOUNT" class="btn" style="background:var(--green); color:#000;">OPEN HVR BANK ACCOUNT</a>
+    </div>
+  </section>
+
+  <!-- INFO/PROMO SCREEN - NOW WITH VIDEO -->
+  <section class="promo-screen">
+    <div class="promo-box">
+      <h2 style="color:var(--gold); margin-bottom:20px;">📢 HVR PROMO & UPDATES</h2>
+      <p style="font-size:16px; color:#aaa; margin-bottom:20px;">Watch our latest promo and stay updated on Bonny Route Launch</p>
+
+      <!-- VIDEO PLAYER -->
+      <video controls style="width:100%; border-radius:10px; border:2px solid var(--gold);">
+        <source src="promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </section>
 
@@ -199,9 +215,27 @@
     </div>
   </section>
 
-  <!-- INSURANCE -->
-  <section id="insurance" class="section" style="background:#111; text-align:center;">
-    <h2>🛡️ INSURANCE & SAFETY</h2>
+  <!-- SAFETY & SECURITY - WRITE UP MOVED HERE -->
+  <section id="safety" class="section" style="background:#111; text-align:center;">
+    <h2>🛡️ SAFETY & SECURITY</h2>
+
+    <div class="card" style="max-width:900px; margin:0 auto 30px;">
+      <p style="font-size:17px; line-height:1.8; color:#ddd; margin-bottom:15px;">
+        At HANTZVIPRIDES, your safety is our first priority. Every trip is covered by our
+        <b style="color:var(--green);">Dispatch Code System</b> sent directly to your WhatsApp after payment.
+      </p>
+      <p style="font-size:16px; line-height:1.8; color:#aaa; margin-bottom:15px;">
+        <b>What we guarantee:</b><br>
+        ✅ Verified Drivers + Fleet Vehicles with Comprehensive Insurance<br>
+        ✅ Group Accident Cover up to ₦5 Million for all Passengers<br>
+        ✅ Live Situation Room Monitoring for every trip<br>
+        ✅ 24/7 Emergency Response Team on standby
+      </p>
+      <p style="font-size:16px; color:var(--gold); font-weight:bold;">
+        No Dispatch Code = No Insurance + No Official Bank Bonus Benefits
+      </p>
+    </div>
+
     <div class="grid">
       <div class="card"><h3>Passengers</h3><p>Group Accident Cover (up to ₦5 million)</p></div>
       <div class="card"><h3>Drivers</h3><p>Commercial + Personal Accident</p></div>
@@ -245,7 +279,7 @@
       <a href="applications.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Applications</a>
       <a href="privacy.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Privacy Policy</a>
       <a href="terms.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Terms of Service</a>
-      <a href="safety.html" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Safety & Dispatch Code</a>
+      <a href="#safety" style="color:#E8B923; margin:0 12px; text-decoration:none; display:inline-block;">Safety & Security</a>
     </div>
 
     <!-- COPYRIGHT -->
