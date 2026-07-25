@@ -8,24 +8,27 @@
     :root { --gold: #E8B923; --deep: #0A0A0A; --card: #121212; --green: #00FF88; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, Helvetica, sans-serif; background: var(--deep); color: #ddd; line-height: 1.6; }
- .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
+.hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 20px; }
     h1 { font-size: clamp(36px, 8vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 3px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
     h2 { color: var(--gold); font-size: clamp(24px, 5vw, 34px); text-align: center; margin: 40px 0 25px; }
- .btn { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
- .btn:hover { background: #ffeb3b; transform: translateY(-3px); }
- .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
- .card { background: var(--card); padding: 24px; border-radius: 14px; border: 1px solid #222; }
- .route-title { color: var(--gold); font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
- .price { color: var(--green); font-weight: bold; float: right; }
- .section { padding: 60px 20px; }
- .form-container { max-width: 600px; margin: 30px auto; background: #0a0a0a; padding: 30px; border-radius: 14px; border: 2px solid var(--gold); }
+.btn { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 8px; transition: all 0.3s; font-size: 15px; }
+.btn:hover { background: #ffeb3b; transform: translateY(-3px); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card { background: var(--card); padding: 24px; border-radius: 14px; border: 1px solid #222; }
+.route-title { color: var(--gold); font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+.price { color: var(--green); font-weight: bold; float: right; }
+.section { padding: 60px 20px; }
+.form-container { max-width: 600px; margin: 30px auto; background: #0a0a0a; padding: 30px; border-radius: 14px; border: 2px solid var(--gold); }
     input, select, textarea, input[type="file"] { width: 100%; padding: 12px; margin: 8px 0; background: #1a1a1a; border: 1px solid #444; color: white; border-radius: 8px; font-size: 15px; }
- .situation-room { background: #0a0a0a; border: 2px dashed var(--gold); padding: 30px; border-radius: 16px; margin: 20px 0; text-align: center; }
+.situation-room { background: #0a0a0a; border: 2px dashed var(--gold); padding: 30px; border-radius: 16px; margin: 20px 0; text-align: center; }
+.partners-logos { display: flex; justify-content: center; align-items: center; gap: 25px; margin: 20px 0; flex-wrap: wrap; }
+.partners-logos img { height: 50px; border-radius: 8px; background: white; padding: 5px; }
 
     @media (max-width: 768px) {
       h1 { font-size: 34px; }
-   .btn { display: block; width: 90%; margin: 10px auto; }
-   .section { padding: 40px 15px; }
+.btn { display: block; width: 90%; margin: 10px auto; }
+.section { padding: 40px 15px; }
+.partners-logos img { height: 40px; }
     }
   </style>
 </head>
@@ -38,6 +41,19 @@
       <h1>HANTZVIPRIDES</h1>
       <p style="font-size:clamp(16px,4vw,22px);">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
       <p style="font-size:clamp(18px,4vw,26px); color:var(--gold); font-weight:bold; margin:15px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
+
+      <!-- CORPORATE PARTNERS LOGOS -->
+      <p style="color:var(--gold); font-weight:900; font-size:16px; margin:15px 0 8px;">CORPORATE PARTNERS</p>
+      <div class="partners-logos">
+        <img src="IMG-202607010-WA0113.jpg" alt="First Bank">
+        <img src="IMG-20260723-WA0135(1).jpg" alt="HVR Flyer" style="height:70px;">
+        <img src="IMG-202607010-WA0116.jpg" alt="Leadway Assurance">
+      </div>
+
+      <!-- BOLD DISCLAIMER -->
+      <div style="background:#000; border:2px solid var(--gold); padding:12px 15px; border-radius:10px; margin:15px auto; max-width:700px;">
+        <p style="font-size:clamp(14px,3vw,17px); color:var(--gold); font-weight:900; margin:0;">💰ONLY PASSENGERS BOOKINGS WITH OFFICIAL BANK ARE QUALIFIED FOR OFFICIAL BANK BONUSES💰</p>
+      </div>
 
       <p style="font-size:clamp(16px,3vw,20px); color:var(--green); font-weight:900; margin:10px 0;">Official Bank Bonus 💰</p>
       <p style="font-size:clamp(15px,3vw,18px); color:#fff; font-weight:800; margin:8px 0;">🫶 BOOK IN ADVANCE</p>
@@ -56,11 +72,12 @@
   <!-- HOW HVR WORKS -->
   <section class="section" style="background:#111;">
     <h2>🛡️ HOW HVR OFFICIAL BANK BONUS 💰 WORKS</h2>
+    <p style="text-align:center; color:var(--green); font-weight:bold; font-size:15px; margin-top:-15px; margin-bottom:25px;">(only for HVR OFFICIAL BANK ACCOUNT HOLDERS)</p>
+
     <div class="grid">
       <div class="card">
         <h3 style="color:var(--gold);">🫶 PAY ON BOARD</h3>
         <p><b>Pay driver during boarding</b></p>
-        <p>Must have HVR Official Bank Account.</p>
         <p style="color:var(--green); font-weight:bold; margin-top:8px; font-size:18px;">11TH TRIP FREE</p>
       </div>
       <div class="card">
@@ -191,6 +208,11 @@
       <div class="card"><h3>Drivers</h3><p>Commercial + Personal Accident</p></div>
       <div class="card"><h3>Fleet Vehicles</h3><p>Comprehensive Insurance</p></div>
     </div>
+  </section>
+
+  <!-- BOTTOM IMAGE -->
+  <section style="padding:40px 20px; text-align:center; background:#000;">
+    <img src="IMG-20260624-WA0059.jpg" alt="HVR Bottom Banner" style="max-width:100%; width:100%; max-width:900px; border-radius:12px; border:2px solid var(--gold);">
   </section>
 
   <!-- FOOTER -->
