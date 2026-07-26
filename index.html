@@ -1,120 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HantzVIPRides - Premium Transport & Bonny Route Launch</title>
-  <meta name="description" content="HantzVIPRides - Premium Car Rental, Corporate Shuttle, Intercity Transport. Bonny Route Launch Coming Soon. Book with First Bank & Leadway.">
-  <style>
-    :root {
-      --primary: #FFD700;
-      --secondary: #0a0a0a;
-      --green: #00C853;
-      --text: #ffffff;
-      --card: #1a1a1a;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background: var(--secondary); color: var(--text); line-height: 1.6; }
-    a { text-decoration: none; color: var(--primary); }
-    .container { max-width: 1200px; margin: auto; padding: 20px; }
+<!-- HERO SECTION -->
+<section class="hero">
+  <div style="max-width:1100px; margin:auto; width:100%;">
+    <img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo" style="width:160px; margin-bottom:8px; border-radius:12px;">
+    <h1>HantzVIPRides</h1>
+    <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
+    
+    <p style="color:var(--primary); font-weight:bold; margin-bottom:10px;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
-    /* FIXED: Tightened Hero */
-    .hero { background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.90)), url('hero-bg.jpg') center/cover no-repeat; min-height: auto; display: flex; align-items: flex-start; text-align: center; padding: 30px 20px 10px; }
-    .hero h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
-    .hero .sub { font-size: 1.1rem; margin-bottom: 15px; color: #ccc; }
-    .alert { background: #222; border: 1px solid var(--primary); padding: 10px; border-radius: 8px; margin: 15px auto; max-width: 600px; font-weight: bold; }
-    .btn { display: inline-block; padding: 12px 25px; margin: 8px; border-radius: 50px; background: var(--primary); color: var(--secondary); font-weight: bold; transition: 0.3s; }
-    .btn:hover { transform: scale(1.05); }
-    .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
-    .btn-green { background: var(--green); color: #fff; border: 2px solid var(--green); }
-    .partner-logos img { width: 50px; margin: 10px; vertical-align: middle; }
-
-    section { padding: 60px 20px; }
-    section h2 { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 30px; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid #333; text-align: center; }
-    .card h3 { color: var(--primary); margin-bottom: 10px; }
-    .center-text { text-align: center; }
-
-    footer { background: #000; text-align: center; padding: 30px 20px; border-top: 2px solid var(--primary); }
-    footer p { margin: 5px 0; }
-  </style>
-</head>
-<body>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div style="max-width:1100px; margin:auto; width:100%;">
-      <img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo" style="width:160px; margin-bottom:8px; border-radius:12px;">
-      <h1>HantzVIPRides</h1>
-      <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-      
-      <p style="color:var(--primary); font-weight:bold; margin-bottom:10px;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
-
-      <div class="partner-logos">
-        <img src="IMG-20260710-WA0113.jpg" alt="First Bank">
-        <img src="IMG-20260710-WA0116.jpg" alt="Leadway">
-      </div>
-
-      <div class="alert">
-        🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥
-      </div>
-
-      <div>
-        <a href="https://wa.me/2348085526104" class="btn">BOOK YOUR RIDE</a>
-        <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
-        <a href="shareter.html" class="btn btn-outline">SHARETER Services</a>
-      </div>
-      <div>
-        <a href="#safety" class="btn btn-outline">Safety & Security</a>
-        <a href="#registration" class="btn btn-outline">Vehicle Registration</a>
-        <a href="#agent" class="btn btn-outline">Join As Agent</a>
-        <a href="https://firstbanknigeria.com" target="_blank" class="btn btn-green">Open Bank Account</a>
-      </div>
+    <div class="partner-logos">
+      <img src="IMG-20260710-WA0113.jpg" alt="First Bank">
+      <img src="IMG-20260710-WA0116.jpg" alt="Leadway">
     </div>
-  </section>
 
-  <!-- SAFETY SECTION - STILL HERE -->
-  <section id="safety">
-    <div class="container">
-      <h2>Safety & Security</h2>
-      <div class="cards">
-        <div class="card"><h3>GPS Tracked</h3><p>All vehicles are tracked 24/7 for your safety.</p></div>
-        <div class="card"><h3>Verified Drivers</h3><p>Background checked and trained professionals.</p></div>
-        <div class="card"><h3>Insured Trips</h3><p>Fully covered by Leadway Assurance.</p></div>
-      </div>
+    <div class="alert">
+      🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥
     </div>
-  </section>
 
-  <!-- REGISTRATION SECTION - STILL HERE -->
-  <section id="registration" style="background:#111;">
-    <div class="container">
-      <h2>Vehicle Registration</h2>
-      <p style="text-align:center; margin-bottom:20px;">Own a car? Join our fleet and start earning.</p>
-      <div style="text-align:center;">
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20register%20my%20vehicle" class="btn">Register Your Vehicle</a>
-      </div>
+    <!-- MAIN BUTTONS -->
+    <div>
+      <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20a%20ride" class="btn">BOOK YOUR RIDE</a>
+      <a href="#routes" class="btn btn-outline">Our Routes</a>
+      <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
+      <a href="#shareter" class="btn btn-outline">SHAReTER Services</a>
     </div>
-  </section>
 
-  <!-- AGENT SECTION - STILL HERE -->
-  <section id="agent">
-    <div class="container">
-      <h2>Join As Agent</h2>
-      <p style="text-align:center; margin-bottom:20px;">Earn commission by referring customers to HantzVIPRides.</p>
-      <div style="text-align:center;">
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20become%20an%20HVR%20Agent" class="btn">Become an Agent</a>
-      </div>
+    <div style="margin-top:10px;">
+      <a href="#safety" class="btn btn-outline">Safety & Security</a>
+      <a href="#registration" class="btn btn-outline">Vehicle Registration</a>
+      <a href="#agent" class="btn btn-outline">Join As Agent</a>
+      <a href="https://firstbanknigeria.com" target="_blank" class="btn btn-green">Open Bank Account</a>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p><strong>HantzVIPRides</strong></p>
-    <p>Premium Transport Solutions</p>
-    <p>WhatsApp: +234 808 552 6104</p>
-    <p>© 2026 HantzVIPRides. All Rights Reserved.</p>
-  </footer>
-
-</body>
-</html>
+  </div>
+</section>
