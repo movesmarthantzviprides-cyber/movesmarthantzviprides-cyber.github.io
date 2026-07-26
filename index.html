@@ -9,7 +9,7 @@
     :root {
       --primary: #FFD700;
       --secondary: #0a0a0a;
-      --accent: #00C853;
+      --green: #00C853;
       --text: #ffffff;
       --card: #1a1a1a;
     }
@@ -26,7 +26,7 @@
     .btn { display: inline-block; padding: 12px 25px; margin: 8px; border-radius: 50px; background: var(--primary); color: var(--secondary); font-weight: bold; transition: 0.3s; }
     .btn:hover { transform: scale(1.05); }
     .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
-    .btn-green { background: var(--accent); color: #fff; border: 2px solid var(--accent); }
+    .btn-green { background: var(--green); color: #fff; border: 2px solid var(--green); }
     .partner-logos img { width: 50px; margin: 10px; vertical-align: middle; }
 
     section { padding: 60px 20px; }
@@ -34,6 +34,7 @@
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .card { background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid #333; text-align: center; }
     .card h3 { color: var(--primary); margin-bottom: 10px; }
+    .center-text { text-align: center; }
 
     footer { background: #000; text-align: center; padding: 30px 20px; border-top: 2px solid var(--primary); }
     footer p { margin: 5px 0; }
@@ -44,8 +45,7 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <div style="max-width:1100px; margin:auto; width:100%;">
-      <!-- FIXED: Smaller margin + smaller logo -->
-      <img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo" style="width:160px; margin-bottom:8px; border-radius:12px; background:transparent;">
+      <img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo" style="width:160px; margin-bottom:8px; border-radius:12px;">
       <h1>HantzVIPRides</h1>
       <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
       
@@ -62,9 +62,11 @@
 
       <div>
         <a href="https://wa.me/2348085526104" class="btn">BOOK YOUR RIDE</a>
-        <a href="#safety" class="btn btn-outline">Safety & Security</a>
+        <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
+        <a href="shareter.html" class="btn btn-outline">SHARETER Services</a>
       </div>
       <div>
+        <a href="#safety" class="btn btn-outline">Safety & Security</a>
         <a href="#registration" class="btn btn-outline">Vehicle Registration</a>
         <a href="#agent" class="btn btn-outline">Join As Agent</a>
         <a href="https://firstbanknigeria.com" target="_blank" class="btn btn-green">Open Bank Account</a>
@@ -72,48 +74,7 @@
     </div>
   </section>
 
-  <!-- CORPORATE PARTNERS PREVIEW PAGE - ADDED BACK -->
-  <section id="partners">
-    <div class="container">
-      <h2>Corporate Partners</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>First Bank of Nigeria</h3>
-          <p>Our Official Banking Partner. Open an account and enjoy exclusive HVR benefits + Free trips.</p>
-          <a href="https://firstbanknigeria.com" target="_blank" class="btn">Open Account</a>
-        </div>
-        <div class="card">
-          <h3>Leadway Assurance</h3>
-          <p>Your safety is insured. All HVR trips are covered by Leadway for maximum peace of mind.</p>
-          <a href="https://www.leadway.com" target="_blank" class="btn btn-outline">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SHARETER SERVICES SECTION - ADDED BACK -->
-  <section id="shareter" style="background:#111;">
-    <div class="container">
-      <h2>SHARETER Services</h2>
-      <p style="text-align:center; margin-bottom:30px;">Share the ride, split the cost. Travel smart with other passengers on the same route.</p>
-      <div class="cards">
-        <div class="card">
-          <h3>Bonny Route Share</h3>
-          <p>Going to Bonny? Join others and pay less. Launching very soon.</p>
-        </div>
-        <div class="card">
-          <h3>Corporate Share</h3>
-          <p>Staff bus sharing for companies. Reduce cost, increase comfort.</p>
-        </div>
-        <div class="card">
-          <h3>Airport Share</h3>
-          <p>Split airport runs with other travelers. Convenient and affordable.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SAFETY SECTION -->
+  <!-- SAFETY SECTION - STILL HERE -->
   <section id="safety">
     <div class="container">
       <h2>Safety & Security</h2>
@@ -125,7 +86,7 @@
     </div>
   </section>
 
-  <!-- REGISTRATION SECTION -->
+  <!-- REGISTRATION SECTION - STILL HERE -->
   <section id="registration" style="background:#111;">
     <div class="container">
       <h2>Vehicle Registration</h2>
@@ -136,7 +97,7 @@
     </div>
   </section>
 
-  <!-- AGENT SECTION -->
+  <!-- AGENT SECTION - STILL HERE -->
   <section id="agent">
     <div class="container">
       <h2>Join As Agent</h2>
