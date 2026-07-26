@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HantzVIPRides - Premium Transport & Bonny Route Launch</title>
-  <meta name="description" content="HantzVIPRides - Premium Car Rental, Corporate Shuttle, Intercity Transport. Bonny Route Launch Coming Soon.">
   <style>
     :root {
       --primary: #FFD700;
@@ -18,109 +17,113 @@
     a { text-decoration: none; }
     .container { max-width: 1100px; margin: auto; padding: 20px; }
 
-    /* HERO - Tighter */
+    /* HERO - Tight */
     .hero { 
-      background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; 
-      padding: 25px 20px 20px; 
+      background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.94)), url('hero-bg.jpg') center/cover no-repeat; 
+      padding: 18px 15px 15px; 
       text-align: center; 
     }
-    .hero img.logo { width: 140px; margin-bottom: 8px; border-radius: 12px; }
-    .hero h1 { font-size: 2.3rem; color: var(--primary); margin: 5px 0; }
-    .hero .sub { font-size: 1.05rem; color: #ccc; margin: 5px 0 8px; }
-    .hero .launch { color: var(--primary); font-weight: bold; font-size: 1.15rem; margin-bottom: 12px; }
+    .hero img.logo { width: 130px; margin-bottom: 4px; border-radius: 10px; }
+    .hero h1 { font-size: 2.2rem; color: var(--primary); margin: 2px 0; }
+    .hero .sub { font-size: 1rem; color: #ccc; margin: 2px 0 6px; }
+    .hero .launch { color: var(--primary); font-weight: bold; font-size: 1.1rem; margin-bottom: 8px; }
 
-    .partner-logos { margin: 12px 0; }
+    .partner-logos { margin: 8px 0; }
     .partner-logos img { 
-      width: 65px; 
-      height: auto; 
-      margin: 0 8px; 
-      border-radius: 6px; 
-      background: #fff;
-      padding: 4px;
+      width: 60px; margin: 0 6px; border-radius: 6px; 
+      background: #fff; padding: 3px;
     }
 
     .alert { 
-      background: #1f1f1f; 
-      border: 1px solid var(--primary); 
-      padding: 10px 18px; 
-      border-radius: 8px; 
-      margin: 12px auto; 
-      max-width: 520px; 
-      font-weight: bold; 
-      color: var(--primary);
+      background: #1f1f1f; border: 1px solid var(--primary); 
+      padding: 9px 16px; border-radius: 8px; margin: 10px auto; 
+      max-width: 500px; font-weight: bold; color: var(--primary); font-size: 0.95rem;
     }
 
-    /* BUTTONS with better hover */
     .btn { 
-      display: inline-block; 
-      padding: 12px 24px; 
-      margin: 6px; 
-      border-radius: 50px; 
-      background: var(--primary); 
-      color: #000; 
-      font-weight: bold; 
-      border: 2px solid var(--primary);
-      transition: all 0.25s ease;
+      display: inline-block; padding: 11px 22px; margin: 5px; border-radius: 50px; 
+      background: var(--primary); color: #000; font-weight: bold; 
+      border: 2px solid var(--primary); transition: all 0.25s ease; font-size: 14px;
     }
     .btn:hover { 
-      transform: translateY(-4px) scale(1.03); 
-      background: #ffea00; 
-      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
+      transform: translateY(-3px) scale(1.03); background: #ffea00; 
+      box-shadow: 0 6px 18px rgba(255, 215, 0, 0.35);
     }
-    .btn-outline { 
-      background: transparent; 
-      color: var(--primary); 
-    }
-    .btn-outline:hover { 
-      background: var(--primary); 
-      color: #000; 
-      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
-    }
-    .btn-green { 
-      background: var(--green); 
-      border-color: var(--green); 
-      color: #fff; 
-    }
-    .btn-green:hover {
-      background: #00e676;
-      box-shadow: 0 8px 20px rgba(0, 200, 83, 0.35);
-    }
+    .btn-outline { background: transparent; color: var(--primary); }
+    .btn-outline:hover { background: var(--primary); color: #000; }
 
     .btn-group-title {
-      color: #aaa;
-      font-size: 13px;
-      letter-spacing: 1px;
-      margin: 18px 0 6px;
-      text-transform: uppercase;
+      color: #aaa; font-size: 12px; letter-spacing: 1px; 
+      margin: 14px 0 4px; text-transform: uppercase;
     }
 
-    /* SECTIONS */
-    section { padding: 55px 20px; }
-    section h2 { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 28px; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #333; text-align: center; transition: transform 0.25s; }
-    .card:hover { transform: translateY(-6px); }
-    .card h3 { color: var(--primary); margin-bottom: 10px; }
+    section { padding: 50px 20px; }
+    section h2 { text-align: center; font-size: 1.9rem; color: var(--primary); margin-bottom: 25px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .card { background: var(--card); padding: 22px; border-radius: 12px; border: 1px solid #333; text-align: center; }
+    .card h3 { color: var(--primary); margin-bottom: 8px; }
     .center-text { text-align: center; }
 
+    .announcement {
+      background: linear-gradient(90deg, #1a1a1a, #222);
+      border: 2px solid var(--primary);
+      padding: 22px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 30px auto;
+      max-width: 720px;
+    }
+
+    .bonus-box {
+      background: #111; border-left: 4px solid var(--green);
+      padding: 15px 20px; margin: 15px 0; border-radius: 0 10px 10px 0;
+    }
+
+    /* Video optimization */
+    .video-wrapper {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--primary);
+    }
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+
+    /* Simple Interactive Map */
+    .map-container {
+      background: #111;
+      border: 2px solid var(--primary);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 10px;
+    }
+
     footer { 
-      background: #000; 
-      text-align: center; 
-      padding: 35px 20px; 
+      background: #000; text-align: center; padding: 40px 20px; 
       border-top: 3px solid var(--primary); 
     }
-    footer p { margin: 6px 0; color: #aaa; }
 
     @media (max-width: 600px) {
-      .hero h1 { font-size: 1.9rem; }
-      .btn { display: block; width: 88%; margin: 8px auto; }
-      .partner-logos img { width: 58px; margin: 4px; }
+      .hero h1 { font-size: 1.8rem; }
+      .btn { display: block; width: 90%; margin: 7px auto; }
+      .map-container iframe { height: 280px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO (Tighter) -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" class="logo">
@@ -130,14 +133,13 @@
 
       <div class="partner-logos">
         <img src="IMG-20260710-WA0113.jpg" alt="First Bank">
-        <img src="IMG-20260710-WA0116.jpg" alt="Leadway Assurance">
+        <img src="IMG-20260710-WA0116.jpg" alt="Leadway">
       </div>
 
       <div class="alert">
         🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥
       </div>
 
-      <!-- GROUPED BUTTONS -->
       <div class="btn-group-title">For Passengers</div>
       <div>
         <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20a%20ride" class="btn">BOOK YOUR RIDE</a>
@@ -154,86 +156,120 @@
         <a href="applications.html" class="btn btn-outline">All Applications</a>
       </div>
 
-      <div class="btn-group-title">For Partners & Admin</div>
+      <div class="btn-group-title">Partners & Admin</div>
       <div>
         <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
         <a href="admin.html" class="btn btn-outline">Admin Panel</a>
-        <a href="privacy.html" class="btn btn-outline">Privacy Policy</a>
+        <a href="privacy.html" class="btn btn-outline">Privacy</a>
         <a href="terms.html" class="btn btn-outline">Terms</a>
       </div>
     </div>
   </section>
 
-  <!-- SHAReTER -->
-  <section id="shareter" style="background:#111;">
+  <!-- OPTIMIZED PROMO VIDEO -->
+  <section style="padding: 30px 20px; background:#000; text-align:center;">
     <div class="container">
-      <h2>💎 SHAReTER – Shared VIP Charter</h2>
-      <p class="center-text" style="margin-bottom:10px; font-size:1.15rem;">Travel VIP. Pay Less.</p>
-      <p class="center-text" style="color:var(--green); font-weight:bold; font-size:1.3rem; margin-bottom:25px;">
-        From ₦10,000 per seat vs ₦40,000 solo
+      <h2 style="color:#FFD700; margin-bottom:20px;">Watch Our Promo</h2>
+      <div class="video-wrapper">
+        <!-- Optimized: preload="none" + poster for faster loading -->
+        <video controls preload="none" poster="hvr-logo.jpg" playsinline>
+          <source src="promo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p style="color:#888; font-size:13px; margin-top:10px;">Video loads only when you press play</p>
+    </div>
+  </section>
+
+  <!-- BIGGER ANNOUNCEMENT -->
+  <div class="container">
+    <div class="announcement">
+      <h3 style="font-size:1.7rem; color:#FFD700; margin-bottom:12px;">OUR SERVICE</h3>
+      <p style="font-size:1.55rem; font-weight:900; color:#fff; line-height:1.4;">
+        HOUSE 2 HOUSE PICKUP & DROP OFF<br>
+        <span style="color:#FFD700;">VIP / SEMI-VIP RIDES</span>
       </p>
-      <div class="center-text">
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20SHAReTER" class="btn">Book SHAReTER on WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- BANK BONUSES -->
+  <section style="background:#111; padding:40px 20px;">
+    <div class="container">
+      <h2>Official Bank Bonus</h2>
+      <p class="center-text" style="margin-bottom:25px;">Book with HVR Official Bank account and enjoy free rides</p>
+      
+      <div class="bonus-box">
+        <strong style="color:var(--green);">11TH RIDE FREE BONUS</strong><br>
+        Multi SHAReTER – Average of previous 10 trips credited to your wallet
+      </div>
+      <div class="bonus-box">
+        <strong style="color:var(--green);">6TH RIDE FREE BONUS</strong><br>
+        VIP SHAReTER – Faster loyalty reward for advance direct payments
       </div>
     </div>
   </section>
 
-  <!-- ROUTES -->
-  <section id="routes">
+  <!-- INTERACTIVE ROUTE MAP -->
+  <section>
     <div class="container">
-      <h2>📍 Our Routes</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Bonny ↔ Port Harcourt</h3>
-          <p>Semi VIP & VIP XX daily trips</p>
-        </div>
-        <div class="card">
-          <h3>Bonny ↔ Warri</h3>
-          <p>From ₦22,000</p>
-        </div>
-        <div class="card">
-          <h3>Port Harcourt ↔ Warri</h3>
-          <p>From ₦15,000</p>
-        </div>
-        <div class="card">
-          <h3>Other Intercity</h3>
-          <p>Akwa Ibom • Abuja • Asaba • Onitsha</p>
-        </div>
+      <h2>📍 Interactive Route Map</h2>
+      <div class="map-container">
+        <p style="margin-bottom:15px; color:#aaa;">Bonny ↔ Port Harcourt Corridor</p>
+        <!-- OpenStreetMap embed (no API key needed) -->
+        <iframe 
+          src="https://www.openstreetmap.org/export/embed.html?bbox=6.95%2C4.35%2C7.25%2C4.85&layer=mapnik&marker=4.45%2C7.15"
+          loading="lazy"
+          title="HantzVIPRides Route Map">
+        </iframe>
+        <p style="margin-top:12px; font-size:14px;">
+          <a href="https://www.openstreetmap.org/#map=10/4.6/7.1" target="_blank" style="color:#FFD700;">
+            Open full map →
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHAReTER -->
+  <section style="background:#111;">
+    <div class="container">
+      <h2>💎 SHAReTER – Shared VIP Charter</h2>
+      <p class="center-text" style="margin-bottom:10px;">Travel VIP. Pay Less.</p>
+      <p class="center-text" style="color:var(--green); font-weight:bold; font-size:1.25rem; margin-bottom:20px;">
+        From ₦10,000 per seat vs ₦40,000 solo
+      </p>
+      <div class="center-text">
+        <a href="shareter.html" class="btn">View SHAReTER Details</a>
+        <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20SHAReTER" class="btn btn-outline">Book on WhatsApp</a>
       </div>
     </div>
   </section>
 
   <!-- SAFETY -->
-  <section id="safety" style="background:#111;">
+  <section>
     <div class="container">
       <h2>Safety & Security</h2>
       <div class="cards">
-        <div class="card"><h3>GPS Tracked</h3><p>All vehicles are tracked 24/7 for your safety.</p></div>
-        <div class="card"><h3>Verified Drivers</h3><p>Background checked and trained professionals.</p></div>
-        <div class="card"><h3>Insured Trips</h3><p>Fully covered by Leadway Assurance.</p></div>
+        <div class="card"><h3>GPS Tracked</h3><p>All vehicles tracked 24/7.</p></div>
+        <div class="card"><h3>Verified Drivers</h3><p>Background checked professionals.</p></div>
+        <div class="card"><h3>Insured Trips</h3><p>Covered by Leadway Assurance.</p></div>
+        <div class="card"><h3>Dispatch Certificate</h3><p>Official proof for claims & benefits.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- REGISTRATION -->
-  <section id="registration">
-    <div class="container">
-      <h2>Vehicle & Driver Registration</h2>
-      <p class="center-text" style="margin-bottom:20px;">Own a car or want to drive with us? Join the fleet.</p>
-      <div class="center-text">
-        <a href="vehicle-form.html" class="btn">Register Vehicle</a>
-        <a href="driver.html" class="btn btn-outline">Apply as Driver</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AGENT -->
-  <section id="agent" style="background:#111;">
-    <div class="container">
-      <h2>Join As Agent</h2>
-      <p class="center-text" style="margin-bottom:20px;">Earn commission by referring customers to HantzVIPRides.</p>
-      <div class="center-text">
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20become%20an%20HVR%20Agent" class="btn">Become an Agent</a>
+  <!-- BOOKING ACCOUNT -->
+  <section style="background:#111;">
+    <div class="container" style="text-align:center;">
+      <h2>Booking & Payment Account</h2>
+      <div style="background:#0a0a0a; padding:25px; border-radius:14px; border:2px solid var(--primary); max-width:450px; margin:0 auto;">
+        <p style="font-size:1.1rem; margin-bottom:8px;"><strong>HANTZ INTERNATIONAL NIGERIA</strong></p>
+        <p style="font-size:1.5rem; color:var(--primary); font-weight:bold; margin:10px 0;">2007689316</p>
+        <p>First Bank</p>
+        <a href="https://wa.me/2348085526104?text=Please%20save%20HVR%20Payment%20Account%3A%0AHantz%20International%20Nigeria%0A2007689316%0AFirst%20Bank" 
+           class="btn" style="margin-top:15px;">
+          Auto-Save Account on WhatsApp
+        </a>
       </div>
     </div>
   </section>
