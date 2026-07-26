@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HantzVIPRides - Premium Transport & Bonny Route Launch</title>
-  <meta name="description" content="HantzVIPRides - Premium Car Rental, Corporate Shuttle, Intercity Transport. Bonny Route Launch Coming Soon. Book with First Bank & Leadway.">
+  <meta name="description" content="HantzVIPRides - Premium Car Rental, Corporate Shuttle, Intercity Transport. Bonny Route Launch Coming Soon.">
   <style>
     :root {
       --primary: #FFD700;
@@ -15,26 +15,62 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     body { background: var(--secondary); color: var(--text); line-height: 1.6; }
-    a { text-decoration: none; color: var(--primary); }
-    .container { max-width: 1200px; margin: auto; padding: 20px; }
+    a { text-decoration: none; }
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
 
+    /* HERO */
     .hero { 
-      background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.90)), url('hero-bg.jpg') center/cover no-repeat; 
-      min-height: auto; 
-      display: flex; 
-      align-items: flex-start; 
+      background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; 
+      padding: 50px 20px 40px; 
       text-align: center; 
-      padding: 40px 20px 30px; 
     }
-    .hero h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
-    .hero .sub { font-size: 1.1rem; margin-bottom: 15px; color: #ccc; }
-    .alert { background: #222; border: 1px solid var(--primary); padding: 12px; border-radius: 8px; margin: 15px auto; max-width: 600px; font-weight: bold; }
-    .btn { display: inline-block; padding: 12px 25px; margin: 8px; border-radius: 50px; background: var(--primary); color: var(--secondary); font-weight: bold; transition: 0.3s; }
-    .btn:hover { transform: scale(1.05); }
-    .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
-    .btn-green { background: var(--green); color: #fff; border: 2px solid var(--green); }
-    .partner-logos img { width: 55px; margin: 8px; vertical-align: middle; border-radius: 6px; }
+    .hero img.logo { width: 150px; margin-bottom: 15px; border-radius: 12px; }
+    .hero h1 { font-size: 2.6rem; color: var(--primary); margin-bottom: 8px; }
+    .hero .sub { font-size: 1.15rem; color: #ccc; margin-bottom: 12px; }
+    .hero .launch { color: var(--primary); font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; }
 
+    .partner-logos { margin: 20px 0; }
+    .partner-logos img { 
+      width: 75px; 
+      height: auto; 
+      margin: 0 12px; 
+      border-radius: 8px; 
+      vertical-align: middle;
+      background: #fff;
+      padding: 6px;
+    }
+
+    .alert { 
+      background: #1f1f1f; 
+      border: 1px solid var(--primary); 
+      padding: 12px 20px; 
+      border-radius: 8px; 
+      margin: 20px auto; 
+      max-width: 550px; 
+      font-weight: bold; 
+      color: var(--primary);
+    }
+
+    .btn { 
+      display: inline-block; 
+      padding: 13px 26px; 
+      margin: 8px; 
+      border-radius: 50px; 
+      background: var(--primary); 
+      color: #000; 
+      font-weight: bold; 
+      transition: 0.3s; 
+      border: 2px solid var(--primary);
+    }
+    .btn:hover { transform: translateY(-3px); background: #ffea00; }
+    .btn-outline { 
+      background: transparent; 
+      color: var(--primary); 
+    }
+    .btn-outline:hover { background: var(--primary); color: #000; }
+    .btn-green { background: var(--green); border-color: var(--green); color: #fff; }
+
+    /* SECTIONS */
     section { padding: 60px 20px; }
     section h2 { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 30px; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
@@ -42,36 +78,42 @@
     .card h3 { color: var(--primary); margin-bottom: 10px; }
     .center-text { text-align: center; }
 
-    footer { background: #000; text-align: center; padding: 30px 20px; border-top: 2px solid var(--primary); }
-    footer p { margin: 5px 0; }
+    footer { 
+      background: #000; 
+      text-align: center; 
+      padding: 35px 20px; 
+      border-top: 3px solid var(--primary); 
+    }
+    footer p { margin: 6px 0; color: #aaa; }
 
     @media (max-width: 600px) {
-      .hero h1 { font-size: 1.9rem; }
-      .btn { display: block; width: 90%; margin: 10px auto; }
+      .hero h1 { font-size: 2rem; }
+      .btn { display: block; width: 85%; margin: 10px auto; }
+      .partner-logos img { width: 65px; margin: 5px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
-    <div style="max-width:1100px; margin:auto; width:100%;">
-      <img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo" style="width:160px; margin-bottom:8px; border-radius:12px;">
+    <div class="container">
+      <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" class="logo">
       <h1>HantzVIPRides</h1>
       <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-      
-      <p style="color:var(--primary); font-weight:bold; margin-bottom:10px;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
+      <p class="launch">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
+      <!-- Partner Logos (fixed size) -->
       <div class="partner-logos">
         <img src="IMG-20260710-WA0113.jpg" alt="First Bank">
-        <img src="IMG-20260710-WA0116.jpg" alt="Leadway">
+        <img src="IMG-20260710-WA0116.jpg" alt="Leadway Assurance">
       </div>
 
       <div class="alert">
         🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥
       </div>
 
-      <!-- MAIN BUTTONS -->
+      <!-- Main Buttons -->
       <div>
         <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20a%20ride" class="btn">BOOK YOUR RIDE</a>
         <a href="#routes" class="btn btn-outline">Our Routes</a>
@@ -79,7 +121,7 @@
         <a href="#shareter" class="btn btn-outline">SHAReTER Services</a>
       </div>
 
-      <div style="margin-top:10px;">
+      <div style="margin-top: 12px;">
         <a href="#safety" class="btn btn-outline">Safety & Security</a>
         <a href="#registration" class="btn btn-outline">Vehicle Registration</a>
         <a href="#agent" class="btn btn-outline">Join As Agent</a>
@@ -88,13 +130,11 @@
     </div>
   </section>
 
-  <!-- SHAReTER SECTION -->
+  <!-- SHAReTER -->
   <section id="shareter" style="background:#111;">
     <div class="container">
       <h2>💎 SHAReTER – Shared VIP Charter</h2>
-      <p class="center-text" style="margin-bottom:15px; font-size:1.15rem;">
-        Travel VIP. Pay Less.
-      </p>
+      <p class="center-text" style="margin-bottom:10px; font-size:1.15rem;">Travel VIP. Pay Less.</p>
       <p class="center-text" style="color:var(--green); font-weight:bold; font-size:1.3rem; margin-bottom:25px;">
         From ₦10,000 per seat vs ₦40,000 solo
       </p>
@@ -104,7 +144,7 @@
     </div>
   </section>
 
-  <!-- OUR ROUTES SECTION -->
+  <!-- ROUTES -->
   <section id="routes">
     <div class="container">
       <h2>📍 Our Routes</h2>
@@ -129,7 +169,7 @@
     </div>
   </section>
 
-  <!-- SAFETY SECTION -->
+  <!-- SAFETY -->
   <section id="safety" style="background:#111;">
     <div class="container">
       <h2>Safety & Security</h2>
@@ -141,23 +181,23 @@
     </div>
   </section>
 
-  <!-- REGISTRATION SECTION -->
+  <!-- REGISTRATION -->
   <section id="registration">
     <div class="container">
       <h2>Vehicle Registration</h2>
-      <p style="text-align:center; margin-bottom:20px;">Own a car? Join our fleet and start earning.</p>
-      <div style="text-align:center;">
+      <p class="center-text" style="margin-bottom:20px;">Own a car? Join our fleet and start earning.</p>
+      <div class="center-text">
         <a href="https://wa.me/2348085526104?text=I%20want%20to%20register%20my%20vehicle" class="btn">Register Your Vehicle</a>
       </div>
     </div>
   </section>
 
-  <!-- AGENT SECTION -->
+  <!-- AGENT -->
   <section id="agent" style="background:#111;">
     <div class="container">
       <h2>Join As Agent</h2>
-      <p style="text-align:center; margin-bottom:20px;">Earn commission by referring customers to HantzVIPRides.</p>
-      <div style="text-align:center;">
+      <p class="center-text" style="margin-bottom:20px;">Earn commission by referring customers to HantzVIPRides.</p>
+      <div class="center-text">
         <a href="https://wa.me/2348085526104?text=I%20want%20to%20become%20an%20HVR%20Agent" class="btn">Become an Agent</a>
       </div>
     </div>
