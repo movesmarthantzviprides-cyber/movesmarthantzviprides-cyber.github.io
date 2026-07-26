@@ -18,63 +18,88 @@
     a { text-decoration: none; }
     .container { max-width: 1100px; margin: auto; padding: 20px; }
 
-    /* HERO */
+    /* HERO - Tighter */
     .hero { 
       background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; 
-      padding: 50px 20px 40px; 
+      padding: 25px 20px 20px; 
       text-align: center; 
     }
-    .hero img.logo { width: 150px; margin-bottom: 15px; border-radius: 12px; }
-    .hero h1 { font-size: 2.6rem; color: var(--primary); margin-bottom: 8px; }
-    .hero .sub { font-size: 1.15rem; color: #ccc; margin-bottom: 12px; }
-    .hero .launch { color: var(--primary); font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; }
+    .hero img.logo { width: 140px; margin-bottom: 8px; border-radius: 12px; }
+    .hero h1 { font-size: 2.3rem; color: var(--primary); margin: 5px 0; }
+    .hero .sub { font-size: 1.05rem; color: #ccc; margin: 5px 0 8px; }
+    .hero .launch { color: var(--primary); font-weight: bold; font-size: 1.15rem; margin-bottom: 12px; }
 
-    .partner-logos { margin: 20px 0; }
+    .partner-logos { margin: 12px 0; }
     .partner-logos img { 
-      width: 75px; 
+      width: 65px; 
       height: auto; 
-      margin: 0 12px; 
-      border-radius: 8px; 
-      vertical-align: middle;
+      margin: 0 8px; 
+      border-radius: 6px; 
       background: #fff;
-      padding: 6px;
+      padding: 4px;
     }
 
     .alert { 
       background: #1f1f1f; 
       border: 1px solid var(--primary); 
-      padding: 12px 20px; 
+      padding: 10px 18px; 
       border-radius: 8px; 
-      margin: 20px auto; 
-      max-width: 550px; 
+      margin: 12px auto; 
+      max-width: 520px; 
       font-weight: bold; 
       color: var(--primary);
     }
 
+    /* BUTTONS with better hover */
     .btn { 
       display: inline-block; 
-      padding: 13px 26px; 
-      margin: 8px; 
+      padding: 12px 24px; 
+      margin: 6px; 
       border-radius: 50px; 
       background: var(--primary); 
       color: #000; 
       font-weight: bold; 
-      transition: 0.3s; 
       border: 2px solid var(--primary);
+      transition: all 0.25s ease;
     }
-    .btn:hover { transform: translateY(-3px); background: #ffea00; }
+    .btn:hover { 
+      transform: translateY(-4px) scale(1.03); 
+      background: #ffea00; 
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
+    }
     .btn-outline { 
       background: transparent; 
       color: var(--primary); 
     }
-    .btn-outline:hover { background: var(--primary); color: #000; }
-    .btn-green { background: var(--green); border-color: var(--green); color: #fff; }
+    .btn-outline:hover { 
+      background: var(--primary); 
+      color: #000; 
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
+    }
+    .btn-green { 
+      background: var(--green); 
+      border-color: var(--green); 
+      color: #fff; 
+    }
+    .btn-green:hover {
+      background: #00e676;
+      box-shadow: 0 8px 20px rgba(0, 200, 83, 0.35);
+    }
+
+    .btn-group-title {
+      color: #aaa;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin: 18px 0 6px;
+      text-transform: uppercase;
+    }
 
     /* SECTIONS */
-    section { padding: 60px 20px; }
-    section h2 { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 30px; }
+    section { padding: 55px 20px; }
+    section h2 { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 28px; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #333; text-align: center; }
+    .card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #333; text-align: center; transition: transform 0.25s; }
+    .card:hover { transform: translateY(-6px); }
     .card h3 { color: var(--primary); margin-bottom: 10px; }
     .center-text { text-align: center; }
 
@@ -87,15 +112,15 @@
     footer p { margin: 6px 0; color: #aaa; }
 
     @media (max-width: 600px) {
-      .hero h1 { font-size: 2rem; }
-      .btn { display: block; width: 85%; margin: 10px auto; }
-      .partner-logos img { width: 65px; margin: 5px; }
+      .hero h1 { font-size: 1.9rem; }
+      .btn { display: block; width: 88%; margin: 8px auto; }
+      .partner-logos img { width: 58px; margin: 4px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO (Tighter) -->
   <section class="hero">
     <div class="container">
       <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" class="logo">
@@ -103,7 +128,6 @@
       <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
       <p class="launch">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
-      <!-- Partner Logos (fixed size) -->
       <div class="partner-logos">
         <img src="IMG-20260710-WA0113.jpg" alt="First Bank">
         <img src="IMG-20260710-WA0116.jpg" alt="Leadway Assurance">
@@ -113,19 +137,29 @@
         🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥
       </div>
 
-      <!-- Main Buttons -->
+      <!-- GROUPED BUTTONS -->
+      <div class="btn-group-title">For Passengers</div>
       <div>
         <a href="https://wa.me/2348085526104?text=I%20want%20to%20BOOK%20a%20ride" class="btn">BOOK YOUR RIDE</a>
-        <a href="#routes" class="btn btn-outline">Our Routes</a>
-        <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
-        <a href="#shareter" class="btn btn-outline">SHAReTER Services</a>
+        <a href="routes.html" class="btn btn-outline">Our Routes</a>
+        <a href="shareter.html" class="btn btn-outline">SHAReTER Services</a>
+        <a href="safety.html" class="btn btn-outline">Safety & Security</a>
       </div>
 
-      <div style="margin-top: 12px;">
-        <a href="#safety" class="btn btn-outline">Safety & Security</a>
-        <a href="#registration" class="btn btn-outline">Vehicle Registration</a>
-        <a href="#agent" class="btn btn-outline">Join As Agent</a>
-        <a href="https://firstbanknigeria.com" target="_blank" class="btn btn-green">Open Bank Account</a>
+      <div class="btn-group-title">For Drivers & Vehicle Owners</div>
+      <div>
+        <a href="vehicle-form.html" class="btn btn-outline">Vehicle Registration</a>
+        <a href="driver.html" class="btn btn-outline">Driver Application</a>
+        <a href="driver-dashboard.html" class="btn btn-outline">Driver Dashboard</a>
+        <a href="applications.html" class="btn btn-outline">All Applications</a>
+      </div>
+
+      <div class="btn-group-title">For Partners & Admin</div>
+      <div>
+        <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
+        <a href="admin.html" class="btn btn-outline">Admin Panel</a>
+        <a href="privacy.html" class="btn btn-outline">Privacy Policy</a>
+        <a href="terms.html" class="btn btn-outline">Terms</a>
       </div>
     </div>
   </section>
@@ -184,10 +218,11 @@
   <!-- REGISTRATION -->
   <section id="registration">
     <div class="container">
-      <h2>Vehicle Registration</h2>
-      <p class="center-text" style="margin-bottom:20px;">Own a car? Join our fleet and start earning.</p>
+      <h2>Vehicle & Driver Registration</h2>
+      <p class="center-text" style="margin-bottom:20px;">Own a car or want to drive with us? Join the fleet.</p>
       <div class="center-text">
-        <a href="https://wa.me/2348085526104?text=I%20want%20to%20register%20my%20vehicle" class="btn">Register Your Vehicle</a>
+        <a href="vehicle-form.html" class="btn">Register Vehicle</a>
+        <a href="driver.html" class="btn btn-outline">Apply as Driver</a>
       </div>
     </div>
   </section>
