@@ -113,6 +113,7 @@
       border: 2px solid var(--primary);
     }
     .video-wrapper video { width: 100%; display: block; background: #000; }
+    .video-title { color:#FFD700; margin-bottom:10px; font-weight:bold; text-align:center; }
 
     footer { 
       background: #000; text-align: center; padding: 35px 20px; 
@@ -207,15 +208,19 @@
     </div>
   </section>
 
-  <!-- PROMO VIDEO -->
+  <!-- PROMO VIDEO - 18 SECONDS AUTOPLAY -->
   <section style="padding:25px 20px; background:#000; text-align:center;">
     <div class="container">
       <h2 style="color:#FFD700; margin-bottom:15px;">Watch Our Promo</h2>
+      <p class="video-title">HVR in 18 Seconds ↓</p>
       <div class="video-wrapper">
-        <video controls preload="none" poster="hvr-logo.jpg" playsinline>
+        <video autoplay muted loop playsinline poster="hvr-logo.jpg">
           <source src="promo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+      </div>
+      <div style="margin-top:15px;">
+        <a href="booking.html" class="btn">BOOK NOW FROM VIDEO</a>
       </div>
     </div>
   </section>
