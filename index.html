@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HantzVIPRides - Premium Transport & Bonny Route Launch</title>
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg"> <!-- FAVICON ADDED -->
   <style>
     :root {
       --primary: #FFD700;
@@ -19,23 +20,37 @@
 
     .hero { 
       background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.94)), url('hero-bg.jpg') center/cover no-repeat; 
-      padding: 12px 15px 10px; 
+      padding: 4px 15px 8px !important; /* STRONGER FIX FOR LOGO SPACE */
       text-align: center; 
     }
-    .hero img.logo { width: 120px; margin-bottom: 2px; border-radius: 10px; }
+    .hero img.logo,
+    .hero img { 
+      margin-top: 0 !important; 
+      margin-bottom: 2px !important; /* LOGO PUSHED UP TIGHT */
+    }
     .hero h1 { font-size: 2.1rem; color: var(--primary); margin: 2px 0; }
 
-    /* BRONZE PARTNER CARDS */
+    /* SPARKLING PARTNER CARDS */
     .logo-grid { display: flex; justify-content: center; align-items: center; gap: 25px; flex-wrap: wrap; margin: 15px 0; }
     .logo-box { 
-      background: linear-gradient(145deg, #3D2F1F, #5C3D2E); border: 1.5px solid #FFD700;
-      padding: 12px 18px; border-radius: 14px; box-shadow: 0 0 20px rgba(255,215,0,0.25); 
+      background: linear-gradient(145deg, #3D2F1F, #5C3D2E); border: 2px solid #FFD700;
+      padding: 12px 18px; border-radius: 14px; 
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
       text-align: center; width: 130px; height: 100px; display: flex; flex-direction: column; 
-      justify-content: center; align-items: center; transition: all 0.3s; 
+      justify-content: center; align-items: center; transition: all 0.35s; position: relative; overflow: hidden;
     }
-    .logo-box:hover { transform: scale(1.08); box-shadow: 0 0 30px rgba(255,215,0,0.5); }
-    .logo-box img { height: 55px; width: auto; max-width: 90px; object-fit: contain; margin-bottom: 5px; background: #fff; padding: 6px; border-radius: 8px;}
-    .logo-box small { color: #FFD700; font-size: 10px; font-weight: bold; }
+    .logo-box::before {
+      content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.45) 48%, rgba(255, 215, 0, 0.3) 50%, transparent 75%);
+      animation: sparkle 3s infinite linear;
+    }
+    @keyframes sparkle {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+    .logo-box:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); border-color: #FFEA00; }
+    .logo-box img { height: 55px; width: auto; max-width: 90px; object-fit: contain; margin-bottom: 5px; background: #fff; padding: 6px; border-radius: 8px; z-index: 2;}
+    .logo-box small { color: #FFD700; font-size: 10px; font-weight: bold; z-index: 2;}
 
     .alert { background: #1f1f1f; border: 1px solid var(--primary); padding: 8px 14px; border-radius: 8px; margin: 8px auto; max-width: 480px; font-weight: bold; color: var(--primary); font-size: 0.9rem;}
     .btn { display: inline-block; padding: 11px 22px; margin: 5px; border-radius: 50px; background: var(--primary); color: #000; font-weight: bold; border: 2px solid var(--primary); transition: all 0.25s ease; font-size: 14px;}
@@ -68,16 +83,16 @@
 <body>
 
   <!-- HERO SECTION -->
-<section class="hero" style="padding: 10px 15px 12px;">
+<section class="hero">
   <div class="container" style="text-align:center;">
-    <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" style="width: 145px; margin: 0 auto 4px auto; display: block; border-radius: 10px;">
+    <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" style="width: 160px !important; margin: 0 auto 2px auto !important; display: block; border-radius: 10px;">
     <h1 style="font-size: 2.15rem; color: #FFD700; margin: 0 0 3px 0;">HantzVIPRides</h1>
     <p style="font-size: 0.95rem; color: #ccc; margin: 0 0 4px 0;">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
     <p style="color: #FFD700; font-weight: bold; font-size: 1.05rem; margin: 0 0 8px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
     <div class="logo-grid" style="margin: 10px 0;">
       <div class="logo-box"><img src="IMG-20260710-WA0113.jpg" alt="First Bank Nigeria"><small>Official Bank</small></div>
-      <div class="logo-box" style="transform:scale(1.1); box-shadow:0 0 35px rgba(255,215,0,0.5);"><img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo"><small>HVR</small></div>
+      <div class="logo-box" style="transform:scale(1.1);"><img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo"><small>HVR</small></div>
       <div class="logo-box"><img src="IMG-20260710-WA0116.jpg" alt="Leadway Assurance"><small>Official Insurer</small></div>
     </div>
 
