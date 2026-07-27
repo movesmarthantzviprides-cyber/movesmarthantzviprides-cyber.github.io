@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HVR Vehicle Sticker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .sticker {
+      width: 320px;
+      background: #0A0A0A;
+      border: 6px solid #FFD700;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .logo {
+      width: 90px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    .plate {
+      background: #FFD700;
+      color: #000;
+      font-size: 22px;
+      font-weight: 900;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin: 12px 0;
+      letter-spacing: 2px;
+    }
+    .qr {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 10px 0;
+    }
+    .qr img {
+      width: 140px;
+      height: 140px;
+    }
+    .footer {
+      font-size: 12px;
+      color: #FFD700;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .note {
+      font-size: 11px;
+      color: #aaa;
+      margin-top: 8px;
+    }
+    @media print {
+      body { background: #fff; }
+      .sticker { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sticker">
+    <img src="hvr-logo.jpg" alt="HVR Logo" class="logo">
+    
+    <div style="font-size:14px; color:#FFD700; font-weight:bold;">HANTZVIPRIDES</div>
+    <div style="font-size:12px; color:#ccc;">Verified Vehicle</div>
+
+    <!-- Change the plate number for each vehicle -->
+    <div class="plate">ABC-123XY</div>
+
+    <div class="qr">
+      <!-- Replace plate in the URL for each vehicle -->
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://movesmarthantzviprides-cyber.github.io/verify.html?plate=ABC-123XY" 
+           alt="QR Code">
+    </div>
+
+    <div class="footer">SCAN TO VERIFY</div>
+    <div class="note">Valid only with active HVR Dispatch Certificate</div>
+  </div>
+
+  <script>
+    // Optional: Auto-print when opened
+    // window.onload = () => window.print();
+  </script>
+</body>
+</html>
