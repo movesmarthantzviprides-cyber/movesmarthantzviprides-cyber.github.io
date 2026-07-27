@@ -123,6 +123,34 @@ _Booked via hantzviprides.net_`;
     alert('Booking Sent! You are being redirected to WhatsApp to confirm.');
   });
 </script>
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // 1. GET FORM DATA
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData);
+  
+  // 2. SEND TO GOOGLE SHEETS - REPLACE WITH YOUR SHEET URL
+  const sheetURL = "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+  fetch(sheetURL, { method: 'POST', body: JSON.stringify(data) })
+  .then(res => console.log("Saved to Sheet"))
+  .catch(err => console.log("Sheet Error:", err));
+  
+  // 3. SEND TO WHATSAPP
+  let message = `NEW HVR BOOKING\n\n`;
+  message += `Name: ${data.fullname}\n`;
+  message += `WhatsApp: ${data.whatsapp}\n`;
+  message += `From: ${data.pickup}\n`;
+  message += `To: ${data.dropoff}\n`;
+  message += `Date: ${data.datetime}\n`;
+  message += `Service: ${data.service}\n`;
+  message += `Payment: ${data.payment}\n`;
+  message += `Notes: ${data.notes || 'None'}`;
+  
+  window.open(`https://wa.me/2348085526104?text=${encodeURIComponent(message)}`, '_blank');
+});
+</script>
 
 </body>
 </html>
