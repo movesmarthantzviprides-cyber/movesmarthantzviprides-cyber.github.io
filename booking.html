@@ -4,151 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Your Ride - HantzVIPRides</title>
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
   <style>
-    :root { --primary: #FFD700; --secondary: #0a0a0a; --card: #1a1a1a; --green: #00C853; }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: var(--secondary); color: #fff; padding: 20px; }
-    .container { max-width: 650px; margin: 20px auto; background: var(--card); padding: 30px; border-radius: 14px; border: 2px solid var(--primary); }
-    h1 { text-align: center; color: var(--primary); margin-bottom: 10px; }
-    p.sub { text-align: center; color: #aaa; margin-bottom: 25px; font-size: 14px; }
-    .form-group { margin-bottom: 18px; }
-    label { display: block; margin-bottom: 6px; font-weight: bold; color: var(--primary); font-size: 14px; }
-    input, select, textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #333; background: #0a0a0a; color: #fff; font-size: 15px; }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); }
-    .btn { width: 100%; padding: 15px; background: var(--primary); color: #000; border: none; border-radius: 50px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
-    .btn:hover { background: #ffea00; transform: translateY(-2px); }
-    .note { background: #111; border-left: 4px solid var(--green); padding: 12px; margin-top: 20px; border-radius: 0 8px 8px 0; font-size: 13px; }
-    .back { text-align: center; margin-top: 20px; }
-    .back a { color: var(--primary); text-decoration: none; }
+    :root {
+      --primary: #FFD700;
+      --secondary: #0a0a0a;
+      --green: #00C853;
+      --text: #ffffff;
+      --card: #1a1a1a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: var(--secondary); color: var(--text); padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background: var(--card); padding: 30px; border-radius: 14px; border: 2px solid var(--primary); }
+    .logo { text-align: center; margin-bottom: 15px; }
+    .logo img { width: 110px; border-radius: 10px; }
+    h1 { color: var(--primary); text-align: center; margin-bottom: 8px; font-size: 1.7rem; }
+    .sub { text-align: center; color: #aaa; margin-bottom: 20px; font-size: 0.9rem; }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; color: var(--primary); font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+    input, select, textarea {
+      width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #333;
+      background: #111; color: #fff; font-size: 15px; outline: none;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--primary); }
+    .btn {
+      width: 100%; padding: 14px; border-radius: 50px; background: var(--primary);
+      color: #000; font-weight: bold; font-size: 16px; border: none; cursor: pointer;
+      transition: all 0.3s; margin-top: 8px;
+    }
+    .btn:hover { transform: translateY(-2px); background: #ffea00; box-shadow: 0 6px 18px rgba(255,215,0,0.35); }
+    .btn-secondary {
+      background: #333; color: var(--primary); border: 2px solid var(--primary);
+    }
+    .note { background: #111; border-left: 4px solid var(--green); padding: 12px; margin: 18px 0; border-radius: 0 8px 8px 0; font-size: 0.9rem; }
+    .terms { font-size: 0.85rem; color: #aaa; margin: 15px 0; text-align: center; }
+    .terms a { color: var(--primary); }
+    .back { display: block; text-align: center; margin-top: 18px; color: var(--primary); text-decoration: none; }
+    .bank-box { background: #0a0a0a; padding: 15px; border-radius: 10px; border: 1px solid var(--primary); text-align: center; margin-bottom: 22px; }
+    .bank-box p { margin: 4px 0; }
+    .bank-acc { font-size: 1.35rem; color: var(--primary); font-weight: bold; }
+
+    /* Floating Buttons */
+    .float-buttons {
+      position: fixed; bottom: 20px; right: 20px;
+      display: flex; flex-direction: column; gap: 12px; z-index: 9999;
+    }
+    .float-btn {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.25s;
+    }
+    .float-btn:hover { transform: scale(1.12); }
+    .float-whatsapp { background: #25D366; }
+    .float-call { background: #FFD700; color: #000; font-size: 24px; }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>🚗 Book Your VIP Ride</h1>
-    <p class="sub">House 2 House Pickup & Drop Off. VIP / SEMI-VIP Service</p>
+    <div class="logo">
+      <img src="hvr-logo.jpg" alt="HantzVIPRides">
+    </div>
+    <h1>BOOK YOUR RIDE</h1>
+    <p class="sub">House 2 House VIP / Semi-VIP Transport</p>
+
+    <div class="bank-box">
+      <p><strong>Booking & Payment Account</strong></p>
+      <p>HANTZ INTERNATIONAL NIGERIA</p>
+      <p class="bank-acc">2007689316</p>
+      <p>First Bank</p>
+      <a href="https://wa.me/2348085526104?text=Please%20save%20HVR%20Payment%20Account%3A%0AHantz%20International%20Nigeria%0A2007689316%0AFirst%20Bank" 
+         class="btn btn-secondary" style="margin-top:10px; padding:10px; font-size:14px;">
+        Auto-Save Account
+      </a>
+    </div>
 
     <form id="bookingForm">
       <div class="form-group">
         <label>Full Name *</label>
-        <input type="text" id="name" required placeholder="Enter your full name">
+        <input type="text" name="fullname" required placeholder="Enter your full name">
       </div>
 
       <div class="form-group">
         <label>WhatsApp Number *</label>
-        <input type="tel" id="phone" required placeholder="080XXXXXXXX">
+        <input type="tel" name="whatsapp" required placeholder="e.g. 08085526104">
       </div>
 
       <div class="form-group">
         <label>Pickup Location *</label>
-        <input type="text" id="pickup" required placeholder="e.g. 25 Aba Road, Port Harcourt">
+        <input type="text" name="pickup" required placeholder="House address for pickup">
       </div>
 
       <div class="form-group">
         <label>Drop-off Location *</label>
-        <input type="text" id="dropoff" required placeholder="e.g. Bonny Jetty, Bonny Island">
+        <input type="text" name="dropoff" required placeholder="Final destination">
       </div>
 
       <div class="form-group">
         <label>Date & Time *</label>
-        <input type="datetime-local" id="datetime" required>
+        <input type="datetime-local" name="datetime" required>
       </div>
 
       <div class="form-group">
         <label>Service Type *</label>
-        <select id="service" required>
+        <select name="service" required>
           <option value="">-- Select Service --</option>
-          <option value="VIP Sedan">VIP Sedan - 1-3 Passengers</option>
-          <option value="VIP SUV">VIP SUV - 1-4 Passengers</option>
-          <option value="SEMI-VIP Bus">SEMI-VIP Bus - 5-14 Passengers</option>
-          <option value="SHAReTER">SHAReTER - Shared VIP</option>
+          <option value="VIP Sedan">VIP Sedan</option>
+          <option value="VIP SUV">VIP SUV</option>
+          <option value="SHAReTER - Shared VIP">SHAReTER - Shared VIP</option>
           <option value="Corporate Shuttle">Corporate Shuttle</option>
         </select>
       </div>
 
       <div class="form-group">
         <label>Payment Method *</label>
-        <select id="payment" required>
+        <select name="payment" required>
           <option value="">-- Select Payment --</option>
-          <option value="Bank Transfer - FirstBank 2007689316">Bank Transfer - FirstBank 2007689316</option>
-          <option value="Pay to Driver - Cash/Transfer">Pay to Driver - Cash/Transfer</option>
+          <option value="Bank Transfer - First Bank">Bank Transfer - First Bank</option>
+          <option value="Pay Driver Cash">Pay Driver Cash</option>
         </select>
       </div>
 
       <div class="form-group">
         <label>Additional Notes</label>
-        <textarea id="notes" rows="3" placeholder="Luggage, flight number, special requests..."></textarea>
+        <textarea name="notes" rows="3" placeholder="Luggage, special request, etc"></textarea>
       </div>
+
+      <p class="terms">
+        By booking, you agree to our 
+        <a href="terms.html" target="_blank">Terms</a> and 
+        <a href="privacy.html" target="_blank">Privacy Policy</a>.
+      </p>
 
       <button type="submit" class="btn">CONFIRM BOOKING NOW</button>
     </form>
 
     <div class="note">
-      <strong>Note:</strong> After submitting, you will be redirected to WhatsApp to confirm with our dispatch team. 
-      For Bank transfers, use: <strong>HANTZ INTERNATIONAL NIGERIA - 2007689316 - First Bank</strong>
+      <strong>Note:</strong> After clicking "Confirm", your booking details will be sent via WhatsApp. We will confirm within 10 minutes.
     </div>
 
-    <div class="back">
-      <a href="index.html">← Back to Home</a>
-    </div>
+    <a href="index.html" class="back">← Back to Home</a>
   </div>
 
-<script>
-  document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const pickup = document.getElementById('pickup').value;
-    const dropoff = document.getElementById('dropoff').value;
-    const datetime = document.getElementById('datetime').value;
-    const service = document.getElementById('service').value;
-    const payment = document.getElementById('payment').value;
-    const notes = document.getElementById('notes').value;
+  <!-- Floating Buttons -->
+  <div class="float-buttons">
+    <a href="https://wa.me/2348085526104?text=Hi%20HANTZVIPRIDES%2C%20I%20want%20to%20book%20a%20ride" 
+       class="float-btn float-whatsapp" target="_blank" title="WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="white">
+        <path d="M16.004 0C7.17 0 0 7.164 0 15.99c0 2.82.738 5.58 2.142 8.01L0.07 32l8.25-2.16A15.94 15.94 0 0 0 16.004 32C24.83 32 32 24.836 32 16.01 32 7.164 24.83 0 16.004 0zm0 29.3c-2.52 0-4.98-.678-7.14-1.96l-.51-.3-4.89 1.28 1.3-4.76-.33-.54A13.25 13.25 0 0 1 2.7 15.99c0-7.34 5.97-13.3 13.304-13.3 7.33 0 13.3 5.96 13.3 13.3 0 7.34-5.97 13.31-13.3 13.31z"/>
+        <path d="M23.48 19.52c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.96-1.8-2.14-2.01-2.5-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.64.23 2.26.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"/>
+      </svg>
+    </a>
+    <a href="tel:+2348085526104" class="float-btn float-call" title="Call Us">📞</a>
+  </div>
 
-    const message = `*NEW RIDE BOOKING - HANTZVIPRIDES*%0A%0A
-*Name:* ${name}%0A
-*Phone:* ${phone}%0A
-*Pickup:* ${pickup}%0A
-*Drop-off:* ${dropoff}%0A
-*Date & Time:* ${datetime}%0A
-*Service:* ${service}%0A
-*Payment:* ${payment}%0A
-*Notes:* ${notes}%0A%0A
-_Booked via hantzviprides.net_`;
-
-    // Send to WhatsApp
-    window.open(`https://wa.me/2348085526104?text=${message}`, '_blank');
-    
-    alert('Booking Sent! You are being redirected to WhatsApp to confirm.');
-  });
-</script>
 <script>
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
-  // 1. GET FORM DATA
-  const formData = new FormData(this);
+  const form = this;
+  const formData = new FormData(form);
   const data = Object.fromEntries(formData);
   
-  // 2. SEND TO GOOGLE SHEETS - REPLACE WITH YOUR SHEET URL
+  // 1. SEND TO GOOGLE SHEETS
+  // Replace with your Google Apps Script Web App URL
   const sheetURL = "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
-  fetch(sheetURL, { method: 'POST', body: JSON.stringify(data) })
-  .then(res => console.log("Saved to Sheet"))
-  .catch(err => console.log("Sheet Error:", err));
   
-  // 3. SEND TO WHATSAPP
-  let message = `NEW HVR BOOKING\n\n`;
-  message += `Name: ${data.fullname}\n`;
-  message += `WhatsApp: ${data.whatsapp}\n`;
-  message += `From: ${data.pickup}\n`;
-  message += `To: ${data.dropoff}\n`;
-  message += `Date: ${data.datetime}\n`;
-  message += `Service: ${data.service}\n`;
-  message += `Payment: ${data.payment}\n`;
-  message += `Notes: ${data.notes || 'None'}`;
+  if (sheetURL !== "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE") {
+    fetch(sheetURL, { 
+      method: 'POST', 
+      mode: 'no-cors',
+      body: JSON.stringify({
+        timestamp: new Date().toLocaleString("en-NG"),
+        ...data
+      }),
+      headers: {'Content-Type': 'application/json'}
+    }).catch(err => console.log("Sheet Error:", err));
+  }
+  
+  // 2. SEND TO WHATSAPP
+  let message = `🚖 *NEW HVR BOOKING* 🚖\n\n`;
+  message += `*Name:* ${data.fullname}\n`;
+  message += `*WhatsApp:* ${data.whatsapp}\n`;
+  message += `*Pickup:* ${data.pickup}\n`;
+  message += `*Drop-off:* ${data.dropoff}\n`;
+  message += `*Date & Time:* ${data.datetime}\n`;
+  message += `*Service:* ${data.service}\n`;
+  message += `*Payment:* ${data.payment}\n`;
+  message += `*Notes:* ${data.notes || 'None'}\n\n`;
+  message += `_Booking Time: ${new Date().toLocaleString("en-NG")}_`;
   
   window.open(`https://wa.me/2348085526104?text=${encodeURIComponent(message)}`, '_blank');
+  
+  alert("Booking Sent! We will confirm on WhatsApp shortly.");
+  form.reset();
 });
 </script>
 
