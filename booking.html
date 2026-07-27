@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Ride - HantzVIPRides</title>
+  <style>
+    :root { --primary: #FFD700; --secondary: #0a0a0a; --card: #1a1a1a; --green: #00C853; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: var(--secondary); color: #fff; padding: 20px; }
+    .container { max-width: 650px; margin: 20px auto; background: var(--card); padding: 30px; border-radius: 14px; border: 2px solid var(--primary); }
+    h1 { text-align: center; color: var(--primary); margin-bottom: 10px; }
+    p.sub { text-align: center; color: #aaa; margin-bottom: 25px; font-size: 14px; }
+    .form-group { margin-bottom: 18px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; color: var(--primary); font-size: 14px; }
+    input, select, textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #333; background: #0a0a0a; color: #fff; font-size: 15px; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); }
+    .btn { width: 100%; padding: 15px; background: var(--primary); color: #000; border: none; border-radius: 50px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
+    .btn:hover { background: #ffea00; transform: translateY(-2px); }
+    .note { background: #111; border-left: 4px solid var(--green); padding: 12px; margin-top: 20px; border-radius: 0 8px 8px 0; font-size: 13px; }
+    .back { text-align: center; margin-top: 20px; }
+    .back a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🚗 Book Your VIP Ride</h1>
+    <p class="sub">House 2 House Pickup & Drop Off. VIP / SEMI-VIP Service</p>
+
+    <form id="bookingForm">
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" id="name" required placeholder="Enter your full name">
+      </div>
+
+      <div class="form-group">
+        <label>WhatsApp Number *</label>
+        <input type="tel" id="phone" required placeholder="080XXXXXXXX">
+      </div>
+
+      <div class="form-group">
+        <label>Pickup Location *</label>
+        <input type="text" id="pickup" required placeholder="e.g. 25 Aba Road, Port Harcourt">
+      </div>
+
+      <div class="form-group">
+        <label>Drop-off Location *</label>
+        <input type="text" id="dropoff" required placeholder="e.g. Bonny Jetty, Bonny Island">
+      </div>
+
+      <div class="form-group">
+        <label>Date & Time *</label>
+        <input type="datetime-local" id="datetime" required>
+      </div>
+
+      <div class="form-group">
+        <label>Service Type *</label>
+        <select id="service" required>
+          <option value="">-- Select Service --</option>
+          <option value="VIP Sedan">VIP Sedan - 1-3 Passengers</option>
+          <option value="VIP SUV">VIP SUV - 1-4 Passengers</option>
+          <option value="SEMI-VIP Bus">SEMI-VIP Bus - 5-14 Passengers</option>
+          <option value="SHAReTER">SHAReTER - Shared VIP</option>
+          <option value="Corporate Shuttle">Corporate Shuttle</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Payment Method *</label>
+        <select id="payment" required>
+          <option value="">-- Select Payment --</option>
+          <option value="Bank Transfer - FirstBank 2007689316">Bank Transfer - FirstBank 2007689316</option>
+          <option value="Pay to Driver - Cash/Transfer">Pay to Driver - Cash/Transfer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea id="notes" rows="3" placeholder="Luggage, flight number, special requests..."></textarea>
+      </div>
+
+      <button type="submit" class="btn">CONFIRM BOOKING NOW</button>
+    </form>
+
+    <div class="note">
+      <strong>Note:</strong> After submitting, you will be redirected to WhatsApp to confirm with our dispatch team. 
+      For Bank transfers, use: <strong>HANTZ INTERNATIONAL NIGERIA - 2007689316 - First Bank</strong>
+    </div>
+
+    <div class="back">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
+
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const pickup = document.getElementById('pickup').value;
+    const dropoff = document.getElementById('dropoff').value;
+    const datetime = document.getElementById('datetime').value;
+    const service = document.getElementById('service').value;
+    const payment = document.getElementById('payment').value;
+    const notes = document.getElementById('notes').value;
+
+    const message = `*NEW RIDE BOOKING - HANTZVIPRIDES*%0A%0A
+*Name:* ${name}%0A
+*Phone:* ${phone}%0A
+*Pickup:* ${pickup}%0A
+*Drop-off:* ${dropoff}%0A
+*Date & Time:* ${datetime}%0A
+*Service:* ${service}%0A
+*Payment:* ${payment}%0A
+*Notes:* ${notes}%0A%0A
+_Booked via hantzviprides.net_`;
+
+    // Send to WhatsApp
+    window.open(`https://wa.me/2348085526104?text=${message}`, '_blank');
+    
+    alert('Booking Sent! You are being redirected to WhatsApp to confirm.');
+  });
+</script>
+
+</body>
+</html>
