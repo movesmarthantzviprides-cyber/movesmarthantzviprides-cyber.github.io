@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HantzVIPRides - Premium Transport & Bonny Route Launch</title>
-  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg"> <!-- FAVICON ADDED -->
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
   <style>
     :root {
       --primary: #FFD700;
@@ -18,46 +18,78 @@
     a { text-decoration: none; }
     .container { max-width: 1100px; margin: auto; padding: 20px; }
 
+    /* HERO - Maximum tight */
     .hero { 
       background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.94)), url('hero-bg.jpg') center/cover no-repeat; 
-      padding: 4px 15px 8px !important; /* STRONGER FIX FOR LOGO SPACE */
+      padding: 2px 15px 8px !important;
       text-align: center; 
     }
-    .hero img.logo,
-    .hero img { 
-      margin-top: 0 !important; 
-      margin-bottom: 2px !important; /* LOGO PUSHED UP TIGHT */
+    .hero img.logo {
+      width: 155px !important;
+      margin: 0 auto 2px auto !important;
+      display: block;
+      border-radius: 10px;
     }
-    .hero h1 { font-size: 2.1rem; color: var(--primary); margin: 2px 0; }
+    .hero h1 { font-size: 2.15rem; color: var(--primary); margin: 0 0 2px 0; }
+    .hero .sub { font-size: 0.95rem; color: #ccc; margin: 0 0 3px 0; }
+    .hero .launch { color: var(--primary); font-weight: bold; font-size: 1.05rem; margin: 0 0 8px 0; }
 
-    /* SPARKLING PARTNER CARDS */
-    .logo-grid { display: flex; justify-content: center; align-items: center; gap: 25px; flex-wrap: wrap; margin: 15px 0; }
+    /* Sparkling Gold Partner Logos */
+    .logo-grid { 
+      display: flex; justify-content: center; align-items: center; 
+      gap: 20px; flex-wrap: wrap; margin: 10px 0; 
+    }
     .logo-box { 
-      background: linear-gradient(145deg, #3D2F1F, #5C3D2E); border: 2px solid #FFD700;
-      padding: 12px 18px; border-radius: 14px; 
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
-      text-align: center; width: 130px; height: 100px; display: flex; flex-direction: column; 
-      justify-content: center; align-items: center; transition: all 0.35s; position: relative; overflow: hidden;
+      background: linear-gradient(145deg, #3D2F1F, #5C3D2E); 
+      border: 2px solid #FFD700;
+      padding: 10px 14px; border-radius: 14px; 
+      box-shadow: 0 0 15px rgba(255,215,0,0.4), 0 0 30px rgba(255,215,0,0.2);
+      text-align: center; width: 120px; height: 95px; 
+      display: flex; flex-direction: column; justify-content: center; align-items: center; 
+      transition: all 0.35s; position: relative; overflow: hidden;
     }
     .logo-box::before {
       content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-      background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.45) 48%, rgba(255, 215, 0, 0.3) 50%, transparent 75%);
+      background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.4) 48%, rgba(255,215,0,0.3) 50%, transparent 75%);
       animation: sparkle 3s infinite linear;
     }
     @keyframes sparkle {
       0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
       100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
     }
-    .logo-box:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); border-color: #FFEA00; }
-    .logo-box img { height: 55px; width: auto; max-width: 90px; object-fit: contain; margin-bottom: 5px; background: #fff; padding: 6px; border-radius: 8px; z-index: 2;}
-    .logo-box small { color: #FFD700; font-size: 10px; font-weight: bold; z-index: 2;}
+    .logo-box:hover { 
+      transform: scale(1.1); 
+      box-shadow: 0 0 25px rgba(255,215,0,0.8); 
+      border-color: #FFEA00; 
+    }
+    .logo-box img { 
+      height: 50px; max-width: 85px; object-fit: contain; 
+      background: #fff; padding: 5px; border-radius: 8px; z-index: 2; 
+    }
+    .logo-box small { color: #FFD700; font-size: 10px; font-weight: bold; z-index: 2; margin-top: 4px; }
 
-    .alert { background: #1f1f1f; border: 1px solid var(--primary); padding: 8px 14px; border-radius: 8px; margin: 8px auto; max-width: 480px; font-weight: bold; color: var(--primary); font-size: 0.9rem;}
-    .btn { display: inline-block; padding: 11px 22px; margin: 5px; border-radius: 50px; background: var(--primary); color: #000; font-weight: bold; border: 2px solid var(--primary); transition: all 0.25s ease; font-size: 14px;}
-    .btn:hover { transform: translateY(-3px) scale(1.03); background: #ffea00; box-shadow: 0 6px 18px rgba(255, 215, 0, 0.35);}
+    .alert { 
+      background: #1f1f1f; border: 1px solid var(--primary); 
+      padding: 8px 14px; border-radius: 8px; margin: 8px auto; 
+      max-width: 480px; font-weight: bold; color: var(--primary); font-size: 0.9rem;
+    }
+
+    .btn { 
+      display: inline-block; padding: 11px 22px; margin: 5px; border-radius: 50px; 
+      background: var(--primary); color: #000; font-weight: bold; 
+      border: 2px solid var(--primary); transition: all 0.25s ease; font-size: 14px;
+    }
+    .btn:hover { 
+      transform: translateY(-3px) scale(1.03); background: #ffea00; 
+      box-shadow: 0 6px 18px rgba(255,215,0,0.35);
+    }
     .btn-outline { background: transparent; color: var(--primary); }
     .btn-outline:hover { background: var(--primary); color: #000; }
-    .btn-group-title {color: #aaa; font-size: 12px; letter-spacing: 1px; margin: 12px 0 4px; text-transform: uppercase;}
+
+    .btn-group-title {
+      color: #aaa; font-size: 12px; letter-spacing: 1px; 
+      margin: 12px 0 4px; text-transform: uppercase;
+    }
 
     section { padding: 45px 20px; }
     section h2 { text-align: center; font-size: 1.8rem; color: var(--primary); margin-bottom: 22px; }
@@ -66,119 +98,239 @@
     .card h3 { color: var(--primary); margin-bottom: 8px; }
     .center-text { text-align: center; }
 
-    .announcement {background: linear-gradient(90deg, #1a1a1a, #222); border: 2px solid var(--primary); padding: 20px; border-radius: 12px; text-align: center; margin: 25px auto; max-width: 700px;}
-    .bonus-box {background: #111; border-left: 4px solid var(--green); padding: 14px 18px; margin: 12px 0; border-radius: 0 10px 10px 0;}
-    .video-wrapper {max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; border: 2px solid var(--primary);}
+    .announcement {
+      background: linear-gradient(90deg, #1a1a1a, #222);
+      border: 2px solid var(--primary);
+      padding: 20px; border-radius: 12px; text-align: center;
+      margin: 25px auto; max-width: 700px;
+    }
+    .bonus-box {
+      background: #111; border-left: 4px solid var(--green);
+      padding: 14px 18px; margin: 12px 0; border-radius: 0 10px 10px 0;
+    }
+    .video-wrapper {
+      max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden;
+      border: 2px solid var(--primary);
+    }
     .video-wrapper video { width: 100%; display: block; background: #000; }
-    footer { background: #000; text-align: center; padding: 35px 20px; border-top: 3px solid var(--primary); }
+
+    footer { 
+      background: #000; text-align: center; padding: 35px 20px; 
+      border-top: 3px solid var(--primary); 
+    }
+
+    /* Floating Buttons */
+    .float-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 9999;
+    }
+    .float-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.25s;
+    }
+    .float-btn:hover { transform: scale(1.12); }
+    .float-whatsapp { background: #25D366; }
+    .float-call { background: #FFD700; color: #000; font-size: 24px; }
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.8rem; }
       .btn { display: block; width: 90%; margin: 7px auto; }
-      .logo-box { width: 110px; height: 90px; }
-      .logo-box img { height: 45px; }
+      .logo-box { width: 105px; height: 88px; }
+      .logo-box img { height: 42px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-<section class="hero">
-  <div class="container" style="text-align:center;">
-    <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" style="width: 160px !important; margin: 0 auto 2px auto !important; display: block; border-radius: 10px;">
-    <h1 style="font-size: 2.15rem; color: #FFD700; margin: 0 0 3px 0;">HantzVIPRides</h1>
-    <p style="font-size: 0.95rem; color: #ccc; margin: 0 0 4px 0;">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-    <p style="color: #FFD700; font-weight: bold; font-size: 1.05rem; margin: 0 0 8px 0;">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container" style="text-align:center;">
+      <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" class="logo"
+           style="width:155px !important; margin:0 auto 2px auto !important; display:block; border-radius:10px;">
+      
+      <h1>HantzVIPRides</h1>
+      <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
+      <p class="launch">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
-    <div class="logo-grid" style="margin: 10px 0;">
-      <div class="logo-box"><img src="IMG-20260710-WA0113.jpg" alt="First Bank Nigeria"><small>Official Bank</small></div>
-      <div class="logo-box" style="transform:scale(1.1);"><img src="hvr-logo.jpg" alt="HANTZVIPRIDES Logo"><small>HVR</small></div>
-      <div class="logo-box"><img src="IMG-20260710-WA0116.jpg" alt="Leadway Assurance"><small>Official Insurer</small></div>
+      <div class="logo-grid">
+        <div class="logo-box">
+          <img src="IMG-20260710-WA0113.jpg" alt="First Bank">
+          <small>Official Bank</small>
+        </div>
+        <div class="logo-box" style="transform:scale(1.1);">
+          <img src="hvr-logo.jpg" alt="HVR">
+          <small>HVR</small>
+        </div>
+        <div class="logo-box">
+          <img src="IMG-20260710-WA0116.jpg" alt="Leadway">
+          <small>Official Insurer</small>
+        </div>
+      </div>
+
+      <div class="alert">🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥</div>
+
+      <div class="btn-group-title">For Passengers</div>
+      <div>
+        <a href="booking.html" class="btn">BOOK YOUR RIDE</a>
+        <a href="routes.html" class="btn btn-outline">Our Routes</a>
+        <a href="shareter.html" class="btn btn-outline">SHAReTER Services</a>
+        <a href="safety.html" class="btn btn-outline">Safety & Security</a>
+      </div>
+
+      <div class="btn-group-title">For Drivers & Vehicle Owners</div>
+      <div>
+        <a href="vehicle-form.html" class="btn btn-outline">Vehicle Registration</a>
+        <a href="driver.html" class="btn btn-outline">Driver Application</a>
+        <a href="driver-dashboard.html" class="btn btn-outline">Driver Dashboard</a>
+        <a href="applications.html" class="btn btn-outline">All Applications</a>
+      </div>
+
+      <div class="btn-group-title">Partners & Admin</div>
+      <div>
+        <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
+        <a href="admin.html" class="btn btn-outline">Admin Panel</a>
+        <a href="privacy.html" class="btn btn-outline">Privacy</a>
+        <a href="terms.html" class="btn btn-outline">Terms</a>
+      </div>
     </div>
-
-    <div class="alert" style="margin: 8px auto;">🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥</div>
-
-    <div class="btn-group-title">For Passengers</div>
-    <div><a href="booking.html" class="btn">BOOK YOUR RIDE</a><a href="routes.html" class="btn btn-outline">Our Routes</a><a href="shareter.html" class="btn btn-outline">SHAReTER Services</a><a href="safety.html" class="btn btn-outline">Safety & Security</a></div>
-
-    <div class="btn-group-title">For Drivers & Vehicle Owners</div>
-    <div><a href="vehicle-form.html" class="btn btn-outline">Vehicle Registration</a><a href="driver.html" class="btn btn-outline">Driver Application</a><a href="driver-dashboard.html" class="btn btn-outline">Driver Dashboard</a><a href="applications.html" class="btn btn-outline">All Applications</a></div>
-
-    <div class="btn-group-title">Partners & Admin</div>
-    <div><a href="partners.html" class="btn btn-outline">Corporate Partners</a><a href="admin.html" class="btn btn-outline">Admin Panel</a><a href="privacy.html" class="btn btn-outline">Privacy</a><a href="terms.html" class="btn btn-outline">Terms</a></div>
-  </div>
-</section>
+  </section>
 
   <!-- PROMO VIDEO -->
-  <section style="padding: 25px 20px; background:#000; text-align:center;">
-    <div class="container"><h2 style="color:#FFD700; margin-bottom:15px;">Watch Our Promo</h2>
-      <div class="video-wrapper"><video controls preload="none" poster="hvr-logo.jpg" playsinline><source src="promo.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+  <section style="padding:25px 20px; background:#000; text-align:center;">
+    <div class="container">
+      <h2 style="color:#FFD700; margin-bottom:15px;">Watch Our Promo</h2>
+      <div class="video-wrapper">
+        <video controls preload="none" poster="hvr-logo.jpg" playsinline>
+          <source src="promo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </section>
 
   <!-- ANNOUNCEMENT -->
-  <div class="container"><div class="announcement"><h3 style="font-size:1.6rem; color:#FFD700; margin-bottom:10px;">OUR SERVICE</h3><p style="font-size:1.45rem; font-weight:900; color:#fff; line-height:1.4;">HOUSE 2 HOUSE PICKUP & DROP OFF<br><span style="color:#FFD700;">VIP / SEMI-VIP RIDES</span></p></div></div>
+  <div class="container">
+    <div class="announcement">
+      <h3 style="font-size:1.6rem; color:#FFD700; margin-bottom:10px;">OUR SERVICE</h3>
+      <p style="font-size:1.45rem; font-weight:900; color:#fff; line-height:1.4;">
+        HOUSE 2 HOUSE PICKUP & DROP OFF<br>
+        <span style="color:#FFD700;">VIP / SEMI-VIP RIDES</span>
+      </p>
+    </div>
+  </div>
 
   <!-- BANK BONUSES -->
-  <section style="background:#111; padding:40px 20px;"><div class="container"><h2>Official Bank Bonus</h2><p class="center-text" style="margin-bottom:20px;">Book with HVR Official Bank account and enjoy free rides</p>
-    <div class="bonus-box"><strong style="color:var(--green);">11TH RIDE FREE BONUS</strong><br>Multi SHAReTER – Average of previous 10 trips credited to your wallet<br><small>(only for official Bank account holders and users)</small></div>
-    <div class="bonus-box"><strong style="color:var(--green);">6TH RIDE FREE BONUS</strong><br>VIP SHAReTER – Faster loyalty reward for advance direct booking payments into HVR OFFICIAL Booking Payments Account<br><small>(only for official Bank account holders and users)</small></div>
-  </div></section>
+  <section style="background:#111; padding:40px 20px;">
+    <div class="container">
+      <h2>Official Bank Bonus</h2>
+      <p class="center-text" style="margin-bottom:20px;">Book with HVR Official Bank account and enjoy free rides</p>
+      <div class="bonus-box">
+        <strong style="color:var(--green);">11TH RIDE FREE BONUS</strong><br>
+        Multi SHAReTER – Average of previous 10 trips credited to your wallet<br>
+        <small>(only for official Bank account holders and users)</small>
+      </div>
+      <div class="bonus-box">
+        <strong style="color:var(--green);">6TH RIDE FREE BONUS</strong><br>
+        VIP SHAReTER – Faster loyalty reward for advance direct booking payments into HVR OFFICIAL Booking Payments Account<br>
+        <small>(only for official Bank account holders and users)</small>
+      </div>
+    </div>
+  </section>
 
-  <!-- CORPORATE PARTNERS PREVIEW -->
-  <section><div class="container"><h2>Corporate Partners</h2><p class="center-text" style="margin-bottom:20px;">Trusted by industry leaders</p>
-    <div class="cards"><div class="card"><h3>First Bank of Nigeria</h3><p>Official Banking Partner. Book with us and earn free trips.</p><a href="partners.html" class="btn" style="margin-top:10px;">View Details →</a></div>
-    <div class="card"><h3>Leadway Assurance</h3><p>All HVR trips are fully insured for your safety and peace of mind.</p><a href="partners.html" class="btn btn-outline" style="margin-top:10px;">View Details →</a></div></div>
-  </div></section>
+  <!-- CORPORATE PARTNERS -->
+  <section>
+    <div class="container">
+      <h2>Corporate Partners</h2>
+      <p class="center-text" style="margin-bottom:20px;">Trusted by industry leaders</p>
+      <div class="cards">
+        <div class="card">
+          <h3>First Bank of Nigeria</h3>
+          <p>Official Banking Partner. Book with us and earn free trips.</p>
+          <a href="partners.html" class="btn" style="margin-top:10px;">View Details →</a>
+        </div>
+        <div class="card">
+          <h3>Leadway Assurance</h3>
+          <p>All HVR trips are fully insured for your safety and peace of mind.</p>
+          <a href="partners.html" class="btn btn-outline" style="margin-top:10px;">View Details →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- SHARETER PREVIEW -->
-  <section style="background:#111;"><div class="container"><h2>$HAR€t€R - Shared VIP Charter</h2><p class="center-text" style="margin-bottom:20px;">Travel VIP. Pay Less. Save up to 75%</p>
-    <div class="cards"><div class="card"><h3>Bonny Route Share</h3><p>Launching Very Soon. House to House VIP</p></div><div class="card"><h3>Corporate Share</h3><p>Staff bus sharing for companies</p></div><div class="card"><h3>Airport Share</h3><p>Split airport runs. Convenient & affordable</p></div></div>
-    <div style="text-align:center; margin-top:25px;"><a href="shareter.html" class="btn btn-outline">View All SHARETER Services →</a></div>
-  </div></section>
+  <!-- SHARETER -->
+  <section style="background:#111;">
+    <div class="container">
+      <h2>$HAR€t€R - Shared VIP Charter</h2>
+      <p class="center-text" style="margin-bottom:20px;">Travel VIP. Pay Less. Save up to 75%</p>
+      <div class="cards">
+        <div class="card"><h3>Bonny Route Share</h3><p>Launching Very Soon. House to House VIP</p></div>
+        <div class="card"><h3>Corporate Share</h3><p>Staff bus sharing for companies</p></div>
+        <div class="card"><h3>Airport Share</h3><p>Split airport runs. Convenient & affordable</p></div>
+      </div>
+      <div style="text-align:center; margin-top:25px;">
+        <a href="shareter.html" class="btn btn-outline">View All SHARETER Services →</a>
+      </div>
+    </div>
+  </section>
 
   <!-- SAFETY -->
-  <section><div class="container"><h2>Safety & Security</h2><div class="cards"><div class="card"><h3>GPS Tracked</h3><p>All vehicles tracked 24/7.</p></div><div class="card"><h3>Verified Drivers</h3><p>Background checked professionals.</p></div><div class="card"><h3>Insured Trips</h3><p>Covered by Leadway Assurance.</p></div><div class="card"><h3>Dispatch Certificate</h3><p>Official proof for claims & benefits.</p></div></div></div></section>
+  <section>
+    <div class="container">
+      <h2>Safety & Security</h2>
+      <div class="cards">
+        <div class="card"><h3>GPS Tracked</h3><p>All vehicles tracked 24/7.</p></div>
+        <div class="card"><h3>Verified Drivers</h3><p>Background checked professionals.</p></div>
+        <div class="card"><h3>Insured Trips</h3><p>Covered by Leadway Assurance.</p></div>
+        <div class="card"><h3>Dispatch Certificate</h3><p>Official proof for claims & benefits.</p></div>
+      </div>
+    </div>
+  </section>
 
   <!-- BOOKING ACCOUNT -->
-  <section style="background:#111;"><div class="container" style="text-align:center;"><h2>Booking & Payment Account</h2>
-    <div style="background:#0a0a0a; padding:25px; border-radius:14px; border:2px solid var(--primary); max-width:450px; margin:0 auto;">
-      <p style="font-size:1.1rem; margin-bottom:8px;"><strong>HANTZ INTERNATIONAL NIGERIA</strong></p><p style="font-size:1.5rem; color:var(--primary); font-weight:bold; margin:10px 0;">2007689316</p><p>First Bank</p>
-      <a href="https://wa.me/2348085526104?text=Please%20save%20HVR%20Payment%20Account%3A%0AHantz%20International%20Nigeria%0A2007689316%0AFirst%20Bank" class="btn" style="margin-top:15px;">Auto-Save Account on WhatsApp</a>
+  <section style="background:#111;">
+    <div class="container" style="text-align:center;">
+      <h2>Booking & Payment Account</h2>
+      <div style="background:#0a0a0a; padding:25px; border-radius:14px; border:2px solid var(--primary); max-width:450px; margin:0 auto;">
+        <p style="font-size:1.1rem; margin-bottom:8px;"><strong>HANTZ INTERNATIONAL NIGERIA</strong></p>
+        <p style="font-size:1.5rem; color:var(--primary); font-weight:bold; margin:10px 0;">2007689316</p>
+        <p>First Bank</p>
+        <a href="https://wa.me/2348085526104?text=Please%20save%20HVR%20Payment%20Account%3A%0AHantz%20International%20Nigeria%0A2007689316%0AFirst%20Bank" 
+           class="btn" style="margin-top:15px;">Auto-Save Account on WhatsApp</a>
+      </div>
     </div>
-  </div></section>
+  </section>
 
   <!-- FOOTER -->
-  <footer><p><strong>HantzVIPRides</strong></p><p>Premium Transport Solutions</p><p>WhatsApp: +234 808 552 6104</p><p>© 2026 HantzVIPRides. All Rights Reserved.</p></footer>
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/2348085526104?text=Hi%20HANTZVIPRIDES%2C%20I%20want%20more%20info%20on%20your%20VIP%20SERVICES" 
-   target="_blank"
-   style="
-     position: fixed;
-     bottom: 25px;
-     right: 25px;
-     background: #25D366;
-     color: white;
-     width: 60px;
-     height: 60px;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-     z-index: 9999;
-     text-decoration: none;
-     font-size: 30px;
-     transition: transform 0.3s;
-   "
-   onmouseover="this.style.transform='scale(1.1)'"
-   onmouseout="this.style.transform='scale(1)'"
-   title="Chat with us on WhatsApp">
-  <!-- WhatsApp Icon -->
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
-    <path d="M16.004 0C7.17 0 0 7.164 0 15.99c0 2.82.738 5.58 2.142 8.01L0.07 32l8.25-2.16A15.94 15.94 0 0 0 16.004 32C24.83 32 32 24.836 32 16.01 32 7.164 24.83 0 16.004 0zm0 29.3c-2.52 0-4.98-.678-7.14-1.96l-.51-.3-4.89 1.28 1.3-4.76-.33-.54A13.25 13.25 0 0 1 2.7 15.99c0-7.34 5.97-13.3 13.304-13.3 7.33 0 13.3 5.96 13.3 13.3 0 7.34-5.97 13.31-13.3 13.31z"/>
-    <path d="M23.48 19.52c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.96-1.8-2.14-2.01-2.5-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.64.23 2.26.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"/>
-  </svg>
-</a>
+  <footer>
+    <p><strong>HantzVIPRides</strong></p>
+    <p>Premium Transport Solutions</p>
+    <p>WhatsApp: +234 808 552 6104</p>
+    <p>© 2026 HantzVIPRides. All Rights Reserved.</p>
+  </footer>
+
+  <!-- FLOATING CONTACT BUTTONS -->
+  <div class="float-buttons">
+    <a href="https://wa.me/2348085526104?text=Hi%20HANTZVIPRIDES%2C%20I%20want%20more%20info%20on%20your%20VIP%20SERVICES" 
+       class="float-btn float-whatsapp" target="_blank" title="WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="white">
+        <path d="M16.004 0C7.17 0 0 7.164 0 15.99c0 2.82.738 5.58 2.142 8.01L0.07 32l8.25-2.16A15.94 15.94 0 0 0 16.004 32C24.83 32 32 24.836 32 16.01 32 7.164 24.83 0 16.004 0zm0 29.3c-2.52 0-4.98-.678-7.14-1.96l-.51-.3-4.89 1.28 1.3-4.76-.33-.54A13.25 13.25 0 0 1 2.7 15.99c0-7.34 5.97-13.3 13.304-13.3 7.33 0 13.3 5.96 13.3 13.3 0 7.34-5.97 13.31-13.3 13.31z"/>
+        <path d="M23.48 19.52c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.96-1.8-2.14-2.01-2.5-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.64.23 2.26.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"/>
+      </svg>
+    </a>
+    <a href="tel:+2348085526104" class="float-btn float-call" title="Call Us">📞</a>
+  </div>
+
 </body>
 </html>
