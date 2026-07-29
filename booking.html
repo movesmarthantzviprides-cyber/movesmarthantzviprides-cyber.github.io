@@ -4,33 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book House2House VIP Ride | HantzVIPRides</title>
+<link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
 <style>
   body{
     background:#0a0a0a;
     color:#fff;
     font-family:'Segoe UI',Arial,sans-serif;
     margin:0;
-    padding:0;
+    padding:20px 0;
   }
- .container{
+.container{
     max-width:650px;
-    margin:40px auto;
+    margin:20px auto;
     padding:30px 20px;
     background:#111;
-    border:1px solid #FFD700;
+    border:2px solid #FFD700;
     border-radius:16px;
   }
+ .logo { text-align: center; margin-bottom: 15px; }
+ .logo img { width: 110px; border-radius: 10px; }
   h1{
     text-align:center;
     color:#FFD700;
     font-weight:900;
     margin-bottom:10px;
+    font-size: 1.7rem;
   }
   p.sub{
     text-align:center;
     color:#aaa;
-    margin-bottom:25px;
+    margin-bottom:20px;
   }
+ .bank-box { 
+    background: #000; 
+    padding: 15px; 
+    border-radius: 10px; 
+    border: 1px solid #FFD700; 
+    text-align: center; 
+    margin-bottom: 22px; 
+  }
+ .bank-box p { margin: 4px 0; }
+ .bank-acc { font-size: 1.35rem; color: #FFD700; font-weight: bold; }
+
   label{
     display:block;
     margin:12px 0 6px;
@@ -51,28 +66,46 @@
     outline:none;
     border:1px solid #00C853;
   }
-  button{
+ .btn {
     width:100%;
-    background:#25D366;
-    color:#fff;
     padding:14px;
-    border:none;
     border-radius:8px;
     font-weight:900;
     font-size:1.1rem;
-    margin-top:20px;
+    margin-top:12px;
     cursor:pointer;
+    text-align:center;
+    text-decoration:none;
+    display:block;
+    box-sizing:border-box;
   }
-  button:hover{
+ .btn-primary {
+    background:#25D366;
+    color:#fff;
+    border:none;
+  }
+ .btn-primary:hover{
     background:#22c55e;
   }
- .note{
-    font-size:0.85rem;
-    color:#00C853;
-    text-align:center;
-    margin-top:12px;
+ .btn-secondary {
+    background:#111; 
+    color:#FFD700; 
+    border:2px solid #FFD700;
   }
- .trust{
+ .btn-secondary:hover{
+    background:#222;
+  }
+.note{
+    background: #0a0a0a;
+    border-left: 4px solid #00C853;
+    padding: 12px;
+    margin: 18px 0;
+    border-radius: 0 8px 8px 0;
+    font-size:0.9rem;
+    color:#00C853;
+    text-align:left;
+  }
+.trust{
     background:#000;
     border:1px solid #FFD700;
     border-radius:10px;
@@ -80,49 +113,82 @@
     margin-top:25px;
     text-align:center;
   }
+ .back { 
+    display: block; 
+    text-align: center; 
+    margin-top: 15px; 
+    color: #FFD700; 
+    text-decoration: none; 
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
+  <div class="logo">
+    <img src="hvr-logo.jpg" alt="HantzVIPRides">
+  </div>
   <h1>🚐 Book Your House2House VIP Ride</h1>
   <p class="sub">From the comfort of your house to your destination. Verified. Insured. Tracked.</p>
 
+  <div class="bank-box">
+    <p><strong>Booking & Payment Account</strong></p>
+    <p>HANTZ INTERNATIONAL NIGERIA</p>
+    <p class="bank-acc">2007689316</p>
+    <p>First Bank</p>
+    <a href="https://wa.me/2348085526104?text=Please%20save%20HVR%20Payment%20Account%3A%0AHantz%20International%20Nigeria%0A2007689316%0AFirst%20Bank" 
+       class="btn btn-secondary" style="margin-top:10px; padding:10px; font-size:14px;">
+      Auto-Save Account
+    </a>
+  </div>
+
   <form id="bookingForm">
 
-    <label>Full Name</label>
+    <label>Full Name *</label>
     <input type="text" name="name" placeholder="John Doe" required>
 
-    <label>WhatsApp Number</label>
-    <input type="tel" name="whatsapp" placeholder="0808 552 6104" required>
+    <label>WhatsApp Number *</label>
+    <input type="tel" name="whatsapp" placeholder="08085526104" required>
 
-    <label>Pickup From</label>
+    <label>Pickup From *</label>
     <input type="text" name="pickup" placeholder="e.g. 12 Bonny Estate, Bonny" required>
 
-    <label>Dropoff To</label>
+    <label>Dropoff To *</label>
     <input type="text" name="dropoff" placeholder="e.g. 5 GRA, Port Harcourt" required>
 
-    <label>Date of Travel</label>
+    <label>Date of Travel *</label>
     <input type="date" id="travelDate" name="date" required>
 
-    <label>Time of Travel</label>
+    <label>Time of Travel *</label>
     <input type="time" name="time" required>
 
-    <label>Service Type</label>
+    <label>Service Type *</label>
     <select name="service" required>
       <option value="">-- Select Service --</option>
       <option value="VIP - Sedan/SUV">VIP - Sedan/SUV</option>
       <option value="VIP - Executive Bus">VIP - Executive Bus</option>
+      <option value="SHAReTER - Shared VIP">SHAReTER - Shared VIP</option>
+      <option value="Corporate Shuttle">Corporate Shuttle</option>
       <option value="Semi-VIP">Semi-VIP</option>
     </select>
 
     <label>Additional Notes</label>
     <textarea name="notes" rows="3" placeholder="Luggage, special request, etc."></textarea>
 
-    <button type="submit">📱 Send Booking to WhatsApp</button>
-    <p class="note">⏰ Driver details will be sent to you 2hrs before trip time</p>
-
+    <button type="submit" class="btn btn-primary">📱 Send Booking to WhatsApp</button>
   </form>
+
+  <div class="note">
+    <strong>Note:</strong> After clicking "Send Booking", your details will be sent via WhatsApp. 
+    <br><strong>Driver details will be sent 2hrs before trip time.</strong> We will confirm within 10 minutes.
+  </div>
+
+  <!-- OUR SERVICES BUTTON -->
+  <a href="our-services.html" class="btn btn-secondary">
+    VIEW OUR SERVICES
+  </a>
+
+  <a href="index.html" class="back">← Back to Home</a>
 
   <div class="trust">
     <p style="margin:0; font-size:0.9rem; color:#FFD700; font-weight:700;">
@@ -152,10 +218,23 @@
     const service = this.service.value;
     const notes = this.notes.value || 'None';
 
-    const message =
-`Hello HantzVIPRides 👋
+    // 1. SAVE TO GOOGLE SHEETS
+    const sheetURL = "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+    if (sheetURL!== "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE") {
+      fetch(sheetURL, { 
+        method: 'POST', 
+        mode: 'no-cors',
+        body: JSON.stringify({
+          timestamp: new Date().toLocaleString("en-NG"), 
+          name, phone, pickup, dropoff, date, time, service, notes
+        }),
+        headers: {'Content-Type': 'application/json'}
+      }).catch(err => console.log("Sheet Error:", err));
+    }
 
-I want to book a House2House VIP Ride
+    // 2. SEND TO WHATSAPP
+    const message =
+`🚖 *NEW HVR BOOKING* 🚖
 
 *Name:* ${name}
 *WhatsApp:* ${phone}
@@ -166,10 +245,12 @@ I want to book a House2House VIP Ride
 *Service:* ${service}
 *Notes:* ${notes}
 
-_Note: Driver assignment is done from 2hrs before trip time_`;
+_Note: Driver assignment is done from 2hrs before trip time_
+_Booking Time: ${new Date().toLocaleString("en-NG")}_`;
 
     window.open(`https://wa.me/2348085526104?text=${encodeURIComponent(message)}`, '_blank');
 
+    alert("Booking Sent! We will confirm on WhatsApp within 10 minutes.");
     this.reset();
     if(dateInput) dateInput.min = today;
   });
