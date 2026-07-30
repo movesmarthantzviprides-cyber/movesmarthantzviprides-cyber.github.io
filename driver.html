@@ -4,84 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Driver Application – HantzVIPRides</title>
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
   <style>
-    body { font-family: Arial, sans-serif; background:#0A0A0A; color:#ddd; margin:0; padding:20px; }
-    .container { max-width:700px; margin:0 auto; background:#121212; padding:30px; border-radius:16px; border:2px solid #FFD700; }
-    .logo { text-align:center; margin-bottom:15px; }
-    .logo img { width:120px; border-radius:10px; }
-    h1 { color:#FFD700; text-align:center; margin-bottom:5px; }
-    h2 { color:#FFD700; font-size:1.15rem; margin:25px 0 10px; border-bottom:1px solid #333; padding-bottom:5px; }
-    input, select, textarea { width:100%; padding:12px; margin:8px 0; background:#1a1a1a; border:1px solid #444; color:#fff; border-radius:8px; }
-    .btn { background:#FFD700; color:#000; padding:14px; border-radius:50px; font-weight:bold; border:none; cursor:pointer; width:100%; margin-top:10px; }
-    .btn-secondary { background:#333; color:#FFD700; border:2px solid #FFD700; }
-    .instruction {
-      background:#1a1a1a; border:1px solid #FFD700; padding:15px; border-radius:10px; 
-      margin:20px 0; text-align:center; font-size:0.95rem;
-    }
-    @media print {
-      body { background:#fff; color:#000; }
-      .container { border:1px solid #000; }
-      .no-print { display:none; }
-      input, select, textarea { border:1px solid #000; background:#fff; color:#000; }
-    }
+    body{background:#0a0a0a;color:#ddd;font-family:Arial,sans-serif;margin:0;padding:20px;}
+    .container{max-width:650px;margin:0 auto;background:#121212;padding:28px;border-radius:14px;border:2px solid #FFD700;}
+    .logo{text-align:center;margin-bottom:12px;}
+    .logo img{width:110px;border-radius:10px;}
+    h1{color:#FFD700;text-align:center;font-size:1.5rem;margin-bottom:6px;}
+    .sub{text-align:center;color:#aaa;margin-bottom:20px;font-size:0.9rem;}
+    label{display:block;color:#FFD700;font-weight:700;margin:12px 0 6px;}
+    input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #333;background:#0a0a0a;color:#fff;box-sizing:border-box;}
+    .btn{width:100%;padding:14px;border:none;border-radius:8px;background:#25D366;color:#fff;font-weight:900;font-size:1rem;margin-top:14px;cursor:pointer;}
+    .note{background:#0a0a0a;border-left:4px solid #00C853;padding:12px;margin:16px 0;border-radius:0 8px 8px 0;font-size:0.9rem;}
+    .policy{background:#111;border-left:4px solid #FFD700;padding:14px;margin:18px 0;border-radius:0 10px 10px 0;font-size:0.92rem;}
+    .back{display:block;text-align:center;margin-top:16px;color:#FFD700;text-decoration:none;}
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- HVR Logo -->
-    <div class="logo">
-      <img src="hvr-logo.jpg" alt="HantzVIPRides Logo">
+    <div class="logo"><img src="hvr-logo.jpg" alt="HantzVIPRides"></div>
+    <h1>Driver Application Form</h1>
+    <p class="sub">Bonny – Port Harcourt Launch: Tuesday 4th August, 2026</p>
+
+    <div class="note">
+      <strong>Physical Submission Required:</strong><br>
+      Print this form, complete it, and bring it with your documents to the HVR inspection / Pre-Mob / profiling point.
     </div>
 
-    <h1>🧑‍✈️ Driver Identification Form</h1>
-    <p style="text-align:center; color:#aaa; margin-bottom:20px;">HantzVIPRides Driver Application</p>
+    <form id="driverForm">
+      <label>Full Name *</label>
+      <input type="text" name="fullname" required>
 
-    <!-- Physical Submission Instruction -->
-    <div class="instruction">
-      <strong style="color:#FFD700;">IMPORTANT</strong><br>
-      Please print this form and bring it physically together with the vehicle<br>
-      to the HantzVIPRides Inspection, Pre-Mob, Profiling & Verification Point.
-    </div>
+      <label>WhatsApp Number *</label>
+      <input type="tel" name="phone" required placeholder="080xxxxxxxx">
 
-    <form>
-      <h2>1. Personal Details</h2>
-      <input type="text" placeholder="Full Name" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="text" placeholder="NIN Number" required>
-      <input type="text" placeholder="Driver’s Licence Number" required>
-      <input type="text" placeholder="Residential Address" required>
+      <label>Residential Address *</label>
+      <input type="text" name="address" required>
 
-      <h2>2. Background Check Declaration</h2>
-      <textarea rows="3" placeholder="Have you ever been convicted of any criminal offence? If yes, give details..."></textarea>
-      <select required>
-        <option value="">Have you been involved in any traffic offence in the last 3 years?</option>
-        <option>No</option>
-        <option>Yes – will provide details</option>
+      <label>Gender *</label>
+      <select name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
       </select>
 
-      <h2>3. Guarantor Information</h2>
-      <p style="font-size:14px; color:#aaa;">Option A: Vehicle Owner as Guarantor</p>
-      <input type="text" placeholder="Vehicle Owner Full Name">
-      <input type="tel" placeholder="Vehicle Owner Phone">
-      <input type="text" placeholder="Vehicle Owner Address">
+      <label>Driver’s License Number *</label>
+      <input type="text" name="license" required>
 
-      <p style="font-size:14px; color:#aaa; margin-top:15px;">Option B: Two Guarantors (if driver owns the vehicle)</p>
-      <input type="text" placeholder="Guarantor 1 Full Name">
-      <input type="tel" placeholder="Guarantor 1 Phone">
-      <input type="text" placeholder="Guarantor 1 Address / Occupation">
-      <input type="text" placeholder="Guarantor 2 Full Name">
-      <input type="tel" placeholder="Guarantor 2 Phone">
-      <input type="text" placeholder="Guarantor 2 Address / Occupation">
+      <label>Years of Driving Experience *</label>
+      <input type="number" name="experience" min="1" required>
 
-      <h2>4. Declaration</h2>
-      <p style="font-size:14px;">I declare that the information provided is true and correct. I agree to the HantzVIPRides Driver Policy.</p>
+      <label>Vehicle Type You Will Drive *</label>
+      <select name="vehicle_type" required>
+        <option value="">Select</option>
+        <option>Sienna</option>
+        <option>SUV / Prado</option>
+        <option>Camry</option>
+        <option>Corolla</option>
+        <option>Hiace</option>
+        <option>Mini Bus</option>
+        <option>Coaster</option>
+        <option>Other</option>
+      </select>
 
-      <button type="button" onclick="window.print()" class="btn no-print">🖨️ Print Form</button>
-      <a href="https://wa.me/2349082483452?text=I%20have%20printed%20the%20Driver%20form%20and%20will%20bring%20it%20with%20the%20vehicle" 
-         class="btn btn-secondary no-print" style="display:block; text-align:center; margin-top:10px;">
-        Notify via WhatsApp
-      </a>
+      <label>NIN *</label>
+      <input type="text" name="nin" required>
+
+      <!-- REFERRAL -->
+      <div style="background:#0a0a0a;border:1px solid #333;border-radius:10px;padding:15px;margin:18px 0;">
+        <label>Who invited you to HantzVIPRides? *</label>
+        <select name="invited_by" required>
+          <option value="">-- Select --</option>
+          <option value="Self">Self</option>
+          <option value="A Friend">A Friend</option>
+          <option value="An Agent">An Agent</option>
+          <option value="Driver/Vehicle Owner">Another Driver / Vehicle Owner</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label>Name of person who invited you</label>
+        <input type="text" name="referrer_name" placeholder="Full name of referrer">
+
+        <label>Referrer WhatsApp Number</label>
+        <input type="tel" name="referrer_phone" placeholder="080xxxxxxxx">
+      </div>
+
+      <div class="policy">
+        <strong style="color:#FFD700;">Referral Policy</strong><br>
+        A verified referrer earns <strong>3% of the referred driver’s approved trip pay</strong> for each of the <strong>first 10 completed HVR trips only</strong>.
+        Reward is paid only after verification, approval, and successful dispatched trips. No self-referral. One referrer per driver/vehicle.
+      </div>
+
+      <label>Additional Notes</label>
+      <textarea name="notes" rows="3" placeholder="Any extra information"></textarea>
+
+      <button type="submit" class="btn">📱 Submit Driver Application via WhatsApp</button>
     </form>
+
+    <a href="index.html" class="back">← Back to Home</a>
   </div>
+
+  <script>
+    document.getElementById('driverForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(this));
+      let message = `🚗 *HVR DRIVER APPLICATION*\n\n`;
+      message += `*Name:* ${d.name}\n`;
+      message += `*Phone:* ${d.phone}\n`;
+      message += `*Address:* ${d.address}\n`;
+      message += `*Gender:* ${d.gender}\n`;
+      message += `*License:* ${d.license}\n`;
+      message += `*Experience:* ${d.experience} years\n`;
+      message += `*Vehicle Type:* ${d.vehicle_type}\n`;
+      message += `*NIN:* ${d.nin}\n`;
+      message += `*Invited by:* ${d.invited_by}\n`;
+      message += `*Referrer Name:* ${d.referrer_name || 'N/A'}\n`;
+      message += `*Referrer Phone:* ${d.referrer_phone || 'N/A'}\n`;
+      message += `*Notes:* ${d.notes || 'None'}\n`;
+      message += `\n_Launch: 4th August 2026_`;
+      window.open(`https://wa.me/2348085526104?text=${encodeURIComponent(message)}`, '_blank');
+      alert('Application prepared. Complete physical submission at HVR profiling point.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
