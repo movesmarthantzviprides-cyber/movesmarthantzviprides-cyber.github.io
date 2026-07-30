@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -119,6 +119,11 @@
     .float-whatsapp { background: #25D366; }
     .float-call { background: #FFD700; color: #000; font-size: 24px; }
 
+    @keyframes hvr-marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.8rem; }
       .btn { display: block; width: 90%; margin: 7px auto; }
@@ -129,105 +134,91 @@
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container" style="text-align:center;">
-    
-    <!-- Main Logo -->
-<img src="hvr-logo.jpg" alt="HantzVIPRides Logo" class="logo"
-     style="width:155px !important; margin:0 auto 2px auto !important; display:block; border-radius:10px;">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container" style="text-align:center;">
+      <img src="hvr-logo.jpg" alt="HantzVIPRides Logo" class="logo"
+           style="width:155px !important; margin:0 auto 2px auto !important; display:block; border-radius:10px;">
 
-<!-- MOVING INFO BELT -->
-<div style="
-  background: linear-gradient(90deg, #1a1a1a, #222, #1a1a1a);
-  border: 1px solid #FFD700;
-  border-radius: 8px;
-  padding: 8px 0;
-  margin: 4px auto 8px;
-  max-width: 480px;
-  overflow: hidden;
-  white-space: nowrap;
-">
-  <div style="
-    display: inline-block;
-    color: #CCFF00;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    padding-left: 100%;
-    animation: hvr-marquee 60s linear infinite;
-  ">
-    ✨ Welcome to HantzVIPRides &nbsp;•&nbsp; Ride with Pride &nbsp;•&nbsp; HOUSE2HOUSE VIP & Semi VIP Rides &nbsp;•&nbsp; Your Safety and Comfort is Our Deal &nbsp;•&nbsp; ✨ Welcome to HantzVIPRides &nbsp;•&nbsp; Ride with Pride &nbsp;•&nbsp; HOUSE2HOUSE VIP & Semi VIP Rides &nbsp;•&nbsp; Your Safety and Comfort is Our Deal
-  </div>
-</div>
+      <!-- MOVING INFO BELT -->
+      <div style="
+        background: linear-gradient(90deg, #1a1a1a, #222, #1a1a1a);
+        border: 1px solid #FFD700;
+        border-radius: 8px;
+        padding: 8px 0;
+        margin: 4px auto 8px;
+        max-width: 480px;
+        overflow: hidden;
+        white-space: nowrap;
+      ">
+        <div style="
+          display: inline-block;
+          color: #FFD700;
+          font-size: 0.85rem;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          padding-left: 100%;
+          animation: hvr-marquee 18s linear infinite;
+        ">
+          ✨ Welcome to HantzVIPRides &nbsp;•&nbsp; Ride with Pride &nbsp;•&nbsp; HOUSE2HOUSE VIP & Semi VIP Rides &nbsp;•&nbsp; Your Safety and Comfort is Our Deal &nbsp;•&nbsp; ✨ Welcome to HantzVIPRides &nbsp;•&nbsp; Ride with Pride &nbsp;•&nbsp; HOUSE2HOUSE VIP & Semi VIP Rides &nbsp;•&nbsp; Your Safety and Comfort is Our Deal
+        </div>
+      </div>
+      
+      <h1>HantzVIPRides</h1>
+      <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
+      <p class="launch">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
 
-<style>
-  @keyframes hvr-marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-</style>
-    
-    <h1>HantzVIPRides</h1>
-    <p class="sub">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-    <p class="launch">BONNY ROUTE LAUNCH - COMING VERY SOON</p>
-
-    <div class="logo-grid">
-      <a href="partners.html" style="text-decoration:none;">
+      <div class="logo-grid">
         <div class="logo-box">
-          <img src="IMG-20260710-WA0113.jpg" alt="First Bank">
+          <div style="font-size:28px; color:#FFD700; z-index:2;">🏦</div>
           <small>Official Bank</small>
         </div>
-      </a>
 
-      <a href="our-services.html" style="text-decoration:none;">
-        <div class="logo-box" style="transform:scale(1.1);">
-          <img src="hvr-logo.jpg" alt="HVR">
-          <small>HVR</small>
-        </div>
-      </a>
+        <a href="our-services.html" style="text-decoration:none;">
+          <div class="logo-box" style="transform:scale(1.1);">
+            <img src="hvr-logo.jpg" alt="HVR">
+            <small>HVR</small>
+          </div>
+        </a>
 
-      <a href="partners.html" style="text-decoration:none;">
         <div class="logo-box">
-          <img src="IMG-20260710-WA0116.jpg" alt="Leadway">
+          <div style="font-size:28px; color:#FFD700; z-index:2;">🛡️</div>
           <small>Official Insurer</small>
         </div>
-      </a>
+      </div>
+
+      <div class="alert">🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥</div>
+
+      <div class="btn-group-title">For Passengers</div>
+      <div>
+        <a href="booking.html" class="btn">BOOK YOUR RIDE</a>
+        <a href="our-services.html" class="btn btn-outline">Our Services</a>
+        <a href="routes.html" class="btn btn-outline">Our Routes</a>
+        <a href="shareter.html" class="btn btn-outline">SHAReTER Services</a>
+        <a href="hvr-fleet.html" class="btn btn-outline">Our Fleet</a>
+        <a href="tourism.html" class="btn btn-outline">Tourism / Tours</a>
+        <a href="corporate-shuttle.html" class="btn btn-outline">Corporate Shuttle</a>
+        <a href="safety.html" class="btn btn-outline">Safety & Security</a>
+      </div>
+
+      <div class="btn-group-title">For Drivers & Vehicle Owners</div>
+      <div>
+        <a href="vehicle-form.html" class="btn btn-outline">Vehicle Registration</a>
+        <a href="driver.html" class="btn btn-outline">Driver Application</a>
+        <a href="driver-dashboard.html" class="btn btn-outline">Driver Dashboard</a>
+        <a href="applications.html" class="btn btn-outline">All Applications</a>
+      </div>
+
+      <div class="btn-group-title">Partners & Admin</div>
+      <div>
+        <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
+        <a href="admin.html" class="btn btn-outline">Admin Panel</a>
+        <a href="verify.html" class="btn btn-outline">Verify Vehicle</a>
+        <a href="privacy.html" class="btn btn-outline">Privacy</a>
+        <a href="terms.html" class="btn btn-outline">Terms</a>
+      </div>
     </div>
-
-    <div class="alert">🔥 BOOK WITH HVR OFFICIAL BANK & EARN FREE TRIPS 🔥</div>
-
-    <div class="btn-group-title">For Passengers</div>
-    <div>
-      <a href="booking.html" class="btn">BOOK YOUR RIDE</a>
-      <a href="our-services.html" class="btn btn-outline">Our Services</a>
-      <a href="routes.html" class="btn btn-outline">Our Routes</a>
-      <a href="shareter.html" class="btn btn-outline">SHAReTER Services</a>
-      <a href="hvr-fleet.html" class="btn btn-outline">Our Fleet</a>
-      <a href="tourism.html" class="btn btn-outline">Tourism / Tours</a>
-      <a href="corporate-shuttle.html" class="btn btn-outline">Corporate Shuttle</a>
-      <a href="safety.html" class="btn btn-outline">Safety & Security</a>
-    </div>
-
-    <div class="btn-group-title">For Drivers & Vehicle Owners</div>
-    <div>
-      <a href="vehicle-form.html" class="btn btn-outline">Vehicle Registration</a>
-      <a href="driver.html" class="btn btn-outline">Driver Application</a>
-      <a href="driver-dashboard.html" class="btn btn-outline">Driver Dashboard</a>
-      <a href="applications.html" class="btn btn-outline">All Applications</a>
-    </div>
-
-    <div class="btn-group-title">Partners & Admin</div>
-    <div>
-      <a href="partners.html" class="btn btn-outline">Corporate Partners</a>
-      <a href="admin.html" class="btn btn-outline">Admin Panel</a>
-      <a href="verify.html" class="btn btn-outline">Verify Vehicle</a>
-      <a href="privacy.html" class="btn btn-outline">Privacy</a>
-      <a href="terms.html" class="btn btn-outline">Terms</a>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- PROMO VIDEO -->
   <section style="padding:25px 20px; background:#000; text-align:center;">
@@ -300,9 +291,9 @@
 
       <div style="background:#000; border:1px solid #FFD700; border-radius:10px; padding:12px;">
         <p style="margin:0; font-size:0.9rem; color:#FFD700; font-weight:700;">
-          ✅ Official Bank: First Bank &nbsp;|&nbsp; ✅ Insured by: Leadway Assurance
+          ✅ Official Bank &nbsp;|&nbsp; ✅ Official Insurer
         </p>
-        <p style="margin:4px 0 0 0; font-size:0.75rem; color:#aaa;">All HVR trips 100% covered</p>
+        <p style="margin:4px 0 0 0; font-size:0.75rem; color:#aaa;">All active HVR trips covered under approved partners</p>
       </div>
 
     </div>
@@ -366,13 +357,13 @@
       <h2>Corporate Partners</h2>
       <div class="cards">
         <div class="card">
-          <h3>First Bank of Nigeria</h3>
-          <p>Official Banking Partner. Book with us and earn free trips.</p>
+          <h3>Official Bank</h3>
+          <p>Preferred banking partner for HVR bookings, payouts and passenger benefits.</p>
           <a href="partners.html" class="btn" style="margin-top:10px;">View Details →</a>
         </div>
         <div class="card">
-          <h3>Leadway Assurance</h3>
-          <p>All HVR trips are fully insured for your safety.</p>
+          <h3>Official Insurer</h3>
+          <p>Insurance cover for passengers, drivers and vehicles during active HVR trips.</p>
           <a href="partners.html" class="btn btn-outline" style="margin-top:10px;">View Details →</a>
         </div>
       </div>
@@ -402,7 +393,7 @@
       <div class="cards">
         <div class="card"><h3>GPS Tracked</h3><p>All vehicles tracked 24/7.</p></div>
         <div class="card"><h3>Verified Drivers</h3><p>Background checked professionals.</p></div>
-        <div class="card"><h3>Insured Trips</h3><p>Covered by Leadway Assurance.</p></div>
+        <div class="card"><h3>Insured Trips</h3><p>Covered under HVR Official Insurer.</p></div>
         <div class="card"><h3>Dispatch Certificate</h3><p>Official proof for claims & benefits.</p></div>
       </div>
       <div style="text-align:center; margin-top:20px;">
@@ -418,8 +409,8 @@
       <div style="background:#0a0a0a; padding:25px; border-radius:14px; border:2px solid var(--primary); max-width:450px; margin:0 auto;">
         <p style="font-size:1.1rem; margin-bottom:8px;"><strong>HANTZ INTERNATIONAL NIGERIA</strong></p>
         <p style="font-size:1.5rem; color:var(--primary); font-weight:bold; margin:10px 0;">2007689316</p>
-        <p>First Bank</p>
-        <a href="https://wa.me/2348085526104?text=Please%20save%20HVR%20Payment%20Account%3A%0AHantz%20International%20Nigeria%0A2007689316%0AFirst%20Bank" 
+        <p>Official Bank Account</p>
+        <a href="https://wa.me/2348085526104?text=Please%20save%20HVR%20Payment%20Account%3A%0AHantz%20International%20Nigeria%0A2007689316" 
            class="btn" style="margin-top:15px;">Auto-Save Account on WhatsApp</a>
       </div>
     </div>
