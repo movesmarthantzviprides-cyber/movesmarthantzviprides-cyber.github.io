@@ -1,1 +1,292 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Countdown | HantzVIPRides</title>
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
+  <meta name="theme-color" content="#FFD700">
+  <style>
+    :root {
+      --primary: #FFD700;
+      --secondary: #0a0a0a;
+      --green: #00C853;
+      --red: #ff4d4d;
+      --card: #1a1a1a;
+      --text: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body {
+      background: var(--secondary);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 40px;
+    }
+    .logo { width: 110px; border-radius: 10px; margin-bottom: 12px; }
+    h1 { color: var(--primary); font-size: 1.5rem; text-align: center; margin-bottom: 6px; }
+    .sub { color: #aaa; font-size: 0.9rem; text-align: center; margin-bottom: 22px; }
+
+    .card {
+      background: var(--card);
+      border: 2px solid var(--primary);
+      border-radius: 16px;
+      padding: 24px 20px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+    .label { color: #aaa; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .code {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+      word-break: break-all;
+    }
+    .status {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .status-waiting { background: rgba(255,215,0,0.15); color: var(--primary); border: 1px solid var(--primary); }
+    .status-board { background: rgba(0,200,83,0.15); color: var(--green); border: 1px solid var(--green); }
+    .status-gone { background: rgba(255,77,77,0.15); color: var(--red); border: 1px solid var(--red); }
+    .status-error { background: #222; color: #ff9800; border: 1px solid #ff9800; }
+
+    .countdown-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0 8px;
+    }
+    .unit {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      min-width: 70px;
+      padding: 12px 8px;
+    }
+    .unit .num {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+    .unit .txt {
+      font-size: 0.65rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .takeoff {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .takeoff strong { color: var(--primary); }
+
+    .note {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    .actions {
+      margin-top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 13px 20px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid var(--primary);
+    }
+    .btn-primary { background: var(--primary); color: #000; }
+    .btn-outline { background: transparent; color: var(--primary); }
+    .btn-wa { background: #25D366; border-color: #25D366; color: #fff; }
+
+    .error-box {
+      background: #1a1000;
+      border: 1px solid #ff9800;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 420px;
+      text-align: center;
+      color: #ffcc80;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: #666;
+      font-size: 0.75rem;
+    }
+    footer a { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+  <img src="hvr-logo.jpg" alt="HantzVIPRides" class="logo" onerror="this.style.display='none'">
+  <h1>Trip Countdown</h1>
+  <p class="sub">Live timer to your vehicle takeoff</p>
+
+  <div id="main" class="card" style="display:none;">
+    <div class="label">Booking Code</div>
+    <div class="code" id="codeDisplay">—</div>
+
+    <div id="statusBadge" class="status status-waiting">Confirmed — waiting for takeoff</div>
+
+    <div class="label">Time to takeoff</div>
+    <div class="countdown-row">
+      <div class="unit">
+        <div class="num" id="d">00</div>
+        <div class="txt">Days</div>
+      </div>
+      <div class="unit">
+        <div class="num" id="h">00</div>
+        <div class="txt">Hours</div>
+      </div>
+      <div class="unit">
+        <div class="num" id="m">00</div>
+        <div class="txt">Mins</div>
+      </div>
+      <div class="unit">
+        <div class="num" id="s">00</div>
+        <div class="txt">Secs</div>
+      </div>
+    </div>
+
+    <p class="takeoff">Takeoff: <strong id="takeoffText">—</strong></p>
+    <p class="note">Show your booking code to the driver at pickup.<br>Arrive a few minutes early.</p>
+
+    <div class="actions">
+      <a id="waLink" href="https://wa.me/2348085526104" class="btn btn-wa" target="_blank">WhatsApp Support</a>
+      <a href="index.html" class="btn btn-outline">← Back to Home</a>
+    </div>
+  </div>
+
+  <div id="error" class="error-box" style="display:none;">
+    <strong>Missing trip time</strong><br><br>
+    This countdown link needs a takeoff time.<br>
+    Please use the full link sent after your booking was confirmed,<br>
+    or contact HantzVIPRides on WhatsApp.
+    <div class="actions" style="margin-top:16px;">
+      <a href="https://wa.me/2348085526104?text=I%20need%20help%20with%20my%20booking%20countdown" class="btn btn-wa" target="_blank">WhatsApp Support</a>
+      <a href="index.html" class="btn btn-outline">← Home</a>
+    </div>
+  </div>
+
+  <footer>
+    HantzVIPRides · <a href="index.html">www.hantzviprides.net</a><br>
+    Call / WhatsApp: 0808 552 6104
+  </footer>
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const timeStr = params.get('time');   // e.g. 2026-08-10T07:00:00
+  const code = params.get('code') || 'HVR-BOOKING';
+  const route = params.get('route') || '';
+
+  const main = document.getElementById('main');
+  const error = document.getElementById('error');
+
+  if (!timeStr) {
+    error.style.display = 'block';
+    return;
+  }
+
+  // Parse takeoff time (treat as local if no timezone)
+  let takeoff = new Date(timeStr);
+  if (isNaN(takeoff.getTime())) {
+    // try space format: 2026-08-10 07:00:00
+    takeoff = new Date(timeStr.replace(' ', 'T'));
+  }
+  if (isNaN(takeoff.getTime())) {
+    error.style.display = 'block';
+    return;
+  }
+
+  main.style.display = 'block';
+  document.getElementById('codeDisplay').textContent = code;
+
+  const opts = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+  let takeoffLabel = takeoff.toLocaleString('en-NG', opts);
+  if (route) takeoffLabel += ' · ' + route;
+  document.getElementById('takeoffText').textContent = takeoffLabel;
+
+  document.getElementById('waLink').href =
+    'https://wa.me/2348085526104?text=' +
+    encodeURIComponent('Hello HantzVIPRides\nMy booking code: ' + code + '\nI need support with my trip.');
+
+  const elD = document.getElementById('d');
+  const elH = document.getElementById('h');
+  const elM = document.getElementById('m');
+  const elS = document.getElementById('s');
+  const badge = document.getElementById('statusBadge');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    const now = new Date();
+    let diff = takeoff - now;
+
+    if (diff <= 0) {
+      elD.textContent = '00';
+      elH.textContent = '00';
+      elM.textContent = '00';
+      elS.textContent = '00';
+
+      // Within 30 minutes after takeoff → board / departing
+      if (diff > -30 * 60 * 1000) {
+        badge.textContent = 'Board now — trip departing';
+        badge.className = 'status status-board';
+      } else {
+        badge.textContent = 'Takeoff time has passed';
+        badge.className = 'status status-gone';
+      }
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff -= days * 1000 * 60 * 60 * 24;
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    diff -= hours * 1000 * 60 * 60;
+    const mins = Math.floor(diff / (1000 * 60));
+    diff -= mins * 1000 * 60;
+    const secs = Math.floor(diff / 1000);
+
+    elD.textContent = pad(days);
+    elH.textContent = pad(hours);
+    elM.textContent = pad(mins);
+    elS.textContent = pad(secs);
+
+    badge.textContent = 'Confirmed — waiting for takeoff';
+    badge.className = 'status status-waiting';
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+
+</body>
+</html>
