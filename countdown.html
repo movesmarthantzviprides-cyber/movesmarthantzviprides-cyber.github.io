@@ -124,6 +124,7 @@
 
     <div class="actions">
       <a id="waLink" href="https://wa.me/2348085526104" class="btn btn-wa" target="_blank">WhatsApp Support</a>
+      <a id="shareLink" href="#" class="btn btn-outline" target="_blank">📤 Share Trip Details</a>
       <a href="index.html" class="btn btn-outline">← Back to Home</a>
     </div>
   </div>
@@ -244,7 +245,10 @@
         if (diff > -30 * 60 * 1000) {
           badge.textContent = 'Board now — trip departing';
           badge.className = 'status status-board';
-          notifyOnce('HantzVIPRides', 'Your vehicle is departing. Board now.');
+          if (!notifiedBoard) {
+            notifiedBoard = true;
+            notifyOnce('HantzVIPRides', 'Your vehicle is departing. Board now.');
+          }
         } else {
           badge.textContent = 'Takeoff time has passed';
           badge.className = 'status status-gone';
@@ -257,8 +261,9 @@
       return false;
     }
 
-    // Browser notification when 15 min left (once)
+    // Browser notifications (once each)
     let notified15 = false;
+    let notifiedBoard = false;
     function maybeNotify15(diff) {
       if (notified15) return;
       if (diff > 0 && diff <= 15 * 60 * 1000) {
@@ -395,6 +400,24 @@
         '\nPlate: ' + (finalPlate || '—') +
         '\nI need support with my trip.'
       );
+
+    // Share trip via WhatsApp (passenger → family/friends)
+    var shareEl = document.getElementById('shareLink');
+    if (shareEl) {
+      var shareRoute = finalRoute ? decodeURIComponent(finalRoute) : '—';
+      var shareVehicle = finalVehicle ? decodeURIComponent(finalVehicle) : '—';
+      var sharePlate = finalPlate ? decodeURIComponent(finalPlate).toUpperCase() : '—';
+      var shareWhen = finalTime.toLocaleString('en-NG', opts);
+      var shareText =
+        '✅ HVR BOOKING CONFIRMED\n\n' +
+        'Code: ' + finalCode + '\n' +
+        'Route: ' + shareRoute + '\n' +
+        'Vehicle: ' + shareVehicle + '\n' +
+        'Plate: ' + sharePlate + '\n' +
+        'Takeoff: ' + shareWhen + '\n\n' +
+        'Live Countdown:\n' + window.location.href;
+      shareEl.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+    }
 
     var copyBtn = document.getElementById('copyCodeBtn');
     if (copyBtn) {
