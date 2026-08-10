@@ -1,21 +1,25 @@
 {
-  "name": "HantzVIPRides",
-  "short_name": "HantzVIP",
-  "description": "Premium Car Rental • Corporate Shuttle • Intercity Transport",
-  "start_url": "/",
+  "name": "HantzVIPRides Trip Countdown",
+  "short_name": "HVR Trip",
+  "description": "Live countdown to your HantzVIPRides takeoff",
+  "start_url": "/countdown.html",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#0a0a0a",
   "theme_color": "#FFD700",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "hvr-logo.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg",
+      "purpose": "any maskable"
     },
     {
-      "src": "icon-512.png",
+      "src": "hvr-logo.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg",
+      "purpose": "any maskable"
     }
   ]
 }
