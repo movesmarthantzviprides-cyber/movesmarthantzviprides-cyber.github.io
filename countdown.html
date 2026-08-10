@@ -97,6 +97,7 @@
   <div id="main" class="card" style="display:none;">
     <div class="label">Booking Code</div>
     <div class="code" id="codeDisplay">—</div>
+    <button type="button" id="copyCodeBtn" class="btn btn-outline" style="padding:8px 16px; margin:0 auto 12px; font-size:0.85rem; width:auto; display:inline-block; cursor:pointer;">📋 Copy Code</button>
     <div id="verifyMsg"></div>
 
     <div id="statusBadge" class="status status-waiting">Confirmed — waiting for takeoff</div>
@@ -303,6 +304,25 @@
     } catch (e) { /* ignore */ }
   }
 
+  function fallbackCopy(text, btn) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      if (btn) {
+        btn.textContent = '✓ Copied';
+        setTimeout(function () { btn.textContent = '📋 Copy Code'; }, 1500);
+      }
+    } catch (e) {
+      alert('Code: ' + text);
+    }
+  }
+
   async function init() {
     const cv = clientValidate();
     if (!cv.ok) {
@@ -360,9 +380,12 @@
 
     const opts = {
       weekday: 'short', year: 'numeric', month: 'short', day: 'numeric',
-      hour: '2-digit', minute: '2-digit'
+      hour: '2-digit', minute: '2-digit',
+      timeZone: 'Africa/Lagos',
+      hour12: true
     };
-    document.getElementById('takeoffText').textContent = finalTime.toLocaleString('en-NG', opts);
+    document.getElementById('takeoffText').textContent =
+      finalTime.toLocaleString('en-NG', opts) + ' (WAT / Lagos)';
 
     document.getElementById('waLink').href =
       'https://wa.me/2348085526104?text=' +
@@ -372,6 +395,23 @@
         '\nPlate: ' + (finalPlate || '—') +
         '\nI need support with my trip.'
       );
+
+    var copyBtn = document.getElementById('copyCodeBtn');
+    if (copyBtn) {
+      copyBtn.onclick = function () {
+        var codeText = document.getElementById('codeDisplay').textContent;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(codeText).then(function () {
+            copyBtn.textContent = '✓ Copied';
+            setTimeout(function () { copyBtn.textContent = '📋 Copy Code'; }, 1500);
+          }).catch(function () {
+            fallbackCopy(codeText, copyBtn);
+          });
+        } else {
+          fallbackCopy(codeText, copyBtn);
+        }
+      };
+    }
 
     startCountdown(finalTime, finalStatus);
   }
