@@ -28,7 +28,6 @@
     .logo { width: 110px; border-radius: 10px; margin-bottom: 12px; }
     h1 { color: var(--primary); font-size: 1.5rem; text-align: center; margin-bottom: 6px; }
     .sub { color: #aaa; font-size: 0.9rem; text-align: center; margin-bottom: 22px; }
-
     .card {
       background: var(--card);
       border: 2px solid var(--primary);
@@ -39,106 +38,48 @@
       text-align: center;
     }
     .label { color: #aaa; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .value { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 14px; word-break: break-word; }
     .code {
-      font-size: 1.35rem;
-      font-weight: 900;
-      color: var(--primary);
-      letter-spacing: 1px;
-      margin-bottom: 18px;
-      word-break: break-all;
+      font-size: 1.35rem; font-weight: 900; color: var(--primary);
+      letter-spacing: 1px; margin-bottom: 14px; word-break: break-all;
     }
     .status {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin-bottom: 18px;
+      display: inline-block; padding: 6px 14px; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 700; margin-bottom: 16px;
     }
     .status-waiting { background: rgba(255,215,0,0.15); color: var(--primary); border: 1px solid var(--primary); }
     .status-board { background: rgba(0,200,83,0.15); color: var(--green); border: 1px solid var(--green); }
     .status-gone { background: rgba(255,77,77,0.15); color: var(--red); border: 1px solid var(--red); }
-    .status-error { background: #222; color: #ff9800; border: 1px solid #ff9800; }
-
-    .countdown-row {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 10px 0 8px;
-    }
+    .status-cancelled { background: rgba(255,77,77,0.2); color: var(--red); border: 1px solid var(--red); }
+    .status-loading { background: #222; color: #aaa; border: 1px solid #444; }
+    .countdown-row { display: flex; justify-content: center; gap: 10px; margin: 10px 0 8px; }
     .unit {
-      background: #0a0a0a;
-      border: 1px solid #333;
-      border-radius: 12px;
-      min-width: 70px;
-      padding: 12px 8px;
+      background: #0a0a0a; border: 1px solid #333; border-radius: 12px;
+      min-width: 70px; padding: 12px 8px;
     }
-    .unit .num {
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: var(--primary);
-      line-height: 1.1;
-    }
-    .unit .txt {
-      font-size: 0.65rem;
-      color: #888;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 4px;
-    }
-
-    .takeoff {
-      margin-top: 16px;
-      font-size: 0.95rem;
-      color: #ccc;
-    }
+    .unit .num { font-size: 1.8rem; font-weight: 900; color: var(--primary); line-height: 1.1; }
+    .unit .txt { font-size: 0.65rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+    .takeoff { margin-top: 16px; font-size: 0.95rem; color: #ccc; }
     .takeoff strong { color: var(--primary); }
-
-    .note {
-      margin-top: 18px;
-      font-size: 0.8rem;
-      color: #888;
-      line-height: 1.5;
+    .note { margin-top: 18px; font-size: 0.8rem; color: #888; line-height: 1.5; }
+    .verify-ok {
+      font-size: 0.75rem; color: var(--green); margin-bottom: 12px;
     }
-
-    .actions {
-      margin-top: 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .verify-warn {
+      font-size: 0.75rem; color: #ff9800; margin-bottom: 12px;
     }
+    .actions { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
     .btn {
-      display: block;
-      text-align: center;
-      padding: 13px 20px;
-      border-radius: 50px;
-      font-weight: 800;
-      font-size: 0.95rem;
-      text-decoration: none;
-      border: 2px solid var(--primary);
+      display: block; text-align: center; padding: 13px 20px; border-radius: 50px;
+      font-weight: 800; font-size: 0.95rem; text-decoration: none; border: 2px solid var(--primary);
     }
-    .btn-primary { background: var(--primary); color: #000; }
     .btn-outline { background: transparent; color: var(--primary); }
     .btn-wa { background: #25D366; border-color: #25D366; color: #fff; }
-
     .error-box {
-      background: #1a1000;
-      border: 1px solid #ff9800;
-      border-radius: 12px;
-      padding: 20px;
-      max-width: 420px;
-      text-align: center;
-      color: #ffcc80;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      background: #1a1000; border: 1px solid #ff9800; border-radius: 12px;
+      padding: 20px; max-width: 420px; text-align: center; color: #ffcc80; font-size: 0.95rem; line-height: 1.6;
     }
-
-    footer {
-      margin-top: 28px;
-      text-align: center;
-      color: #666;
-      font-size: 0.75rem;
-    }
+    footer { margin-top: 28px; text-align: center; color: #666; font-size: 0.75rem; }
     footer a { color: var(--primary); }
   </style>
 </head>
@@ -148,34 +89,37 @@
   <h1>Trip Countdown</h1>
   <p class="sub">Live timer to your vehicle takeoff</p>
 
+  <div id="loading" class="card">
+    <div class="status status-loading">Validating booking…</div>
+    <p class="note">Please wait</p>
+  </div>
+
   <div id="main" class="card" style="display:none;">
     <div class="label">Booking Code</div>
     <div class="code" id="codeDisplay">—</div>
+    <div id="verifyMsg"></div>
 
     <div id="statusBadge" class="status status-waiting">Confirmed — waiting for takeoff</div>
 
+    <div class="label">Route</div>
+    <div class="value" id="routeDisplay">—</div>
+
+    <div class="label">Vehicle</div>
+    <div class="value" id="vehicleDisplay">—</div>
+
+    <div class="label">Plate Number</div>
+    <div class="value" id="plateDisplay">—</div>
+
     <div class="label">Time to takeoff</div>
     <div class="countdown-row">
-      <div class="unit">
-        <div class="num" id="d">00</div>
-        <div class="txt">Days</div>
-      </div>
-      <div class="unit">
-        <div class="num" id="h">00</div>
-        <div class="txt">Hours</div>
-      </div>
-      <div class="unit">
-        <div class="num" id="m">00</div>
-        <div class="txt">Mins</div>
-      </div>
-      <div class="unit">
-        <div class="num" id="s">00</div>
-        <div class="txt">Secs</div>
-      </div>
+      <div class="unit"><div class="num" id="d">00</div><div class="txt">Days</div></div>
+      <div class="unit"><div class="num" id="h">00</div><div class="txt">Hours</div></div>
+      <div class="unit"><div class="num" id="m">00</div><div class="txt">Mins</div></div>
+      <div class="unit"><div class="num" id="s">00</div><div class="txt">Secs</div></div>
     </div>
 
     <p class="takeoff">Takeoff: <strong id="takeoffText">—</strong></p>
-    <p class="note">Show your booking code to the driver at pickup.<br>Arrive a few minutes early.</p>
+    <p class="note">Show your booking code + confirm plate before boarding.<br>Arrive 10 minutes early.</p>
 
     <div class="actions">
       <a id="waLink" href="https://wa.me/2348085526104" class="btn btn-wa" target="_blank">WhatsApp Support</a>
@@ -184,10 +128,8 @@
   </div>
 
   <div id="error" class="error-box" style="display:none;">
-    <strong>Missing trip time</strong><br><br>
-    This countdown link needs a takeoff time.<br>
-    Please use the full link sent after your booking was confirmed,<br>
-    or contact HantzVIPRides on WhatsApp.
+    <strong id="errorTitle">Invalid or missing booking</strong><br><br>
+    <span id="errorBody">Please use the full confirmation link sent by HantzVIPRides, or contact support.</span>
     <div class="actions" style="margin-top:16px;">
       <a href="https://wa.me/2348085526104?text=I%20need%20help%20with%20my%20booking%20countdown" class="btn btn-wa" target="_blank">WhatsApp Support</a>
       <a href="index.html" class="btn btn-outline">← Home</a>
@@ -201,90 +143,240 @@
 
 <script>
 (function () {
+  // ============================================================
+  // CONFIG — paste your Google Apps Script Web App URL when ready
+  // Leave empty to use link-only mode (no server check)
+  // ============================================================
+  const API_URL = '';
+  // Example: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+
   const params = new URLSearchParams(window.location.search);
-  const timeStr = params.get('time');   // e.g. 2026-08-10T07:00:00
-  const code = params.get('code') || 'HVR-BOOKING';
+  const timeStr = params.get('time');
+  const code = (params.get('code') || '').trim();
   const route = params.get('route') || '';
+  const vehicle = params.get('vehicle') || '';
+  const plate = params.get('plate') || '';
+  const statusParam = (params.get('status') || 'confirmed').toLowerCase();
 
-  const main = document.getElementById('main');
-  const error = document.getElementById('error');
+  const elLoading = document.getElementById('loading');
+  const elMain = document.getElementById('main');
+  const elError = document.getElementById('error');
 
-  if (!timeStr) {
-    error.style.display = 'block';
-    return;
+  function showError(title, body) {
+    elLoading.style.display = 'none';
+    elMain.style.display = 'none';
+    elError.style.display = 'block';
+    document.getElementById('errorTitle').textContent = title;
+    document.getElementById('errorBody').textContent = body;
   }
 
-  // Parse takeoff time (treat as local if no timezone)
-  let takeoff = new Date(timeStr);
-  if (isNaN(takeoff.getTime())) {
-    // try space format: 2026-08-10 07:00:00
-    takeoff = new Date(timeStr.replace(' ', 'T'));
-  }
-  if (isNaN(takeoff.getTime())) {
-    error.style.display = 'block';
-    return;
+  function parseTime(str) {
+    if (!str || typeof str !== 'string') return null;
+    let d = new Date(str);
+    if (!isNaN(d.getTime())) return d;
+    d = new Date(str.replace(' ', 'T'));
+    if (!isNaN(d.getTime())) return d;
+    return null;
   }
 
-  main.style.display = 'block';
-  document.getElementById('codeDisplay').textContent = code;
+  // Basic client-side validation (always runs)
+  function clientValidate() {
+    if (!timeStr) {
+      return { ok: false, msg: 'Missing takeoff time in link.' };
+    }
+    const t = parseTime(timeStr);
+    if (!t) {
+      return { ok: false, msg: 'Invalid takeoff time format. Use YYYY-MM-DDTHH:MM:00' };
+    }
+    if (!code || code.length < 4) {
+      return { ok: false, msg: 'Missing or invalid booking code.' };
+    }
+    // Reject clearly fake / empty codes
+    if (/^(test|null|undefined)$/i.test(code)) {
+      return { ok: false, msg: 'Invalid booking code.' };
+    }
+    return { ok: true, takeoff: t };
+  }
 
-  const opts = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-  let takeoffLabel = takeoff.toLocaleString('en-NG', opts);
-  if (route) takeoffLabel += ' · ' + route;
-  document.getElementById('takeoffText').textContent = takeoffLabel;
-
-  document.getElementById('waLink').href =
-    'https://wa.me/2348085526104?text=' +
-    encodeURIComponent('Hello HantzVIPRides\nMy booking code: ' + code + '\nI need support with my trip.');
-
-  const elD = document.getElementById('d');
-  const elH = document.getElementById('h');
-  const elM = document.getElementById('m');
-  const elS = document.getElementById('s');
-  const badge = document.getElementById('statusBadge');
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function tick() {
-    const now = new Date();
-    let diff = takeoff - now;
-
-    if (diff <= 0) {
-      elD.textContent = '00';
-      elH.textContent = '00';
-      elM.textContent = '00';
-      elS.textContent = '00';
-
-      // Within 30 minutes after takeoff → board / departing
-      if (diff > -30 * 60 * 1000) {
-        badge.textContent = 'Board now — trip departing';
-        badge.className = 'status status-board';
-      } else {
-        badge.textContent = 'Takeoff time has passed';
-        badge.className = 'status status-gone';
+  // Optional server-side validation via Google Apps Script
+  async function serverValidate(codeVal) {
+    if (!API_URL) return { ok: true, source: 'link-only' };
+    try {
+      const url = API_URL + '?code=' + encodeURIComponent(codeVal) + '&action=validate';
+      const res = await fetch(url, { method: 'GET', mode: 'cors' });
+      if (!res.ok) return { ok: true, source: 'link-only', warn: 'Server unreachable — using link data' };
+      const data = await res.json();
+      // Expected: { valid: true/false, status, route, vehicle, plate, time, message }
+      if (data && data.valid === false) {
+        return { ok: false, msg: data.message || 'Booking not found or cancelled.' };
       }
+      return { ok: true, source: 'server', data: data || {} };
+    } catch (e) {
+      return { ok: true, source: 'link-only', warn: 'Could not reach server — using link data' };
+    }
+  }
+
+  function startCountdown(takeoff, tripStatus) {
+    const elD = document.getElementById('d');
+    const elH = document.getElementById('h');
+    const elM = document.getElementById('m');
+    const elS = document.getElementById('s');
+    const badge = document.getElementById('statusBadge');
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function applyStatus(diff) {
+      const st = (tripStatus || 'confirmed').toLowerCase();
+      if (st === 'cancelled') {
+        badge.textContent = 'Booking cancelled';
+        badge.className = 'status status-cancelled';
+        elD.textContent = '00'; elH.textContent = '00'; elM.textContent = '00'; elS.textContent = '00';
+        return true;
+      }
+      if (st === 'completed') {
+        badge.textContent = 'Trip completed';
+        badge.className = 'status status-gone';
+        elD.textContent = '00'; elH.textContent = '00'; elM.textContent = '00'; elS.textContent = '00';
+        return true;
+      }
+      if (diff <= 0) {
+        if (diff > -30 * 60 * 1000) {
+          badge.textContent = 'Board now — trip departing';
+          badge.className = 'status status-board';
+          notifyOnce('HantzVIPRides', 'Your vehicle is departing. Board now.');
+        } else {
+          badge.textContent = 'Takeoff time has passed';
+          badge.className = 'status status-gone';
+        }
+        elD.textContent = '00'; elH.textContent = '00'; elM.textContent = '00'; elS.textContent = '00';
+        return true;
+      }
+      badge.textContent = 'Confirmed — waiting for takeoff';
+      badge.className = 'status status-waiting';
+      return false;
+    }
+
+    // Browser notification when 15 min left (once)
+    let notified15 = false;
+    function maybeNotify15(diff) {
+      if (notified15) return;
+      if (diff > 0 && diff <= 15 * 60 * 1000) {
+        notified15 = true;
+        notifyOnce('HantzVIPRides', 'Your trip takes off in about 15 minutes. Please proceed to pickup.');
+      }
+    }
+
+    function tick() {
+      const now = new Date();
+      let diff = takeoff - now;
+      if (applyStatus(diff)) return;
+      maybeNotify15(diff);
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= days * 1000 * 60 * 60 * 24;
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      diff -= hours * 1000 * 60 * 60;
+      const mins = Math.floor(diff / (1000 * 60));
+      diff -= mins * 1000 * 60;
+      const secs = Math.floor(diff / 1000);
+
+      elD.textContent = pad(days);
+      elH.textContent = pad(hours);
+      elM.textContent = pad(mins);
+      elS.textContent = pad(secs);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  function notifyOnce(title, body) {
+    try {
+      if (!('Notification' in window)) return;
+      if (Notification.permission === 'granted') {
+        new Notification(title, { body: body, icon: 'hvr-logo.jpg' });
+      } else if (Notification.permission !== 'denied') {
+        Notification.requestPermission().then(function (p) {
+          if (p === 'granted') new Notification(title, { body: body, icon: 'hvr-logo.jpg' });
+        });
+      }
+    } catch (e) { /* ignore */ }
+  }
+
+  async function init() {
+    const cv = clientValidate();
+    if (!cv.ok) {
+      showError('Validation failed', cv.msg);
       return;
     }
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    diff -= days * 1000 * 60 * 60 * 24;
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    diff -= hours * 1000 * 60 * 60;
-    const mins = Math.floor(diff / (1000 * 60));
-    diff -= mins * 1000 * 60;
-    const secs = Math.floor(diff / 1000);
+    const sv = await serverValidate(code);
+    if (!sv.ok) {
+      showError('Booking not valid', sv.msg || 'This booking could not be verified.');
+      return;
+    }
 
-    elD.textContent = pad(days);
-    elH.textContent = pad(hours);
-    elM.textContent = pad(mins);
-    elS.textContent = pad(secs);
+    // Prefer server data when available
+    let finalRoute = route;
+    let finalVehicle = vehicle;
+    let finalPlate = plate;
+    let finalTime = cv.takeoff;
+    let finalStatus = statusParam;
+    let finalCode = code;
 
-    badge.textContent = 'Confirmed — waiting for takeoff';
-    badge.className = 'status status-waiting';
+    if (sv.source === 'server' && sv.data) {
+      if (sv.data.route) finalRoute = sv.data.route;
+      if (sv.data.vehicle) finalVehicle = sv.data.vehicle;
+      if (sv.data.plate) finalPlate = sv.data.plate;
+      if (sv.data.time) {
+        const st = parseTime(sv.data.time);
+        if (st) finalTime = st;
+      }
+      if (sv.data.status) finalStatus = String(sv.data.status).toLowerCase();
+      if (sv.data.code) finalCode = sv.data.code;
+    }
+
+    elLoading.style.display = 'none';
+    elMain.style.display = 'block';
+
+    document.getElementById('codeDisplay').textContent = finalCode;
+    document.getElementById('routeDisplay').textContent = finalRoute ? decodeURIComponent(finalRoute) : '—';
+    document.getElementById('vehicleDisplay').textContent = finalVehicle ? decodeURIComponent(finalVehicle) : '—';
+    document.getElementById('plateDisplay').textContent = finalPlate
+      ? decodeURIComponent(finalPlate).toUpperCase()
+      : '—';
+
+    const verifyEl = document.getElementById('verifyMsg');
+    if (sv.source === 'server') {
+      verifyEl.className = 'verify-ok';
+      verifyEl.textContent = '✓ Verified with HVR records';
+    } else if (sv.warn) {
+      verifyEl.className = 'verify-warn';
+      verifyEl.textContent = '⚠ ' + sv.warn;
+    } else {
+      verifyEl.className = 'verify-warn';
+      verifyEl.textContent = 'Link mode (add API_URL for server verification)';
+    }
+
+    const opts = {
+      weekday: 'short', year: 'numeric', month: 'short', day: 'numeric',
+      hour: '2-digit', minute: '2-digit'
+    };
+    document.getElementById('takeoffText').textContent = finalTime.toLocaleString('en-NG', opts);
+
+    document.getElementById('waLink').href =
+      'https://wa.me/2348085526104?text=' +
+      encodeURIComponent(
+        'Hello HantzVIPRides\nMy booking code: ' + finalCode +
+        '\nRoute: ' + (finalRoute || '—') +
+        '\nPlate: ' + (finalPlate || '—') +
+        '\nI need support with my trip.'
+      );
+
+    startCountdown(finalTime, finalStatus);
   }
 
-  tick();
-  setInterval(tick, 1000);
+  init();
 })();
 </script>
 
