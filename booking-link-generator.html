@@ -41,10 +41,29 @@
     .ok { color:var(--green); font-size:0.85rem; text-align:center; margin-top:8px; display:none; }
     footer { text-align:center; margin-top:24px; color:#666; font-size:0.75rem; }
     footer a { color:var(--primary); }
+    #gate {
+      max-width: 360px; margin: 60px auto; background: var(--card);
+      border: 2px solid var(--primary); border-radius: 14px; padding: 24px; text-align: center;
+    }
+    #gate h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 8px; }
+    #gate p { color: #888; font-size: 0.85rem; margin-bottom: 14px; }
+    #gateErr { color: #ff6b6b; font-size: 0.85rem; margin-top: 8px; display: none; }
+    #app { display: none; }
   </style>
 </head>
 <body>
-  <div class="wrap">
+
+  <!-- PASSWORD GATE -->
+  <div id="gate">
+    <h2>Staff Access</h2>
+    <p>HVR Booking Link Generator<br>Enter staff password to continue</p>
+    <input id="gatePass" type="password" placeholder="Password" style="width:100%; padding:12px; border-radius:8px; border:1px solid #333; background:#111; color:#fff; font-size:16px; margin-bottom:10px;">
+    <button type="button" class="btn btn-primary" id="gateBtn" style="margin-top:0;">Unlock</button>
+    <p id="gateErr">Wrong password. Try again.</p>
+    <p style="margin-top:16px;"><a href="index.html" style="color:#FFD700; font-size:0.85rem;">← Back to Home</a></p>
+  </div>
+
+  <div class="wrap" id="app">
     <h1>HVR Link Generator</h1>
     <p class="sub">Staff tool — build countdown link + WhatsApp message</p>
 
@@ -100,6 +119,39 @@
 
 <script>
 (function () {
+  // ===== STAFF PASSWORD (change this) =====
+  var STAFF_PASSWORD = 'HVR2026';
+
+  var gate = document.getElementById('gate');
+  var app = document.getElementById('app');
+  var passInput = document.getElementById('gatePass');
+  var gateErr = document.getElementById('gateErr');
+
+  function unlock() {
+    if (passInput.value === STAFF_PASSWORD) {
+      try { sessionStorage.setItem('hvr_staff_ok', '1'); } catch (e) {}
+      gate.style.display = 'none';
+      app.style.display = 'block';
+    } else {
+      gateErr.style.display = 'block';
+      passInput.value = '';
+      passInput.focus();
+    }
+  }
+
+  // Stay unlocked for this browser tab session
+  try {
+    if (sessionStorage.getItem('hvr_staff_ok') === '1') {
+      gate.style.display = 'none';
+      app.style.display = 'block';
+    }
+  } catch (e) {}
+
+  document.getElementById('gateBtn').onclick = unlock;
+  passInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') unlock();
+  });
+
   // Default date = tomorrow
   var d = new Date();
   d.setDate(d.getDate() + 1);
