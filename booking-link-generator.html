@@ -1,1 +1,190 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVR Booking Link Generator | Staff</title>
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
+  <meta name="theme-color" content="#FFD700">
+  <style>
+    :root { --primary:#FFD700; --bg:#0a0a0a; --card:#1a1a1a; --green:#00C853; }
+    * { box-sizing:border-box; margin:0; padding:0; font-family:'Segoe UI',Arial,sans-serif; }
+    body { background:var(--bg); color:#eee; padding:20px; line-height:1.5; }
+    .wrap { max-width:520px; margin:0 auto; }
+    h1 { color:var(--primary); font-size:1.4rem; text-align:center; margin-bottom:6px; }
+    .sub { text-align:center; color:#888; font-size:0.85rem; margin-bottom:20px; }
+    .card {
+      background:var(--card); border:2px solid var(--primary);
+      border-radius:14px; padding:20px;
+    }
+    label { display:block; color:var(--primary); font-size:0.8rem; font-weight:700; margin:12px 0 4px; }
+    input, select {
+      width:100%; padding:11px 12px; border-radius:8px; border:1px solid #333;
+      background:#111; color:#fff; font-size:15px;
+    }
+    input:focus, select:focus { outline:none; border-color:var(--primary); }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .btn {
+      display:block; width:100%; text-align:center; margin-top:14px;
+      padding:14px; border-radius:50px; font-weight:900; font-size:1rem;
+      border:2px solid var(--primary); cursor:pointer; text-decoration:none;
+    }
+    .btn-primary { background:var(--primary); color:#000; }
+    .btn-outline { background:transparent; color:var(--primary); }
+    .btn-wa { background:#25D366; border-color:#25D366; color:#fff; }
+    .out {
+      margin-top:18px; background:#0a0a0a; border:1px solid #333;
+      border-radius:10px; padding:14px; font-size:0.8rem; word-break:break-all;
+      color:#ccc; display:none; white-space:pre-wrap;
+    }
+    .out.show { display:block; }
+    .ok { color:var(--green); font-size:0.85rem; text-align:center; margin-top:8px; display:none; }
+    footer { text-align:center; margin-top:24px; color:#666; font-size:0.75rem; }
+    footer a { color:var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>HVR Link Generator</h1>
+    <p class="sub">Staff tool — build countdown link + WhatsApp message</p>
+
+    <div class="card">
+      <label>Booking Code *</label>
+      <input id="code" type="text" placeholder="HVR-BNY-0842" value="HVR-">
+
+      <label>Takeoff Date *</label>
+      <input id="date" type="date">
+
+      <label>Takeoff Time * (Lagos / WAT)</label>
+      <input id="time" type="time" value="07:00">
+
+      <label>Route *</label>
+      <input id="route" type="text" placeholder="Bonny to PH (Aggrey Rd)">
+
+      <div class="row">
+        <div>
+          <label>Vehicle</label>
+          <input id="vehicle" type="text" placeholder="Toyota Sienna">
+        </div>
+        <div>
+          <label>Plate Number</label>
+          <input id="plate" type="text" placeholder="ABC-123XY">
+        </div>
+      </div>
+
+      <label>Status</label>
+      <select id="status">
+        <option value="confirmed">confirmed</option>
+        <option value="cancelled">cancelled</option>
+        <option value="completed">completed</option>
+        <option value="boarded">boarded</option>
+      </select>
+
+      <label>Base site URL</label>
+      <input id="base" type="text" value="https://movesmarthantzviprides-cyber.github.io">
+
+      <button type="button" class="btn btn-primary" id="genBtn">Generate Link + Message</button>
+      <button type="button" class="btn btn-outline" id="copyMsgBtn">📋 Copy WhatsApp Message</button>
+      <a id="openWa" class="btn btn-wa" href="#" target="_blank" style="display:none;">Open in WhatsApp</a>
+      <p class="ok" id="copied">✓ Copied to clipboard</p>
+
+      <div class="out" id="outBox"></div>
+    </div>
+
+    <footer>
+      <a href="countdown.html">Countdown page</a> ·
+      <a href="index.html">Home</a><br>
+      Internal staff tool — do not share publicly
+    </footer>
+  </div>
+
+<script>
+(function () {
+  // Default date = tomorrow
+  var d = new Date();
+  d.setDate(d.getDate() + 1);
+  document.getElementById('date').value = d.toISOString().slice(0, 10);
+
+  function build() {
+    var code = document.getElementById('code').value.trim() || 'HVR-BOOKING';
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value || '07:00';
+    var route = document.getElementById('route').value.trim();
+    var vehicle = document.getElementById('vehicle').value.trim();
+    var plate = document.getElementById('plate').value.trim();
+    var status = document.getElementById('status').value;
+    var base = document.getElementById('base').value.trim().replace(/\/$/, '');
+
+    if (!date) {
+      alert('Please select takeoff date');
+      return null;
+    }
+
+    // time as YYYY-MM-DDTHH:MM:00 (interpreted as local; countdown forces Lagos display)
+    var timeIso = date + 'T' + time + ':00';
+
+    var q = new URLSearchParams();
+    q.set('code', code);
+    q.set('time', timeIso);
+    if (route) q.set('route', route);
+    if (vehicle) q.set('vehicle', vehicle);
+    if (plate) q.set('plate', plate);
+    if (status) q.set('status', status);
+
+    var link = base + '/countdown.html?' + q.toString();
+
+    var whenLabel = date + ' · ' + time + ' (WAT)';
+    var msg =
+      '✅ HVR BOOKING CONFIRMED\n\n' +
+      'Code: ' + code + '\n' +
+      'Route: ' + (route || '—') + '\n' +
+      'Vehicle: ' + (vehicle || '—') + '\n' +
+      'Plate: ' + (plate || '—') + '\n' +
+      'Takeoff: ' + whenLabel + '\n\n' +
+      '⏱ Live countdown:\n' + link + '\n\n' +
+      'Show this code and confirm plate before boarding.\n' +
+      'Ride with Pride.\nHantzVIPRides · 0808 552 6104';
+
+    return { link: link, msg: msg };
+  }
+
+  document.getElementById('genBtn').onclick = function () {
+    var r = build();
+    if (!r) return;
+    var box = document.getElementById('outBox');
+    box.className = 'out show';
+    box.textContent = r.msg;
+
+    var wa = document.getElementById('openWa');
+    wa.style.display = 'block';
+    wa.href = 'https://wa.me/?text=' + encodeURIComponent(r.msg);
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(r.msg).then(function () {
+        var c = document.getElementById('copied');
+        c.style.display = 'block';
+        setTimeout(function () { c.style.display = 'none'; }, 2000);
+      });
+    }
+  };
+
+  document.getElementById('copyMsgBtn').onclick = function () {
+    var r = build();
+    if (!r) return;
+    var box = document.getElementById('outBox');
+    box.className = 'out show';
+    box.textContent = r.msg;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(r.msg).then(function () {
+        var c = document.getElementById('copied');
+        c.style.display = 'block';
+        setTimeout(function () { c.style.display = 'none'; }, 2000);
+      });
+    } else {
+      alert('Copy manually from the box below');
+    }
+  };
+})();
+</script>
+</body>
+</html>
