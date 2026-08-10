@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trip Countdown | HantzVIPRides</title>
   <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="hvr-logo.jpg">
+  <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#FFD700">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="HVR Trip">
+  <meta name="mobile-web-app-capable" content="yes">
   <style>
     :root {
       --primary: #FFD700;
@@ -111,6 +117,12 @@
     <div class="label">Plate Number</div>
     <div class="value" id="plateDisplay">—</div>
 
+    <div class="label">Driver Scan QR</div>
+    <div id="qrWrap" style="background:#fff; border-radius:12px; padding:12px; display:inline-block; margin:6px auto 14px;">
+      <canvas id="qrCanvas" width="160" height="160" style="display:block;"></canvas>
+    </div>
+    <p style="font-size:0.7rem; color:#888; margin-bottom:14px;">Driver scans to confirm passenger booking code</p>
+
     <div class="label">Time to takeoff</div>
     <div class="countdown-row">
       <div class="unit"><div class="num" id="d">00</div><div class="txt">Days</div></div>
@@ -151,6 +163,22 @@
   // ============================================================
   const API_URL = '';
   // Example: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+
+  // Offline notice (link-only mode still works offline)
+  window.addEventListener('offline', function () {
+    var vm = document.getElementById('verifyMsg');
+    if (vm) {
+      vm.className = 'verify-warn';
+      vm.textContent = '⚠ Offline — showing link data (countdown still runs)';
+    }
+  });
+  window.addEventListener('online', function () {
+    var vm = document.getElementById('verifyMsg');
+    if (vm && vm.textContent.indexOf('Offline') !== -1) {
+      vm.className = 'verify-ok';
+      vm.textContent = '✓ Back online';
+    }
+  });
 
   const params = new URLSearchParams(window.location.search);
   const timeStr = params.get('time');
@@ -309,6 +337,33 @@
     } catch (e) { /* ignore */ }
   }
 
+
+  // Minimal QR Code generator (byte mode) — booking code only
+  function drawQR(text, canvas) {
+    // Use API image as reliable QR without heavy local lib
+    // Fallback: draw code text if image fails
+    var size = 160;
+    canvas.width = size;
+    canvas.height = size;
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, size, size);
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=' + encodeURIComponent(text);
+    img.onload = function () {
+      ctx.drawImage(img, 0, 0, size, size);
+    };
+    img.onerror = function () {
+      ctx.fillStyle = '#000';
+      ctx.font = 'bold 12px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('CODE', size/2, size/2 - 8);
+      ctx.fillText(String(text).slice(0, 16), size/2, size/2 + 10);
+    };
+    img.src = qrUrl;
+  }
+
   function fallbackCopy(text, btn) {
     try {
       var ta = document.createElement('textarea');
@@ -370,6 +425,10 @@
     document.getElementById('plateDisplay').textContent = finalPlate
       ? decodeURIComponent(finalPlate).toUpperCase()
       : '—';
+
+    // QR for driver scan (booking code)
+    var qrCanvas = document.getElementById('qrCanvas');
+    if (qrCanvas) drawQR(finalCode, qrCanvas);
 
     const verifyEl = document.getElementById('verifyMsg');
     if (sv.source === 'server') {
