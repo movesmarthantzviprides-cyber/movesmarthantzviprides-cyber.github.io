@@ -1,1 +1,802 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOUSE2HOUSE VIP Logistics | HantzVIPRides</title>
+  <meta name="description" content="HantzVIPRides HOUSE2HOUSE VIP Logistics — Luggage, Waybills, Documents & Corporate door-to-door delivery. Bonny ↔ Port Harcourt and intercity.">
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
+  <meta name="theme-color" content="#FFD700">
+  <style>
+    :root {
+      --primary: #FFD700;
+      --secondary: #0a0a0a;
+      --green: #00C853;
+      --text: #ffffff;
+      --card: #1a1a1a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: var(--secondary); color: var(--text); line-height: 1.6; }
+    a { text-decoration: none; color: var(--primary); }
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+    .hero {
+      background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.95)), url('hero-bg.jpg') center/cover no-repeat;
+      text-align: center; padding: 30px 20px 25px;
+      border-bottom: 3px solid var(--primary);
+    }
+    .hero img { width: 120px; border-radius: 10px; margin-bottom: 10px; }
+    .hero h1 { color: var(--primary); font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 6px; }
+    .hero .sub { color: #ccc; font-size: 1rem; margin-bottom: 14px; }
+
+    .btn {
+      display: inline-block; padding: 12px 24px; margin: 6px;
+      border-radius: 50px; background: var(--primary); color: #000;
+      font-weight: 900; border: 2px solid var(--primary); transition: 0.25s; font-size: 14px;
+    }
+    .btn:hover { transform: translateY(-2px); background: #ffea00; }
+    .btn-outline { background: transparent; color: var(--primary); }
+    .btn-outline:hover { background: var(--primary); color: #000; }
+    .btn-wa { background: #25D366; border-color: #25D366; color: #fff; }
+    .btn-wa:hover { background: #20bd5a; color: #fff; }
+
+    section { padding: 45px 20px; }
+    section h2 { text-align: center; color: var(--primary); font-size: 1.7rem; margin-bottom: 12px; }
+    .center { text-align: center; }
+    .lead { text-align: center; color: #bbb; max-width: 720px; margin: 0 auto 28px; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .card {
+      background: var(--card); border: 1px solid #333; border-radius: 14px;
+      padding: 22px; text-align: center; transition: 0.3s;
+    }
+    .card:hover { border-color: var(--primary); transform: translateY(-4px); }
+    .card h3 { color: var(--primary); margin-bottom: 8px; font-size: 1.15rem; }
+    .card p { color: #ccc; font-size: 0.95rem; }
+    .price { color: var(--green); font-weight: 800; margin-top: 10px; font-size: 1.05rem; }
+
+    table {
+      width: 100%; border-collapse: collapse; margin: 18px 0;
+      background: var(--card); border-radius: 12px; overflow: hidden;
+      border: 1px solid #333; font-size: 0.92rem;
+    }
+    th {
+      background: #111; color: var(--primary); text-align: left;
+      padding: 12px 14px; border-bottom: 2px solid var(--primary);
+    }
+    td { padding: 11px 14px; border-bottom: 1px solid #2a2a2a; color: #ddd; }
+    tr:last-child td { border-bottom: none; }
+    td.amt { color: var(--green); font-weight: 700; white-space: nowrap; }
+
+    .note-box {
+      background: #111; border-left: 4px solid var(--primary);
+      padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 20px 0;
+      color: #ccc; font-size: 0.92rem;
+    }
+    .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px; margin: 24px 0;
+    }
+    .step {
+      background: var(--card); border: 1px solid #333; border-radius: 12px;
+      padding: 16px 12px; text-align: center;
+    }
+    .step .num { color: var(--primary); font-weight: 900; font-size: 1.4rem; }
+    .step p { color: #ccc; font-size: 0.85rem; margin-top: 6px; }
+
+    .calc-box {
+      background: var(--card); border: 2px solid var(--primary);
+      border-radius: 16px; padding: 24px 20px; max-width: 560px;
+      margin: 0 auto;
+    }
+    .calc-box label {
+      display: block; color: var(--primary); font-weight: 700;
+      font-size: 0.85rem; margin: 12px 0 5px;
+    }
+    .calc-box select, .calc-box input {
+      width: 100%; padding: 11px 12px; border-radius: 8px;
+      border: 1px solid #333; background: #111; color: #fff; font-size: 15px;
+    }
+    .calc-box select:focus, .calc-box input:focus {
+      outline: none; border-color: var(--primary);
+    }
+    .calc-result {
+      margin-top: 18px; padding: 16px; background: #0a0a0a;
+      border: 1px solid #333; border-radius: 12px; text-align: center;
+    }
+    .calc-result .est {
+      font-size: 1.8rem; color: var(--green); font-weight: 900; margin: 6px 0;
+    }
+    .calc-result .hint { color: #888; font-size: 0.8rem; }
+
+    footer {
+      background: #000; text-align: center; padding: 35px 20px;
+      border-top: 3px solid var(--primary); margin-top: 20px;
+    }
+    footer p { color: #888; margin: 4px 0; font-size: 0.9rem; }
+
+    @media (max-width: 600px) {
+      .btn { display: block; width: 90%; margin: 8px auto; }
+      table { font-size: 0.82rem; }
+      th, td { padding: 9px 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <a href="index.html"><img src="hvr-logo.jpg" alt="HantzVIPRides"></a>
+      <h1>📦 HOUSE2HOUSE VIP Logistics</h1>
+      <p class="sub">Luggage · Waybills · Documents · Corporate — Door to Door</p>
+      <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides%0A%0AI%20want%20HOUSE2HOUSE%20VIP%20LOGISTICS%0A%0A*Service:*%20Luggage%20%2F%20Waybill%20%2F%20Documents%20%2F%20Corporate%0A*Pickup:*%20%0A*Drop-off:*%20%0A*Item%20details:*%20%0A*Date:*%20" class="btn btn-wa" target="_blank">📱 Book on WhatsApp</a>
+      <a href="index.html" class="btn btn-outline">← Home</a>
+      <a href="booking.html" class="btn btn-outline">Passenger Booking</a>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section>
+    <div class="container">
+      <p class="lead">
+        Move bags, parcels, documents and light cargo the HVR way —
+        <strong style="color:#FFD700;">from your house / office to the destination door</strong>,
+        with profiled vehicles, verified handlers and tracked trips.
+        No more park-to-park stress with your luggage.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🧳 Luggage</h3>
+          <p>Travel bags, suitcases and personal effects on dedicated or shared HVR runs.</p>
+        </div>
+        <div class="card">
+          <h3>📋 Waybills</h3>
+          <p>Intercity waybill / consignment movement with handover record and tracking.</p>
+        </div>
+        <div class="card">
+          <h3>📄 Documents</h3>
+          <p>Secure door-to-door delivery of files, certificates and sensitive papers.</p>
+        </div>
+        <div class="card">
+          <h3>🏢 Corporate</h3>
+          <p>Office-to-office, hotel guest luggage, bank runs and staff materials.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="background:#111;">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><p>Book via WhatsApp or form</p></div>
+        <div class="step"><div class="num">2</div><p>Describe items (type, size, weight)</p></div>
+        <div class="step"><div class="num">3</div><p>HVR assesses & confirms charge</p></div>
+        <div class="step"><div class="num">4</div><p>House / point pickup</p></div>
+        <div class="step"><div class="num">5</div><p>Door delivery + confirmation</p></div>
+      </div>
+      <p class="center" style="color:#888; font-size:0.9rem;">
+        Final price is confirmed before pickup. Payment to HVR logistics / booking account as advised at confirmation.
+      </p>
+    </div>
+  </section>
+
+  <!-- LUGGAGE PRICES -->
+  <section>
+    <div class="container">
+      <h2>🧳 Luggage — Guide Prices (Bonny ↔ Port Harcourt)</h2>
+      <p class="lead">Prices are <strong style="color:#FFD700;">guide rates</strong>. Final charge depends on size, weight, fragility and exact pickup/drop axis.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item type</th>
+            <th>Description</th>
+            <th>Guide price (one way)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Small bag / backpack</td>
+            <td>Hand luggage, soft bag (under ~10 kg)</td>
+            <td class="amt">From ₦3,000</td>
+          </tr>
+          <tr>
+            <td>Medium suitcase</td>
+            <td>Standard travel suitcase (~10–20 kg)</td>
+            <td class="amt">From ₦5,000</td>
+          </tr>
+          <tr>
+            <td>Large suitcase</td>
+            <td>Large bag / heavy luggage (~20–30 kg)</td>
+            <td class="amt">From ₦7,500</td>
+          </tr>
+          <tr>
+            <td>Extra-large / special</td>
+            <td>Oversize, fragile, or multiple pieces</td>
+            <td class="amt">Assessed on request</td>
+          </tr>
+          <tr>
+            <td>Passenger + own luggage</td>
+            <td>Travelling with your bags on same HVR trip</td>
+            <td class="amt">Often included / small add-on</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <strong style="color:#FFD700;">Passenger on same trip:</strong> When you book a House2House seat, reasonable personal luggage is usually carried with you. Excess, commercial, or unaccompanied luggage is charged under logistics rates above.
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYBILLS & DOCUMENTS -->
+  <section style="background:#111;">
+    <div class="container">
+      <h2>📋 Waybills & 📄 Documents</h2>
+      <p class="lead">Door-to-door consignment and document runs on the Bonny ↔ PH corridor and selected intercity routes.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Typical use</th>
+            <th>Guide price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Document envelope</td>
+            <td>Files, certificates, letters (non-cash)</td>
+            <td class="amt">From ₦4,000</td>
+          </tr>
+          <tr>
+            <td>Small parcel / waybill</td>
+            <td>Box or sealed package (under ~10 kg)</td>
+            <td class="amt">From ₦6,000</td>
+          </tr>
+          <tr>
+            <td>Medium waybill</td>
+            <td>~10–25 kg sealed consignment</td>
+            <td class="amt">From ₦10,000</td>
+          </tr>
+          <tr>
+            <td>Urgent / same-day (corridor)</td>
+            <td>Subject to vehicle availability</td>
+            <td class="amt">From ₦15,000</td>
+          </tr>
+          <tr>
+            <td>Multi-drop (same town)</td>
+            <td>More than one drop-off point</td>
+            <td class="amt">+ ₦2,000 per extra stop</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <strong style="color:#FFD700;">Not accepted:</strong> Cash-in-transit, illegal goods, hazardous materials, or items prohibited by law. HVR may refuse any item at profiling.
+      </div>
+    </div>
+  </section>
+
+  <!-- ROUTE ADD-ONS -->
+  <section>
+    <div class="container">
+      <h2>🗺️ Route Guide — Logistics Add-on</h2>
+      <p class="lead">Base corridor is <strong style="color:#FFD700;">Bonny ↔ Port Harcourt</strong>. Other routes attract intercity logistics rates.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Route / corridor</th>
+            <th>Luggage (medium bag guide)</th>
+            <th>Document / small waybill guide</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bonny ↔ Port Harcourt (main axes)</td>
+            <td class="amt">From ₦5,000</td>
+            <td class="amt">From ₦4,000</td>
+          </tr>
+          <tr>
+            <td>Bonny / PH ↔ Eleme, Onne, Airport area</td>
+            <td class="amt">From ₦6,000</td>
+            <td class="amt">From ₦5,000</td>
+          </tr>
+          <tr>
+            <td>Bonny / PH ↔ Aba, Owerri</td>
+            <td class="amt">From ₦8,000</td>
+            <td class="amt">From ₦7,000</td>
+          </tr>
+          <tr>
+            <td>Bonny / PH ↔ Warri, Asaba, Benin</td>
+            <td class="amt">From ₦12,000</td>
+            <td class="amt">From ₦10,000</td>
+          </tr>
+          <tr>
+            <td>Bonny / PH ↔ Lagos or Abuja</td>
+            <td class="amt">On request</td>
+            <td class="amt">On request</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="center" style="color:#888; font-size:0.88rem; margin-top:12px;">
+        Exact axis (e.g. Aggrey Rd, Airport, Finima) can adjust final price. Confirm on WhatsApp before dispatch.
+      </p>
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES -->
+  <section style="background:#111;">
+    <div class="container">
+      <h2>➕ Other Logistics Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Hotel guest luggage</h3>
+          <p>VIP hotels & guest houses — airport / jetty / house transfers for guest bags.</p>
+          <p class="price">Contract or per trip</p>
+        </div>
+        <div class="card">
+          <h3>Bank / office runs</h3>
+          <p>Non-cash document pouches between branches or partner offices (by arrangement).</p>
+          <p class="price">Corporate rate</p>
+        </div>
+        <div class="card">
+          <h3>Return / round-trip logistics</h3>
+          <p>Send item one way and schedule return movement on a later HVR trip.</p>
+          <p class="price">Quoted per leg</p>
+        </div>
+        <div class="card">
+          <h3>Group / event materials</h3>
+          <p>Light materials for meetings, tours or picnics moved with HVR shuttle.</p>
+          <p class="price">With tourism / shuttle booking</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ITEM DESCRIPTION & VEHICLE GROUPING -->
+  <section id="item-guide" style="background:#0a0a0a;">
+    <div class="container">
+      <h2>📝 Clear Item Description → Right Vehicle</h2>
+      <p class="lead">
+        Accurate description lets HVR group your request and assign the right vehicle class.
+        Always state: <strong style="color:#FFD700;">type · size/weight · quantity · fragile? · value band</strong>.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Service group</th>
+            <th>Describe like this</th>
+            <th>Typical vehicle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Documents</strong></td>
+            <td>Envelope / folder · non-cash · A4 or smaller · “documents only”</td>
+            <td class="amt">Any HVR trip / Sienna / Camry</td>
+          </tr>
+          <tr>
+            <td><strong>Luggage S–M</strong></td>
+            <td>1× cabin bag or medium suitcase · ~kg · soft/hard shell</td>
+            <td class="amt">Sienna / Camry with passenger</td>
+          </tr>
+          <tr>
+            <td><strong>Luggage L / multi</strong></td>
+            <td>2–3 large cases · total kg · “unaccompanied” or with passenger</td>
+            <td class="amt">Sienna (boot space) / Hiace</td>
+          </tr>
+          <tr>
+            <td><strong>Waybill / parcel</strong></td>
+            <td>Sealed carton · L×W×H cm · kg · contents class (clothes, parts, etc.)</td>
+            <td class="amt">Sienna / Hiace</td>
+          </tr>
+          <tr>
+            <td><strong>Light cargo 25–50 kg</strong></td>
+            <td>No. of cartons · total kg · stackable? · pickup floor level?</td>
+            <td class="amt">Sienna / 7-seater / Hiace</td>
+          </tr>
+          <tr>
+            <td><strong>Medium–heavy cargo</strong></td>
+            <td>50–200 kg · crates/bags · need full vehicle space?</td>
+            <td class="amt">Hiace / Coaster charter</td>
+          </tr>
+          <tr>
+            <td><strong>Fragile / high value</strong></td>
+            <td>Declare “fragile” + approx. value band · special packing?</td>
+            <td class="amt">Assigned after assessment</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <strong style="color:#FFD700;">Booking tip:</strong> WhatsApp message template —
+        <em>Service group · Pickup · Drop-off · Item description (size/weight/qty) · Date · Fragile/value if any</em>.
+        Incomplete descriptions delay pricing and vehicle assignment.
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL-TIME TRACKING -->
+  <section id="tracking" style="background:#111;">
+    <div class="container">
+      <h2>📍 Real-Time Tracking</h2>
+      <p class="lead">
+        Logistics on active HVR trips follow the same visibility standard as passenger rides.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>1. Booking code</h3>
+          <p>Every confirmed logistics/luggage run gets a code (e.g. HVR-LOG-0842). Keep it for status and claims.</p>
+        </div>
+        <div class="card">
+          <h3>2. Live countdown</h3>
+          <p>Where a takeoff time is set, use your countdown link to see time-to-departure, route, vehicle and plate.</p>
+          <p class="price" style="font-size:0.9rem;"><a href="countdown.html">Open countdown page</a></p>
+        </div>
+        <div class="card">
+          <h3>3. WhatsApp status</h3>
+          <p>Ops updates: pickup done · in transit · delivered. Send your code for a live check anytime.</p>
+        </div>
+        <div class="card">
+          <h3>4. GPS (fleet)</h3>
+          <p>HVR-profiled vehicles are tracked on active trips. Share plate + code with support for location assist.</p>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <strong style="color:#FFD700;">Track my shipment:</strong>
+        WhatsApp <strong>0808 552 6104</strong> with your booking code, or open the countdown link sent after confirmation.
+        Staff can also issue links via the <a href="booking-link-generator.html">Staff Link Generator</a>.
+      </div>
+
+      <div class="center" style="margin-top:20px;">
+        <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides%0A%0APlease%20TRACK%20my%20logistics%0A%0A*Booking%20code:*%20%0A*Route:*%20%0A*Date:*%20" class="btn btn-wa" target="_blank">📱 Track on WhatsApp</a>
+        <a href="countdown.html" class="btn btn-outline">Countdown / Trip Status</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSURANCE -->
+  <section id="insurance">
+    <div class="container">
+      <h2>🛡️ Insurance — Luggage, Waybills &amp; Cargo</h2>
+      <p class="lead">
+        Passenger accident cover on HVR trips is separate from <strong style="color:#FFD700;">goods / cargo cover</strong>.
+        Protecting the <em>value of items</em> needs Goods-in-Transit (GIT) style arrangements.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Passenger luggage (with rider)</h3>
+          <p>Personal bags travelling with a booked passenger on an active HVR trip — handled under trip rules; declare excess/high-value items.</p>
+        </div>
+        <div class="card">
+          <h3>Unaccompanied luggage / waybill</h3>
+          <p>Items without a passenger — recommend declared value and, for higher sums, GIT or single-journey cover.</p>
+        </div>
+        <div class="card">
+          <h3>Cargo / commercial</h3>
+          <p>Stock and merchandise in transit — typically needs <strong>Goods-in-Transit insurance</strong> (annual or per journey).</p>
+        </div>
+        <div class="card">
+          <h3>Documents</h3>
+          <p>Low physical value but high importance — focus on chain of custody, handover record, and limited declared-value options.</p>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Best for</th>
+            <th>Notes (Nigeria market)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Goods-in-Transit (GIT)</strong></td>
+            <td>Cargo, stock, frequent waybills</td>
+            <td>Covers loss/damage in road transit (accident, theft, loading). Offered by Leadway, AIICO, AXA Mansard, NEM, Custodian and others. Annual or single-journey.</td>
+          </tr>
+          <tr>
+            <td><strong>Declared-value add-on</strong></td>
+            <td>One-off high-value luggage/parcel</td>
+            <td>State approx. value at booking; HVR may facilitate referral to insurer — not automatic full replacement.</td>
+          </tr>
+          <tr>
+            <td><strong>Carrier vs owner policy</strong></td>
+            <td>Shippers / SMEs</td>
+            <td>Vehicle insurance does <em>not</em> replace cargo cover. Owners of goods should hold GIT for serious commercial loads.</td>
+          </tr>
+          <tr>
+            <td><strong>Group accident (trip)</strong></td>
+            <td>Passengers &amp; drivers</td>
+            <td>People cover on active HVR operations — not a substitute for goods cover.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <strong style="color:#FFD700;">HVR position:</strong>
+        Active HVR trips aim for profiled vehicles, tracking and professional handling.
+        For commercial cargo and high-value consignments, clients should arrange or request <strong>Goods-in-Transit</strong> cover with a licensed insurer.
+        HVR can introduce partners (including discussions with Official Insurer channels) — terms are set by the insurer, not by the website quote.
+        Always declare fragile and high-value items before loading.
+      </div>
+
+      <div class="center" style="margin-top:20px;">
+        <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides%0A%0AI%20need%20advice%20on%20LOGISTICS%20%2F%20CARGO%20INSURANCE%0A%0A*Item%20type:*%20%0A*Approx%20value:*%20%0A*Route:*%20" class="btn btn-wa" target="_blank">📱 Ask about cover</a>
+        <a href="#item-guide" class="btn btn-outline">Item description guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMIC PRICE CALCULATOR -->
+  <section id="calculator" style="background:#0d0d0d; border-top:2px solid #FFD700; border-bottom:2px solid #FFD700;">
+    <div class="container">
+      <h2>🧮 Logistics Price Calculator</h2>
+      <p class="lead">Get an instant <strong style="color:#FFD700;">guide estimate</strong>. Final price is confirmed by HVR before pickup.</p>
+
+      <div class="calc-box">
+        <label for="calcService">Service type</label>
+        <select id="calcService">
+          <option value="luggage_small">Luggage — Small bag / backpack</option>
+          <option value="luggage_med" selected>Luggage — Medium suitcase</option>
+          <option value="luggage_large">Luggage — Large suitcase</option>
+          <option value="doc">Document envelope</option>
+          <option value="waybill_small">Waybill / parcel — Small (under ~10 kg)</option>
+          <option value="waybill_med">Waybill / parcel — Medium (~10–25 kg)</option>
+          <option value="urgent">Urgent / same-day (corridor)</option>
+          <option value="cargo_light">Cargo — Light (25–50 kg)</option>
+          <option value="cargo_med">Cargo — Medium (50–100 kg)</option>
+          <option value="cargo_heavy">Cargo — Heavy (100–200 kg)</option>
+        </select>
+
+        <label for="calcRoute">Route</label>
+        <select id="calcRoute">
+          <option value="bny_ph" selected>Bonny ↔ Port Harcourt (main axes)</option>
+          <option value="bny_eleme">Bonny / PH ↔ Eleme, Onne, Airport</option>
+          <option value="bny_aba">Bonny / PH ↔ Aba, Owerri</option>
+          <option value="bny_warri">Bonny / PH ↔ Warri, Asaba, Benin</option>
+          <option value="bny_lagos">Bonny / PH ↔ Lagos or Abuja</option>
+        </select>
+
+        <label for="calcQty">Quantity (pieces)</label>
+        <input type="number" id="calcQty" min="1" max="20" value="1">
+
+        <label for="calcExtra">Extra drop-offs (same town)</label>
+        <input type="number" id="calcExtra" min="0" max="5" value="0">
+
+        <div class="calc-result">
+          <div style="color:#aaa; font-size:0.85rem;">Estimated guide total</div>
+          <div class="est" id="calcTotal">₦5,000</div>
+          <div class="hint" id="calcBreakdown">Medium luggage · Bonny ↔ PH · 1 piece</div>
+          <div class="hint" style="margin-top:8px;">Not a final quote. Confirm on WhatsApp before dispatch.</div>
+        </div>
+
+        <div style="text-align:center; margin-top:16px;">
+          <a href="#" id="calcWaBtn" class="btn btn-wa" target="_blank">📱 Send this estimate on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARGO SHIPPING -->
+  <section id="cargo">
+    <div class="container">
+      <h2>🚛 Cargo Shipping (Light Commercial)</h2>
+      <p class="lead">
+        For loads above normal luggage — cartons, market goods, small equipment and sealed cargo —
+        moved House2House on the Bonny ↔ PH corridor and selected intercity routes.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Light cargo</h3>
+          <p>25–50 kg total · sealed cartons or bags</p>
+          <p class="price">From ₦15,000 (Bonny ↔ PH)</p>
+        </div>
+        <div class="card">
+          <h3>Medium cargo</h3>
+          <p>50–100 kg · multiple cartons / crates</p>
+          <p class="price">From ₦25,000 (Bonny ↔ PH)</p>
+        </div>
+        <div class="card">
+          <h3>Heavy cargo</h3>
+          <p>100–200 kg · subject to vehicle space</p>
+          <p class="price">From ₦40,000 (Bonny ↔ PH)</p>
+        </div>
+        <div class="card">
+          <h3>Full vehicle charter</h3>
+          <p>Exclusive Sienna / Hiace space for your load</p>
+          <p class="price">Quoted per trip</p>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cargo class</th>
+            <th>Bonny ↔ PH</th>
+            <th>↔ Aba / Owerri</th>
+            <th>↔ Warri / Asaba / Benin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Light (25–50 kg)</td>
+            <td class="amt">From ₦15,000</td>
+            <td class="amt">From ₦22,000</td>
+            <td class="amt">From ₦30,000</td>
+          </tr>
+          <tr>
+            <td>Medium (50–100 kg)</td>
+            <td class="amt">From ₦25,000</td>
+            <td class="amt">From ₦35,000</td>
+            <td class="amt">From ₦45,000</td>
+          </tr>
+          <tr>
+            <td>Heavy (100–200 kg)</td>
+            <td class="amt">From ₦40,000</td>
+            <td class="amt">From ₦55,000</td>
+            <td class="amt">From ₦70,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <strong style="color:#FFD700;">Cargo rules:</strong>
+        Items must be sealed and declared. No hazardous, illegal, or perishable goods without prior written clearance.
+        Loading assistance is limited — very heavy single pieces may require charter or external labour.
+        Lagos / Abuja cargo is quoted case by case.
+      </div>
+
+      <div class="center" style="margin-top:22px;">
+        <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides%0A%0AI%20want%20CARGO%20SHIPPING%0A%0A*Pickup:*%20%0A*Drop-off:*%20%0A*Weight%20approx:*%20%0A*Description:*%20%0A*Date:*%20" class="btn btn-wa" target="_blank">📱 Book Cargo on WhatsApp</a>
+        <a href="#calculator" class="btn btn-outline">Use Price Calculator</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section style="background:#111;">
+    <div class="container">
+      <h2>Rules & Accountability</h2>
+      <div class="note-box">
+        <ul style="margin:0; padding-left:18px; color:#ccc;">
+          <li>All items must be declared at booking; HVR may inspect before loading.</li>
+          <li>Value declaration recommended for important documents and high-value items.</li>
+          <li>Logistics on active HVR trips follow platform dispatch and tracking standards.</li>
+          <li>Driver/handler remits HVR share of logistics charges as per operational rules.</li>
+          <li>Claims process follows HVR trip / dispatch records (where applicable).</li>
+        </ul>
+      </div>
+      <div class="center" style="margin-top:28px;">
+        <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides%0A%0AI%20want%20HOUSE2HOUSE%20VIP%20LOGISTICS%0A%0A*Service:*%20%0A*Pickup:*%20%0A*Drop-off:*%20%0A*Items:*%20%0A*Date:*%20" class="btn btn-wa" target="_blank">📱 Book Logistics Now</a>
+        <a href="booking.html" class="btn">Book Ride + Luggage</a>
+        <a href="corporate-shuttle.html" class="btn btn-outline">Corporate</a>
+        <a href="index.html" class="btn btn-outline">← Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong style="color:#FFD700;">HantzVIPRides</strong> — HOUSE2HOUSE VIP Logistics</p>
+    <p>WhatsApp / Call: 0808 552 6104 · 0906 509 9622</p>
+    <p>www.hantzviprides.net</p>
+    <p style="margin-top:12px;">© 2026 HantzVIPRides. All Rights Reserved.</p>
+  </footer>
+
+<script>
+(function () {
+  // Base prices (Bonny ↔ PH) in Naira
+  var base = {
+    luggage_small: 3000,
+    luggage_med: 5000,
+    luggage_large: 7500,
+    doc: 4000,
+    waybill_small: 6000,
+    waybill_med: 10000,
+    urgent: 15000,
+    cargo_light: 15000,
+    cargo_med: 25000,
+    cargo_heavy: 40000
+  };
+
+  // Route multipliers
+  var routeMult = {
+    bny_ph: 1,
+    bny_eleme: 1.2,
+    bny_aba: 1.6,
+    bny_warri: 2.2,
+    bny_lagos: 3.5
+  };
+
+  var serviceLabel = {
+    luggage_small: 'Small luggage',
+    luggage_med: 'Medium luggage',
+    luggage_large: 'Large luggage',
+    doc: 'Document envelope',
+    waybill_small: 'Small waybill/parcel',
+    waybill_med: 'Medium waybill/parcel',
+    urgent: 'Urgent/same-day',
+    cargo_light: 'Light cargo (25–50 kg)',
+    cargo_med: 'Medium cargo (50–100 kg)',
+    cargo_heavy: 'Heavy cargo (100–200 kg)'
+  };
+
+  var routeLabel = {
+    bny_ph: 'Bonny ↔ Port Harcourt',
+    bny_eleme: 'Bonny/PH ↔ Eleme/Onne/Airport',
+    bny_aba: 'Bonny/PH ↔ Aba/Owerri',
+    bny_warri: 'Bonny/PH ↔ Warri/Asaba/Benin',
+    bny_lagos: 'Bonny/PH ↔ Lagos/Abuja'
+  };
+
+  function formatNaira(n) {
+    return '₦' + Math.round(n).toLocaleString('en-NG');
+  }
+
+  function calc() {
+    var service = document.getElementById('calcService').value;
+    var route = document.getElementById('calcRoute').value;
+    var qty = parseInt(document.getElementById('calcQty').value, 10) || 1;
+    var extra = parseInt(document.getElementById('calcExtra').value, 10) || 0;
+    if (qty < 1) qty = 1;
+    if (qty > 20) qty = 20;
+    if (extra < 0) extra = 0;
+
+    var unit = (base[service] || 5000) * (routeMult[route] || 1);
+    // Cargo / urgent: quantity often = one consignment; still allow multi
+    var sub = unit * qty;
+    var extraFee = extra * 2000;
+    var total = sub + extraFee;
+
+    // Lagos/Abuja cargo flagged
+    var lagosNote = (route === 'bny_lagos' && service.indexOf('cargo') === 0)
+      ? ' · Lagos/Abuja cargo quoted case-by-case'
+      : '';
+
+    document.getElementById('calcTotal').textContent = formatNaira(total);
+    document.getElementById('calcBreakdown').textContent =
+      (serviceLabel[service] || service) + ' · ' +
+      (routeLabel[route] || route) + ' · ' +
+      qty + ' piece(s)' +
+      (extra ? ' · +' + extra + ' extra stop(s)' : '') +
+      lagosNote;
+
+    var wa =
+      'Hello HantzVIPRides%0A%0A' +
+      'LOGISTICS PRICE ESTIMATE%0A%0A' +
+      '*Service:* ' + (serviceLabel[service] || service) + '%0A' +
+      '*Route:* ' + (routeLabel[route] || route) + '%0A' +
+      '*Quantity:* ' + qty + '%0A' +
+      '*Extra stops:* ' + extra + '%0A' +
+      '*Guide total:* ' + formatNaira(total) + '%0A%0A' +
+      '_Estimate only — please confirm final price and schedule._%0A%0A' +
+      '*Pickup:*%20%0A*Drop-off:*%20%0A*Date:*%20';
+
+    document.getElementById('calcWaBtn').href = 'https://wa.me/2348085526104?text=' + wa;
+  }
+
+  ['calcService', 'calcRoute', 'calcQty', 'calcExtra'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('change', calc);
+      el.addEventListener('input', calc);
+    }
+  });
+  calc();
+})();
+</script>
+
+</body>
+</html>
