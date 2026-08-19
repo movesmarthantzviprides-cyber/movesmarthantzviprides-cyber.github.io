@@ -4,21 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tourism & Pleasure Rides – HantzVIPRides</title>
+  <link rel="icon" href="hvr-logo.jpg" type="image/jpeg">
+  <meta name="theme-color" content="#FFD700">
   <style>
-    body { font-family: Arial, sans-serif; background:#0A0A0A; color:#ddd; margin:0; padding:0; }
+    body { font-family: Arial, sans-serif; background:#0A0A0A; color:#ddd; margin:0; padding:0; line-height:1.6; }
     .container { max-width:1000px; margin:0 auto; padding:40px 20px; }
     h1 { color:#FFD700; text-align:center; font-size:2rem; }
     h2 { color:#FFD700; margin:30px 0 15px; }
     .card { background:#121212; padding:25px; border-radius:14px; border:1px solid #333; margin-bottom:20px; }
     .price { color:#00C853; font-weight:bold; font-size:1.2rem; }
-    .btn { background:#FFD700; color:#000; padding:12px 26px; border-radius:50px; text-decoration:none; font-weight:bold; display:inline-block; margin:8px 5px; }
+    .btn { background:#FFD700; color:#000; padding:12px 26px; border-radius:50px; text-decoration:none; font-weight:bold; display:inline-block; margin:8px 5px; border:2px solid #FFD700; cursor:pointer; font-size:15px; }
+    .btn:hover { background:#ffea00; }
     .btn-outline { background:transparent; border:2px solid #FFD700; color:#FFD700; }
+    .btn-outline:hover { background:#FFD700; color:#000; }
+    .btn-wa { background:#25D366; border-color:#25D366; color:#fff; }
+    .btn-wa:hover { background:#20bd5a; color:#fff; }
+
+    .form-box {
+      background:#121212; border:2px solid #FFD700;
+      border-radius:16px; padding:28px 22px; max-width:560px; margin:0 auto;
+    }
+    .form-box label {
+      display:block; color:#FFD700; font-weight:bold;
+      font-size:0.9rem; margin:12px 0 5px;
+    }
+    .form-box input, .form-box select, .form-box textarea {
+      width:100%; padding:11px 12px; border-radius:8px; box-sizing:border-box;
+      border:1px solid #333; background:#0a0a0a; color:#fff; font-size:15px;
+    }
+    .form-box input:focus, .form-box select:focus, .form-box textarea:focus {
+      outline:none; border-color:#FFD700;
+    }
+    .form-box textarea { min-height:70px; resize:vertical; }
+    .form-box .hint { color:#888; font-size:0.8rem; margin-top:4px; }
+    .form-box .row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    @media (max-width:520px) {
+      .form-box .row { grid-template-columns:1fr; }
+      .btn { display:block; width:90%; margin:8px auto; text-align:center; }
+    }
+    .note-box {
+      background:#0a0a0a; border-left:4px solid #FFD700;
+      padding:12px 16px; border-radius:0 10px 10px 0; margin:16px 0;
+      color:#aaa; font-size:0.9rem;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>🏝️ Tourism & Pleasure Rides</h1>
-    <p style="text-align:center; color:#aaa; margin-bottom:40px;">House-to-House VIP Leisure & Tour Packages</p>
+    <p style="text-align:center; color:#aaa; margin-bottom:30px;">House-to-House VIP Leisure & Tour Packages</p>
+
+    <div style="text-align:center; margin-bottom:30px;">
+      <a href="#bio-register" class="btn">Tourist Bio Registration</a>
+      <a href="https://wa.me/2348085526104?text=I%20want%20to%20book%20a%20Tourism%20or%20Pleasure%20Ride" class="btn btn-wa" target="_blank">Book on WhatsApp</a>
+    </div>
 
     <div class="card">
       <h2>Pleasure Ride</h2>
@@ -44,10 +83,147 @@
       <p class="price">From ₦80,000</p>
     </div>
 
+    <p style="text-align:center; color:#aaa; margin:30px 0 10px;">
+      Tourists and first-time leisure clients should complete <strong style="color:#FFD700;">Bio Registration</strong> below before or with their first tour booking.
+    </p>
+
+    <!-- TOURIST BIO REGISTRATION -->
+    <div id="bio-register" style="margin-top:40px; padding-top:30px; border-top:2px solid #FFD700;">
+      <h2 style="text-align:center;">🛂 Tourist Bio Registration</h2>
+      <p style="text-align:center; color:#aaa; margin-bottom:24px; max-width:600px; margin-left:auto; margin-right:auto;">
+        Required for tourist / leisure clients for safety and identification.
+        Submit via WhatsApp. Attach your ID photo in the same chat after the form opens.
+      </p>
+
+      <div class="form-box">
+        <form id="touristBioForm">
+          <label for="t-fullname">Full name *</label>
+          <input type="text" id="t-fullname" required placeholder="As on ID">
+
+          <label for="t-phone">WhatsApp / Phone *</label>
+          <input type="tel" id="t-phone" required placeholder="e.g. 0808...">
+
+          <label for="t-email">Email</label>
+          <input type="email" id="t-email" placeholder="Optional">
+
+          <div class="row">
+            <div>
+              <label for="t-sex">Sex *</label>
+              <select id="t-sex" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div>
+              <label for="t-nationality">Nationality *</label>
+              <input type="text" id="t-nationality" required placeholder="e.g. Nigerian">
+            </div>
+          </div>
+
+          <label for="t-address">Residential / hotel address *</label>
+          <textarea id="t-address" required placeholder="Where you are staying in Bonny / PH / elsewhere"></textarea>
+
+          <label for="t-nin">NIN (or passport number if non-Nigerian) *</label>
+          <input type="text" id="t-nin" required placeholder="NIN or Passport No.">
+
+          <label for="t-idtype">ID type *</label>
+          <select id="t-idtype" required>
+            <option value="">Select</option>
+            <option value="National ID">National ID</option>
+            <option value="International Passport">International Passport</option>
+            <option value="Voters Card">Voters Card</option>
+            <option value="Drivers License">Drivers License</option>
+          </select>
+
+          <label for="t-idfile">ID card image (snap or upload) *</label>
+          <input type="file" id="t-idfile" accept="image/*" capture="environment">
+          <p class="hint">After submit, WhatsApp opens — please attach the ID photo in the same chat.</p>
+
+          <label for="t-package">Package interest</label>
+          <select id="t-package">
+            <option value="">Select (optional)</option>
+            <option value="Pleasure Ride">Pleasure Ride</option>
+            <option value="Bonny Island Tour">Bonny Island Tour</option>
+            <option value="Port Harcourt City Tour">Port Harcourt City Tour</option>
+            <option value="Private Day Hire">Private Day Hire</option>
+            <option value="Other / Not sure">Other / Not sure</option>
+          </select>
+
+          <label for="t-date">Preferred tour date</label>
+          <input type="date" id="t-date">
+
+          <label for="t-guests">Number of guests</label>
+          <input type="number" id="t-guests" min="1" max="50" value="1">
+
+          <label for="t-notes">Notes / special requests</label>
+          <textarea id="t-notes" placeholder="Accessibility, language, group type, etc."></textarea>
+
+          <div class="note-box">
+            By submitting, you confirm the details are accurate and agree to HVR safety and identification rules for tourism services.
+          </div>
+
+          <button type="submit" class="btn" style="width:100%; margin-top:8px;">SUBMIT BIO VIA WHATSAPP</button>
+        </form>
+      </div>
+    </div>
+
     <div style="text-align:center; margin-top:40px;">
-      <a href="https://wa.me/2348085526104?text=I%20want%20to%20book%20a%20Tourism%20or%20Pleasure%20Ride" class="btn">Book on WhatsApp</a>
+      <a href="https://wa.me/2348085526104?text=I%20want%20to%20book%20a%20Tourism%20or%20Pleasure%20Ride" class="btn btn-wa" target="_blank">Book on WhatsApp</a>
       <a href="index.html" class="btn btn-outline">← Back to Home</a>
     </div>
   </div>
+
+<script>
+(function () {
+  var dateInput = document.getElementById('t-date');
+  if (dateInput) {
+    dateInput.min = new Date().toISOString().split('T')[0];
+  }
+
+  document.getElementById('touristBioForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var name = document.getElementById('t-fullname').value.trim();
+    var phone = document.getElementById('t-phone').value.trim();
+    var email = document.getElementById('t-email').value.trim() || '—';
+    var sex = document.getElementById('t-sex').value;
+    var nationality = document.getElementById('t-nationality').value.trim();
+    var address = document.getElementById('t-address').value.trim();
+    var nin = document.getElementById('t-nin').value.trim();
+    var idtype = document.getElementById('t-idtype').value;
+    var pkg = document.getElementById('t-package').value || '—';
+    var date = document.getElementById('t-date').value || '—';
+    var guests = document.getElementById('t-guests').value || '1';
+    var notes = document.getElementById('t-notes').value.trim() || 'None';
+    var fileInput = document.getElementById('t-idfile');
+    var hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
+
+    var msg =
+      '🛂 HVR TOURIST BIO REGISTRATION\n\n' +
+      '*Name:* ' + name + '\n' +
+      '*WhatsApp/Phone:* ' + phone + '\n' +
+      '*Email:* ' + email + '\n' +
+      '*Sex:* ' + sex + '\n' +
+      '*Nationality:* ' + nationality + '\n' +
+      '*Address / Hotel:* ' + address + '\n' +
+      '*NIN / Passport:* ' + nin + '\n' +
+      '*ID Type:* ' + idtype + '\n' +
+      '*ID image:* ' + (hasFile ? 'Will attach in this chat (' + fileInput.files[0].name + ')' : 'Please request / I will send') + '\n' +
+      '*Package interest:* ' + pkg + '\n' +
+      '*Preferred date:* ' + date + '\n' +
+      '*Guests:* ' + guests + '\n' +
+      '*Notes:* ' + notes + '\n\n' +
+      '_Tourist bio for HantzVIPRides tourism services._';
+
+    window.open('https://wa.me/2348085526104?text=' + encodeURIComponent(msg), '_blank');
+
+    if (hasFile) {
+      alert('WhatsApp is opening with your bio details.\n\nPlease ATTACH your ID photo in the same WhatsApp chat before sending.');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
